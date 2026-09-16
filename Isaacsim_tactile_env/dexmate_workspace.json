@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "units": "m",
+  "world_axes": "+X from robot into table, +Y robot left, +Z up",
+  "table": {
+    "name": "Vention T-Slot Mounting Table — 1530 × 1080 × 790 mm",
+    "official_design": "AS-JF-312098",
+    "source_url": "https://vention.com/designs/t-slot-mounting-table-1530-x-1080-x-790-mm-312098",
+    "nominal_dimensions_m": [1.53, 1.08, 0.79],
+    "published_overall_dimensions_m": [1.564, 1.114, 0.791],
+    "near_short_edge_center_xy_m": [0.0, 0.0],
+    "official_asset_path": "assets/vention_312098_v6/vention_312098_v6_meshes.npz",
+    "asset_status": "Converted from user-supplied official VentionAssembly_312098_v6.STEP, including open shells",
+    "proxy_top_thickness_m": 0.0225
+  },
+  "robot": {
+    "urdf": "assets/dexmate/vega_1u_gripper_flexitac.urdf",
+    "position_m": [-0.49, 0.0, 0.187],
+    "orientation_wxyz": [1.0, 0.0, 0.0, 0.0],
+    "placement_status": "Short-side centered and facing +X per user; distance provisional, Z aligns URDF base mesh bottom to floor",
+    "fixed_base": true
+  }
+}

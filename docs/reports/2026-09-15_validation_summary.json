@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "scope": "Selected measured evidence; full local run directories are ignored by Git",
+  "runtime_v3": {
+    "isaacsim": "5.1.0.0",
+    "status": "passed",
+    "r535_vulkan_workaround": {
+      "actual_driver": "535.309.01",
+      "enabled": true
+    },
+    "cube_final_position_m": [
+      -8.806160280983022e-07,
+      -7.508189696636691e-07,
+      0.04999992251396179
+    ],
+    "physics_passed": true,
+    "rgb_shape": [
+      480,
+      640,
+      4
+    ],
+    "render_passed": true
+  },
+  "self_collision_v8": {
+    "status": "failed",
+    "self_collision_enabled": true,
+    "source_urdf_sha256": "a6a931cddd341bb6ec3bc724e91cdaeac86d67e6964d66de70e2344ca3d3c394",
+    "imported_mesh_count": 131,
+    "drive_test_passed": false,
+    "render_passed": true,
+    "largest_self_contact_event_counts": {
+      "/World/Dexmate/head_l1 | /World/Dexmate/torso_flip_link": 4332,
+      "/World/Dexmate/base_link | /World/Dexmate/torso_flip_link": 2456,
+      "/World/Dexmate/L_gripper_l1 | /World/Dexmate/L_gripper_l2": 1580,
+      "/World/Dexmate/R_arm_l1 | /World/Dexmate/torso_flip_link": 1444,
+      "/World/Dexmate/L_arm_l1 | /World/Dexmate/torso_flip_link": 1444,
+      "/World/Dexmate/R_gripper_l1 | /World/Dexmate/R_gripper_l2": 1320,
+      "/World/Dexmate/head_l2 | /World/Dexmate/torso_flip_link": 1266,
+      "/World/Dexmate/head_l3 | /World/Dexmate/torso_flip_link": 1163,
+      "/World/Dexmate/L_arm_l5 | /World/Dexmate/L_arm_l7": 786,
+      "/World/Dexmate/head_l3 | /World/Dexmate/lift_link": 750
+    },
+    "max_joint_errors_rad_or_m": [
+      53.1425666809082,
+      93.90921020507812,
+      91.68101501464844
+    ]
+  },
+  "isolated_scene_v11": {
+    "status": "passed",
+    "self_collision_enabled": false,
+    "source_urdf_sha256": "a6a931cddd341bb6ec3bc724e91cdaeac86d67e6964d66de70e2344ca3d3c394",
+    "imported_mesh_count": 131,
+    "drive_test_passed": true,
+    "render_passed": true,
+    "validation_scope": "Drive/render/table-contact checks with robot self-collision disabled",
+    "official_table": {
+      "source_sha256": "bafc462548aa41a829252cef38ed14d03f457491d9437ef4da5f9749fa8d8f06",
+      "component_count": 144,
+      "triangle_count": 616112,
+      "tabletop_height_m": 0.791000001497
+    },
+    "cube_rest_position_m": [
+      0.3999998867511749,
+      1.1099430139438482e-06,
+      0.8160001635551453
+    ],
+    "table_contact_passed": true,
+    "camera_outputs": {
+      "head_left": {
+        "shape": [
+          480,
+          640,
+          4
+        ],
+        "std": 31.445133023864635
+      },
+      "head_right": {
+        "shape": [
+          480,
+          640,
+          4
+        ],
+        "std": 31.3716375774628
+      },
+      "wrist_left": {
+        "shape": [
+          480,
+          640,
+          4
+        ],
+        "std": 28.5983515811665
+      },
+      "wrist_right": {
+        "shape": [
+          480,
+          640,
+          4
+        ],
+        "std": 28.726403681553123
+      }
+    },
+    "max_joint_errors_rad_or_m": [
+      0.010631382465362549,
+      0.010633111000061035,
+      0.010633409023284912
+    ]
+  }
+}

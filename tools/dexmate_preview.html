@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dexmate 夹爪几何确认</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101824;color:#e4edf7;font:15px system-ui,sans-serif}
+header{padding:24px 30px 8px}h1{margin:0 0 8px;font-size:25px}p{line-height:1.6;color:#acbdd0;margin:6px 0}
+.controls{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:14px 30px}
+select,button{background:#24364c;color:#fff;border:1px solid #4b6480;border-radius:6px;padding:8px}
+input[type=range]{width:260px}canvas{width:100%;height:65vh;display:block;touch-action:none;cursor:grab}
+.note{margin:10px 30px 24px;padding:14px 18px;border-left:3px solid #f5a353;background:#202c3e;line-height:1.7}
+a{color:#8fc8ff}#status{font-variant-numeric:tabular-nums;color:#90d0ff}
+</style>
+<header><h1>Dexmate · 定制夹爪预览</h1>
+<p>拖动旋转，滚轮缩放。模型数据已嵌入，无需网络。蓝色和橙色区分两侧手指。</p></header>
+<div class="controls">
+<select id="mode" aria-label="模型"><option value="custom">定制指体 + 原金属件</option>
+<option value="original">官方原版对照</option><option value="collision">定制碰撞网格（含暂用金属凸包）</option></select>
+<label><input type="checkbox" id="base" checked> 显示底座</label>
+<label>开合 q <input id="q" type="range" min="0" max="0.7854" step="0.0001" value="0.4"></label>
+<span id="status"></span><button id="closed">q = 0</button><button id="small">q = 0.01</button>
+<button id="front">正视图</button><button id="side">侧视图</button><button id="reset">复位视角</button>
+</div>
+<canvas id="canvas"></canvas>
+<div class="note"><strong>需确认：闭合零位</strong><br>
+两个定制 TPU 指体的中心截面：__CLOSURE_SUMMARY__
+这些是刚体几何检查，不是 TPU 形变或接触仿真结论；关节零位及限位尚未修改。<br>
+<a href="finger_review.png">指体对比与开合图</a> · <a href="closing_clearance.png">闭合局部图</a> ·
+<a href="robot_mounts.png">整机安装图</a><br>
+当前预览为夹爪局部坐标系，整机安装方向请看整机图。Isaac Sim 导入和动力学尚未验证。
+</div>
+<script id="mesh-data" type="application/json">__MESH_DATA__</script>
+<script>
+"use strict";
+const canvas=document.getElementById("canvas"), gl=canvas.getContext("webgl",{antialias:true});
+if(!gl)throw new Error("需要启用 WebGL；可打开下方 PNG 静态预览。");
+const vertex=`attribute vec3 p;attribute vec3 n;uniform mat4 model;uniform mat3 view;
+uniform float scale;uniform float aspect;varying vec3 normal;
+void main(){vec3 v=view*((model*vec4(p,1.)).xyz-vec3(0.,0.,.055));
+gl_Position=vec4(v.x*scale/aspect,v.y*scale,-v.z/2.,1.);normal=view*mat3(model)*n;}`;
+const fragment=`precision mediump float;varying vec3 normal;uniform vec3 color;
+void main(){float shade=.40+.60*abs(dot(normalize(normal),normalize(vec3(-.4,.6,1.))));
+gl_FragColor=vec4(color*shade,1.);}`;
+function shader(type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);
+if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;}
+const program=gl.createProgram();gl.attachShader(program,shader(gl.VERTEX_SHADER,vertex));
+gl.attachShader(program,shader(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(program);
+if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+const loc={};for(const n of ["model","view","scale","aspect","color"])loc[n]=gl.getUniformLocation(program,n);
+const pos=gl.getAttribLocation(program,"p"),norm=gl.getAttribLocation(program,"n");
+function buffer(encoded){const bytes=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
+const a=new Float32Array(bytes.buffer),b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);
+gl.bufferData(gl.ARRAY_BUFFER,a,gl.STATIC_DRAW);return {b,count:a.length/3};}
+const objects=JSON.parse(document.getElementById("mesh-data").textContent).map(o=>({...o,p:buffer(o.positions),n:buffer(o.normals)}));
+function multiply(a,b){const c=new Float32Array(16);for(let j=0;j<4;j++)for(let i=0;i<4;i++)
+for(let k=0;k<4;k++)c[j*4+i]+=a[k*4+i]*b[j*4+k];return c;}
+function rotation(a,q){if(a.every(x=>x===0))return new Float32Array([1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]);
+const [x,y,z]=a,c=Math.cos(q),s=Math.sin(q),t=1-c;
+return new Float32Array([t*x*x+c,t*x*y+s*z,t*x*z-s*y,0,t*x*y-s*z,t*y*y+c,t*y*z+s*x,0,
+t*x*z+s*y,t*y*z-s*x,t*z*z+c,0,0,0,0,1]);}
+let yaw=-1.15,pitch=.22,zoom=6.0;
+function draw(){const d=Math.min(devicePixelRatio,2),w=Math.round(canvas.clientWidth*d),h=Math.round(canvas.clientHeight*d);
+if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}gl.viewport(0,0,w,h);
+gl.clearColor(.063,.094,.141,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);
+const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);
+const right=[-sy,cy,0],up=[-sp*cy,-sp*sy,cp],out=[cp*cy,cp*sy,sp];
+gl.uniformMatrix3fv(loc.view,false,new Float32Array([right[0],up[0],out[0],right[1],up[1],out[1],right[2],up[2],out[2]]));
+gl.uniform1f(loc.scale,zoom);gl.uniform1f(loc.aspect,w/h);
+const q=Number(document.getElementById("q").value),mode=document.getElementById("mode").value;
+document.getElementById("status").textContent=q.toFixed(4)+" rad / "+(q*180/Math.PI).toFixed(2)+"°";
+for(const o of objects){if(o.mode!==mode&&!(mode==="collision"&&o.mode==="custom"&&o.base))continue;
+if(o.base&&!document.getElementById("base").checked)continue;
+gl.uniformMatrix4fv(loc.model,false,multiply(o.transform,rotation(o.axis,q)));gl.uniform3fv(loc.color,o.color);
+for(const [location,b] of [[pos,o.p],[norm,o.n]]){gl.bindBuffer(gl.ARRAY_BUFFER,b.b);gl.enableVertexAttribArray(location);
+gl.vertexAttribPointer(location,3,gl.FLOAT,false,0,0);}gl.drawArrays(gl.TRIANGLES,0,o.p.count);}
+document.body.dataset.rendered="true";}
+for(const id of ["q","mode","base"])document.getElementById(id).addEventListener("input",draw);
+for(const [id,q] of [["closed",0],["small",.01]])document.getElementById(id).onclick=()=>{document.getElementById("q").value=q;draw();};
+document.getElementById("front").onclick=()=>{yaw=-Math.PI/2;pitch=0;draw();};
+document.getElementById("side").onclick=()=>{yaw=0;pitch=0;draw();};
+document.getElementById("reset").onclick=()=>{yaw=-1.15;pitch=.22;zoom=6;draw();};
+let drag=null;canvas.onpointerdown=e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId);};
+canvas.onpointermove=e=>{if(!drag)return;yaw-=(e.clientX-drag[0])*.008;pitch=Math.max(-1.5,Math.min(1.5,pitch+(e.clientY-drag[1])*.008));
+drag=[e.clientX,e.clientY];draw();};canvas.onpointerup=()=>{drag=null;};canvas.onpointercancel=()=>{drag=null;};
+canvas.addEventListener("wheel",e=>{e.preventDefault();zoom=Math.max(2,Math.min(25,zoom*Math.exp(-e.deltaY*.001)));draw();},{passive:false});
+addEventListener("resize",draw);draw();
+</script>
+</html>

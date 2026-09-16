@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "source": "meshes/custom/gripper_finger_tpu_26mm_uniform_width_raise_2mm.stl",
+  "source_sha256": "6e9cf1534a1a4153a59a2303c0c7f2e63afb1bc11936219ceb45a89a7955d62e",
+  "units_stl": "mm",
+  "operation": "Translate four contact-face corners along local -X; preserve all other vertices and topology",
+  "simulation_reduction_mm": 0.5,
+  "printing_reduction_mm": 0.8,
+  "simulation_plateau_x_mm": 25.796567916870117,
+  "printing_plateau_x_mm": 25.496567916870116,
+  "simulation_bounds_mm": [
+    [
+      -13.666926383972168,
+      -13.004961013793945,
+      27.593158721923828
+    ],
+    [
+      25.796567916870117,
+      12.995038986206055,
+      150.3880157470703
+    ]
+  ],
+  "printing_bounds_mm": [
+    [
+      -13.666926383972168,
+      -13.004961013793945,
+      27.593158721923828
+    ],
+    [
+      25.496567916870116,
+      12.995038986206055,
+      150.3880157470703
+    ]
+  ],
+  "print_vs_sim_surface_recess_mm": 0.3,
+  "padding_note": "Print surface is 0.3 mm below sim; adding a 1 mm pad projects 0.7 mm beyond sim per finger",
+  "files_sha256": {
+    "printing/gripper_finger_26mm_bump_minus_0p8mm_print.stl": "7e5dd49126d5cc7419bc558912a1671dc19de1794bf79a4c74257b8206eadfe4",
+    "simulation/gripper_finger_26mm_bump_minus_0p5mm_sim.stl": "f2a5ce8d4b52e30d183a6668bb10353178a426f7ccfa3c0da844575af862a0ef",
+    "simulation/gripper_l1_metal_collision.obj": "0d68d63ebafd5f0613c21110111c9cdcb694641fcd0740f37ffc1db8ce6c4780",
+    "simulation/gripper_l1_tpu_collision.obj": "5e5cf8cfe39eef71ffae19ec23afaff154bf057fff3075eca4c67304186a5fba",
+    "simulation/gripper_l1_visual.glb": "2321ce1d161f1cf011421fb26816203dff5834168c17fc93eb5f717a4bd2ab03",
+    "simulation/gripper_l2_metal_collision.obj": "be2f7e1d02ff6c887fc0fed248286aba0dcf2dbf964fc87eb6700c1ae399c63f",
+    "simulation/gripper_l2_tpu_collision.obj": "8fbe9983c4855e8c2dd89c54574a53edbfff28c742c9cb0e51263e6aef304368",
+    "simulation/gripper_l2_visual.glb": "1c0759d46308a6ff59f64406bad26176bd822e2b676bea5b7f87275eca2e4315"
+  }
+}

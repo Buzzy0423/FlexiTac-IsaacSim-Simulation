@@ -1,5 +1,16 @@
 # IsaacSim Tactile Environment for FlexiTac
 
+## Dexmate 本地开发入口
+
+本项目正在搭建 **Dexmate Vega-1U + 定制 26 mm 手指 + 官方 Vention 工作台** 场景。
+仿真导入及部分运行验证已完成，完整触觉环境仍在开发；最新进展统一维护在状态页。
+
+**继续工作：[当前状态](docs/STATUS.md) → [按任务选择文档](docs/README.md)。**
+启动方法见 [运行指南](docs/guides/runtime.md)，代码职责见 [项目结构](docs/architecture.md)。
+供后续代理读取的简短入口为 [AGENTS.md](AGENTS.md)。
+
+以下保留上游 FlexiTac／ALOHA 项目介绍和使用说明；Dexmate 使用独立环境与入口。
+
 **Authors:**  
 Binghao Huang¹, Yunzhu Li¹  
 ¹Columbia University
@@ -19,7 +30,6 @@ This repository contains tools for running FlexiTac in IsaacSim, including:
 
 - **trajectory replay with tactile visualization**
 - **a browser-based Viser interface for interactive control**
-
 
 ![Demo](isaacsim.gif)
 

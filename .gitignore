@@ -8,19 +8,38 @@
 **/*.dmp
 **/.thumbs
 
-# No USD files allowed in the repo
+# Generated USD is ignored; deliberately maintained scene assets may live under assets/.
 **/*.usd
 **/*.usda
 **/*.usdc
 **/*.usdz
+!Isaacsim_tactile_env/assets/**/*.usd
+!Isaacsim_tactile_env/assets/**/*.usda
+!Isaacsim_tactile_env/assets/**/*.usdc
+!Isaacsim_tactile_env/assets/**/*.usdz
 
 # Python
 .DS_Store
 **/*.egg-info/
 **/__pycache__/
 **/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/.coverage
+**/.coverage.*
+**/htmlcov/
 **/*.pyc
 **/*.pb
+
+# Machine-local environments, caches and credentials. Keep environment_dexmate.yml tracked.
+.venv/
+venv/
+.conda/
+.cache/
+.env
+.env.*
+!.env.example
+!.env.template
 
 # Docker/Singularity
 **/*.sif
@@ -64,8 +83,7 @@ _build
 # Teleop Recorded Dataset
 /datasets/
 
-# Tests
-tests/
+# Test source is versioned; generated reports belong in output/ or the caches above.
 
 # Docker history
 .isaac-lab-docker-history
