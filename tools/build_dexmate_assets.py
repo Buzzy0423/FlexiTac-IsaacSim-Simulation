@@ -51,7 +51,7 @@ def snapshot(package, source_stl, output):
     return root, custom, source_files
 
 
-def build_fingers(package, source_stl, custom):
+def build_fingers(package, source_stl, custom, *, distal_extension_mm=0.0):
     finger = trimesh.load_mesh(source_stl, process=True)
     # STL carries no unit declaration; its 26-unit width identifies this input as millimetres.
     if not np.isclose(finger.extents[1], 26.0, atol=1e-3) or not finger.is_watertight:
@@ -60,8 +60,10 @@ def build_fingers(package, source_stl, custom):
     mesh_dir = package / "robots/hands/dexs_gripper/meshes/visual"
     scenes = {i: trimesh.load_scene(mesh_dir / f"gripper_l{i}.glb", process=False) for i in (1, 2)}
     original, first_transform = geometry_in_link(scenes[1], TPU_NAMES[1])
-    # The replacement preserves the original TPU's Z interval and minimum X.
-    if not np.allclose(finger.bounds[:, 2], original.bounds[:, 2], atol=1e-6):
+    # Preserve the mounting frame; an explicit approved revision may extend the tip.
+    expected_z = original.bounds[:, 2].copy()
+    expected_z[1] += distal_extension_mm * 0.001
+    if not np.allclose(finger.bounds[:, 2], expected_z, atol=1e-6):
         raise ValueError("Replacement Z interval differs from the original finger frame")
     if not np.isclose(finger.bounds[0, 0], original.bounds[0, 0], atol=1e-6):
         raise ValueError("Replacement X origin differs from the original finger frame")

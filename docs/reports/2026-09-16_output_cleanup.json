@@ -1,0 +1,134 @@
+{
+  "date": "2026-09-16",
+  "scope": "Only ignored generated files under Isaacsim_tactile_env/output; original assets, maintained assets, recordings and numerical evidence retained",
+  "policy": "Remove generated import OBJ and USD/USDA exports; remove three byte-identical v2 wrist preview files whose v3 copies remain. Keep runtime URDF and source snapshots as provenance, not standalone reloadable scenes. Historical runs stay at their original paths.",
+  "before_bytes": 4087419405,
+  "removed_bytes": 3406307308,
+  "removed_files": 5205,
+  "after_bytes_including_deletion_ledger": 682457337,
+  "categories": {
+    "rebuildable_usd_export": 194,
+    "rebuildable_import_mesh": 5008,
+    "byte_identical_to_wrist_camera_review_20260916_v3": 3
+  },
+  "deletion_ledger": "Isaacsim_tactile_env/output/cleanup_20260916.json",
+  "deletion_ledger_sha256": "cdbe4440df029b35110a547b561b1f5513b5da46e07c8f252e1acb5f11d9b557",
+  "integrity": {
+    "retained_output_and_asset_files_sha256_checked": 2005,
+    "video_symlinks_preserved_and_resolved": 5
+  },
+  "runs": {
+    "dexmate_cpu_contact_fast_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_cpu_final_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_cpu_no_viewport_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_cpu_phys1_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_cpu_profile_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_cpu_threads16_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_cpu_threads8_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_episodes_20260915_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_grasp_20260915_v1": {
+      "removed_files": 138,
+      "removed_bytes": 302041330
+    },
+    "dexmate_parallel_1_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_parallel_2_20260916_v1": {
+      "removed_files": 272,
+      "removed_bytes": 156214488
+    },
+    "dexmate_parallel_2_20260916_v2": {
+      "removed_files": 272,
+      "removed_bytes": 156214488
+    },
+    "dexmate_parallel_4_20260916_v1": {
+      "removed_files": 544,
+      "removed_bytes": 312428976
+    },
+    "dexmate_perf_baseline_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_perf_optimized_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_perf_optimized_20260916_v2": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_perf_optimized_20260916_v3": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_physx_cpu_control_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_physx_gpu_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_physx_gpu_20260916_v2": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_pose_sweep_20260916_v1": {
+      "removed_files": 136,
+      "removed_bytes": 78107244
+    },
+    "dexmate_startup_shared_20260916_v1": {
+      "removed_files": 544,
+      "removed_bytes": 312428976
+    },
+    "dexmate_startup_shared_20260916_v2": {
+      "removed_files": 544,
+      "removed_bytes": 312428976
+    },
+    "dexmate_tactile_20260915_v3": {
+      "removed_files": 138,
+      "removed_bytes": 302017051
+    },
+    "wrist_camera_active_20260916_v1": {
+      "removed_files": 146,
+      "removed_bytes": 63087052
+    },
+    "wrist_camera_review_20260916_v2": {
+      "removed_files": 3,
+      "removed_bytes": 35448719
+    },
+    "wrist_camera_validation_20260916_v1": {
+      "removed_files": 146,
+      "removed_bytes": 63087052
+    },
+    "wrist_camera_validation_20260916_v2": {
+      "removed_files": 146,
+      "removed_bytes": 63087052
+    }
+  }
+}

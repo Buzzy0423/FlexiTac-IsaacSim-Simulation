@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "model": "EMEET SmartCam C960",
+  "identity_source": "/etc/udev/rules.d/99-dexmate-wrist-cams.rules",
+  "capture": {
+    "width": 1280,
+    "height": 720,
+    "fourcc": "MJPG",
+    "requested_fps": 30.0,
+    "buffer_count": 4,
+    "measured_fps_status": "Simultaneous 1280x720 capture measured 29.99 fps left / 29.93 fps right on 2026-09-16, using four buffers; host read timing, not hardware synchronization",
+    "rotation_degrees": 0,
+    "mirror": false,
+    "crop": null,
+    "controls": {
+      "auto_exposure": 3,
+      "white_balance_automatic": 1,
+      "power_line_frequency": 2,
+      "exposure_dynamic_framerate": 1
+    },
+    "controls_source": "Retain original device controls. One-buffer OpenCV capture lost frames; four buffers restored approximately 30 fps without exposure changes."
+  },
+  "cameras": {
+    "wrist_left": {
+      "device": "/dev/dexmate-wrist-left",
+      "serial": "A260401000123002",
+      "intrinsics": {
+        "status": "requires_calibration",
+        "image_size": [
+          1280,
+          720
+        ],
+        "camera_matrix": null,
+        "distortion_model": null,
+        "distortion_coefficients": null,
+        "source": null
+      },
+      "optical_pose_in_gripper": null
+    },
+    "wrist_right": {
+      "device": "/dev/dexmate-wrist-right",
+      "serial": "A260421000122337",
+      "intrinsics": {
+        "status": "requires_calibration",
+        "image_size": [
+          1280,
+          720
+        ],
+        "camera_matrix": null,
+        "distortion_model": null,
+        "distortion_coefficients": null,
+        "source": null
+      },
+      "optical_pose_in_gripper": null
+    }
+  },
+  "simulation_status": "Default Isaac Sim wrist cameras use manufacturer-spec nominal 640x360 pinhole optics and STL lens-front poses; real per-device calibration remains unknown."
+}

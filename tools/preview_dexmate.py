@@ -30,8 +30,9 @@ def origin(element):
 
 
 class Robot:
-    def __init__(self, path):
+    def __init__(self, path, asset_root=None):
         self.path = path
+        self.asset_root = Path(asset_root) if asset_root else path.parent
         self.root = ET.parse(path).getroot()
         self.geometry = {}
         for link in self.root.findall("link"):
@@ -40,7 +41,7 @@ class Robot:
                 spec = visual.find("geometry/mesh")
                 if spec is None:
                     continue
-                scene = trimesh.load_scene(path.parent / spec.get("filename"), process=False)
+                scene = trimesh.load_scene(self.asset_root / spec.get("filename"), process=False)
                 for node in scene.graph.nodes_geometry:
                     transform, name = scene.graph[node]
                     mesh = scene.geometry[name].copy()
@@ -53,7 +54,7 @@ class Robot:
     def collision_mesh(self, link, component):
         collision = self.root.find(f"link[@name='{link}']/collision[@name='{component}_collision']")
         spec = collision.find("geometry/mesh")
-        mesh = trimesh.load_mesh(self.path.parent / spec.get("filename"))
+        mesh = trimesh.load_mesh(self.asset_root / spec.get("filename"))
         mesh.apply_scale(np.fromstring(spec.get("scale", "1 1 1"), sep=" "))
         mesh.apply_transform(origin(collision.find("origin")))
         return mesh

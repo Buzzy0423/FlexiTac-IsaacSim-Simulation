@@ -1,0 +1,251 @@
+{
+  "scope": "Offline geometry; no maintained asset changes, physics or optical calibration",
+  "sources_sha256": {
+    "meshes/custom/camera_in_mount_frame_mm.stl": "6ffa104e7d0e8dc9aef22d78be05f270c8ae37fe3785cb9d17c29b323ec69e06",
+    "meshes/custom/dexmate_c960_base_camera_mount_skate_ramp_full_base_coverage_left_dual_limit_2mm_w16mm_tangent_YZ24deg.stl": "6577e6b72aef9c2866bbc6babe8ba4ad3b17d31a7ce2cee542f08f545cd0a6b1",
+    "upstream/robots/hands/dexs_gripper/meshes/visual/gripper_base.glb": "d14faa532f23e8bd5cd88d928b7aa8744e1e9b48c003368cd070cd2c5f05077f",
+    "vega_1u_gripper_flexitac.urdf": "0407431428b25692c9155f4c6a0e77d9c76070a79b5d5841f87306829048fda3"
+  },
+  "source_units": "millimetres; scale 0.001 to metres",
+  "cad_to_gripper_base_matrix": [
+    [
+      -3.673205103346574e-06,
+      3.6732051033217936e-06,
+      -0.9999999999865075,
+      0.0
+    ],
+    [
+      0.9999999999932537,
+      1.3492435731251315e-11,
+      -3.6732051033217936e-06,
+      0.0
+    ],
+    [
+      -0.0,
+      -0.9999999999932537,
+      -3.673205103346574e-06,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "removed_official_components_cad_bounds_mm": [
+    [
+      [
+        -71.9130477768907,
+        3.946629819410113,
+        -17.299885427951313
+      ],
+      [
+        -50.56299572884457,
+        41.14174300202017,
+        16.899988061612223
+      ]
+    ],
+    [
+      [
+        -96.14728556097573,
+        -18.903155447089397,
+        -41.33494218014145
+      ],
+      [
+        9.20063671309257,
+        49.56584929242203,
+        40.942234023487515
+      ]
+    ]
+  ],
+  "parts": {
+    "custom_camera": {
+      "bounds_mm": [
+        [
+          -102.23451232910156,
+          1.4470428228378296,
+          -62.2014045715332
+        ],
+        [
+          -60.052001953125,
+          35.57423400878906,
+          61.7985954284668
+        ]
+      ],
+      "extents_mm": [
+        42.18251037597656,
+        34.12719118595123,
+        124.0
+      ],
+      "watertight": true,
+      "triangles": 1400,
+      "gripper_base_bounds_mm": [
+        [
+          -61.79827836484902,
+          -102.23468422893609,
+          -35.574405909388624
+        ],
+        [
+          62.20183802545853,
+          -60.0519642968059,
+          -1.4468694423879103
+        ]
+      ]
+    },
+    "custom_mount": {
+      "bounds_mm": [
+        [
+          -73.20120239257812,
+          12.47920036315918,
+          -41.33494186401367
+        ],
+        [
+          9.200637817382812,
+          49.565853118896484,
+          40.94223403930664
+        ]
+      ],
+      "extents_mm": [
+        82.40184020996094,
+        37.086652755737305,
+        82.27717590332031
+      ],
+      "watertight": true,
+      "triangles": 15998,
+      "gripper_base_bounds_mm": [
+        [
+          -40.94216868327513,
+          -73.20128246235157,
+          -49.56600160873034
+        ],
+        [
+          41.335082334752656,
+          9.200787813040701,
+          -12.479115539954943
+        ]
+      ]
+    }
+  },
+  "old_bracket_vertex_match": {
+    "within_0p01mm": 7112,
+    "old_vertices": 9891,
+    "method": "Nearest new vertex, in original CAD frame; supports unchanged installation interface"
+  },
+  "left_right_official_camera_origins_identical": true,
+  "camera_mount_sampled_penetration": {
+    "camera_in_mount": {
+      "samples_in_other_bbox": 747,
+      "inside_over_0p01mm": 0,
+      "maximum_sampled_penetration_mm": 4.189529226675416e-15,
+      "method": "Vertices and triangle centres; solid angle and nearest triangle, tolerance 0.01 mm"
+    },
+    "mount_in_camera": {
+      "samples_in_other_bbox": 1224,
+      "inside_over_0p01mm": 0,
+      "maximum_sampled_penetration_mm": 2.220446049250313e-15,
+      "method": "Vertices and triangle centres; solid angle and nearest triangle, tolerance 0.01 mm"
+    }
+  },
+  "camera_mount_surface_distance_mm": 0.0,
+  "fixed_hardware_surface_distances_mm": {
+    "custom_camera": 16.05199225121883,
+    "custom_mount": 0.0
+  },
+  "finger_sweep": [
+    {
+      "q_rad": 0.0,
+      "custom_camera_surface_distance_mm": 80.65368902458839,
+      "custom_mount_surface_distance_mm": 40.503981404711624
+    },
+    {
+      "q_rad": 0.0490875,
+      "custom_camera_surface_distance_mm": 80.64132047558219,
+      "custom_mount_surface_distance_mm": 40.533881634170726
+    },
+    {
+      "q_rad": 0.098175,
+      "custom_camera_surface_distance_mm": 80.6408673722581,
+      "custom_mount_surface_distance_mm": 40.51987793086074
+    },
+    {
+      "q_rad": 0.1472625,
+      "custom_camera_surface_distance_mm": 80.65232949784433,
+      "custom_mount_surface_distance_mm": 40.502046440692425
+    },
+    {
+      "q_rad": 0.19635,
+      "custom_camera_surface_distance_mm": 80.64112913992568,
+      "custom_mount_surface_distance_mm": 40.52944984087429
+    },
+    {
+      "q_rad": 0.2454375,
+      "custom_camera_surface_distance_mm": 80.64004957826327,
+      "custom_mount_surface_distance_mm": 40.52147662620457
+    },
+    {
+      "q_rad": 0.294525,
+      "custom_camera_surface_distance_mm": 80.65088591151056,
+      "custom_mount_surface_distance_mm": 40.501017761322956
+    },
+    {
+      "q_rad": 0.3436125,
+      "custom_camera_surface_distance_mm": 80.64161445484933,
+      "custom_mount_surface_distance_mm": 40.52579855388075
+    },
+    {
+      "q_rad": 0.3927,
+      "custom_camera_surface_distance_mm": 80.63987497740422,
+      "custom_mount_surface_distance_mm": 40.52326589639584
+    },
+    {
+      "q_rad": 0.4417875,
+      "custom_camera_surface_distance_mm": 80.65005116639323,
+      "custom_mount_surface_distance_mm": 40.500122987660504
+    },
+    {
+      "q_rad": 0.490875,
+      "custom_camera_surface_distance_mm": 80.64312838418938,
+      "custom_mount_surface_distance_mm": 40.52222370641258
+    },
+    {
+      "q_rad": 0.5399625,
+      "custom_camera_surface_distance_mm": 80.64070776153623,
+      "custom_mount_surface_distance_mm": 40.52781632765111
+    },
+    {
+      "q_rad": 0.58905,
+      "custom_camera_surface_distance_mm": 80.65020117126781,
+      "custom_mount_surface_distance_mm": 40.50195964908213
+    },
+    {
+      "q_rad": 0.6381375,
+      "custom_camera_surface_distance_mm": 80.64376195936319,
+      "custom_mount_surface_distance_mm": 40.521338430694215
+    },
+    {
+      "q_rad": 0.687225,
+      "custom_camera_surface_distance_mm": 80.64078403356721,
+      "custom_mount_surface_distance_mm": 40.530623056562675
+    },
+    {
+      "q_rad": 0.7363125,
+      "custom_camera_surface_distance_mm": 80.64971973788506,
+      "custom_mount_surface_distance_mm": 40.50215392943353
+    },
+    {
+      "q_rad": 0.7854,
+      "custom_camera_surface_distance_mm": 80.64593021022367,
+      "custom_mount_surface_distance_mm": 40.518919049123994
+    }
+  ],
+  "distance_limitations": "Triangle-surface distances on visual meshes (coal BVH); <=0 indicates surface contact/intersection. No solid-containment proof, fastener fit, deformation, PhysX, continuous-motion or whole-arm clearance test.",
+  "output_directory": "Isaacsim_tactile_env/output/wrist_camera_review_20260916_v3",
+  "artifacts_sha256": {
+    "review.html": "83a0a35cc63baaf920522ffaf08610657d767e530eadc06e80e76b2f42e16cc1",
+    "custom_assembly.glb": "dfe45a77c09d1b96280aaf91f8fdc870a8228a4ba9ad5ef4e56aff30cbc4cf3d",
+    "comparison.png": "be4f920187dc0cab5127e9caa1d65fdff103e7280f2d0fcc92629527af532f50",
+    "custom_views.png": "f2c59826d484f0284cbb48c6171bef98f607d8e9a6a382a916e9e86e4a7aeda2",
+    "review.json": "8312d5551f22d4a583e52bc7f9941b05a04f7766e11c06020fcbd9cb5715f6eb"
+  }
+}

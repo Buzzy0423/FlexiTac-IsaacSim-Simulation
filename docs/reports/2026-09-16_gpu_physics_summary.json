@@ -1,0 +1,1179 @@
+{
+  "scope": "Single environment, GPU dynamics with CPU readback versus CPU dynamics; CCD off for both",
+  "runs": [
+    {
+      "output": "Isaacsim_tactile_env/output/dexmate_physx_cpu_control_20260916_v1",
+      "summary": {
+        "status": "passed",
+        "workers": 1,
+        "episodes_per_worker": 2,
+        "worker_startup": [
+          {
+            "worker": 0,
+            "monotonic": 1106287.001688101,
+            "startup_seconds": 8.583338872063905,
+            "initial_reset_seconds": 1.37473325105384,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "process_to_ready_seconds": 10.05087401298806
+          }
+        ],
+        "startup_mode": "sequential loading, synchronized parallel collection",
+        "cpu_threads_per_worker": 8,
+        "physics_threads_per_worker": 8,
+        "physics_mode": "cpu",
+        "ccd_requested": false,
+        "scope": "Independent processes, one shared GPU, identical 120 Hz reference replay; five RGB streams",
+        "worker_pids": [
+          3753756
+        ],
+        "startup_to_gate_seconds": 10.10613631713204,
+        "physx_errors": {
+          "worker_00": []
+        },
+        "episode_count": 2,
+        "passed_count": 2,
+        "physical_passed_count": 2,
+        "full_reference_complete": true,
+        "all_numeric_samples_identical": true,
+        "collection_wall_seconds": 63.139821141026914,
+        "successful_episodes_per_minute": 1.9005438696440422,
+        "collection_seconds_per_successful_episode": 31.569910570513457,
+        "aggregate_simulated_seconds_per_wall_second": 0.5701631608932127,
+        "worker_core_seconds": [
+          58.29010311886668
+        ],
+        "start_skew_seconds": 0.0,
+        "total_wall_seconds": 75.87033281312324,
+        "exit_codes": [
+          0
+        ],
+        "peak_gpu_memory_mib": 3694,
+        "mean_collection_gpu_utilization_percent": 29.606060606060606
+      },
+      "summary_sha256": "7754393464d62bc4596625c48ccda39b626bd647060028488f31c44c4f1c8ebc",
+      "benchmark_sha256": "2cf4f2ebc27146ca6d942ae9deb411322134d0f03e139da438d8427da9af041e",
+      "runtime": {
+        "physics_device": "cpu",
+        "physics_mode_requested": "cpu",
+        "gpu_dynamics_enabled": false,
+        "broadphase": "MBP",
+        "ccd_enabled": false,
+        "solver_type": "TGS",
+        "suppress_readback": false,
+        "gpu_found_lost_aggregate_pairs_capacity": 1024,
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": true,
+        "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 8,
+          "/persistent/physics/numThreads": 8,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+        }
+      },
+      "timings": {
+        "startup": {
+          "seconds": 8.583338872063905,
+          "calls": 1,
+          "mean_ms": 8583.338872063905
+        },
+        "reset": {
+          "seconds": 2.632972226245329,
+          "calls": 2,
+          "mean_ms": 1316.4861131226644
+        },
+        "env_step": {
+          "seconds": 58.29010311886668,
+          "calls": 4320,
+          "mean_ms": 13.493079425663584
+        },
+        "record_append": {
+          "seconds": 1.6804408831521869,
+          "calls": 4320,
+          "mean_ms": 0.3889909451741173
+        },
+        "record_finish": {
+          "seconds": 1.5854432759806514,
+          "calls": 2,
+          "mean_ms": 792.7216379903257
+        }
+      },
+      "env_timings": {
+        "tactile": {
+          "seconds": 2.6352579237427562,
+          "calls": 4322,
+          "mean_ms": 0.6097311253453855
+        },
+        "physics_only": {
+          "seconds": 16.423204480670393,
+          "calls": 3240,
+          "mean_ms": 5.068890271811849
+        },
+        "world_step": {
+          "seconds": 47.74429631140083,
+          "calls": 4320,
+          "mean_ms": 11.051920442453897
+        },
+        "observe": {
+          "seconds": 3.3048692734446377,
+          "calls": 4320,
+          "mean_ms": 0.7650160355195921
+        },
+        "physics_and_render": {
+          "seconds": 31.307039582869038,
+          "calls": 1080,
+          "mean_ms": 28.987999613767627
+        },
+        "capture": {
+          "seconds": 6.626536662923172,
+          "calls": 1080,
+          "mean_ms": 6.1356820952992335
+        }
+      },
+      "render_flush_histogram": {
+        "0": 1082
+      },
+      "episodes": [
+        {
+          "episode_id": 0,
+          "episode": {
+            "kind": "Dynamic object, gravity and friction only; left-arm position drives; no object attachment",
+            "checks": {
+              "lift_50mm_within_10mm": true,
+              "hold_2_seconds": true,
+              "slip_under_8mm": true,
+              "both_fingers_loaded_during_hold": true,
+              "both_pads_active_during_hold": true,
+              "released_contact_and_tactile": true,
+              "returned_to_table": true,
+              "returned_near_start_xy": true,
+              "released_object_stable": true,
+              "no_unexpected_robot_contacts": true
+            },
+            "passed": true,
+            "object_baseline_m": [
+              0.3493499159812927,
+              0.2200000286102295,
+              0.8410000205039978
+            ],
+            "hold_lift_range_m": [
+              0.05008745193481445,
+              0.05011641979217529
+            ],
+            "max_relative_slip_m": 4.878668152743886e-05,
+            "hold_finger_contact_fraction": [
+              1.0,
+              1.0
+            ],
+            "unexpected_robot_contacts": {},
+            "frame_count": 540,
+            "sync_checks": {
+              "physics_step_sequence": true,
+              "internal_state_120hz": true,
+              "recorded_state_30hz": true,
+              "camera_every_four_steps": true,
+              "camera_state_alignment": true,
+              "saved_camera_state_alignment": true,
+              "camera_render_clock_alignment": true,
+              "camera_render_references_advance": true,
+              "four_camera_clocks_match": true,
+              "encoded_frame_counts_match": true
+            },
+            "camera_frame_counts": {
+              "head_left": 540,
+              "head_right": 540,
+              "wrist_left": 540,
+              "wrist_right": 540,
+              "observer": 540
+            },
+            "max_render_clock_error_s": 0.0,
+            "api_success": true,
+            "validation_frame_count": 2160,
+            "validation_hz": 120,
+            "final_physics_state": {
+              "step": 2160,
+              "time_s": 18.000000938773155,
+              "terminated": true,
+              "truncated": false,
+              "task_success": true
+            },
+            "grasp_config": {
+              "dimensions_m": [
+                0.04,
+                0.03,
+                0.08
+              ],
+              "mass_kg": 0.05,
+              "position_m": [
+                0.34935,
+                0.22,
+                0.841000001497
+              ],
+              "gripper_base_position_m": [
+                0.2,
+                0.22,
+                0.854500001497
+              ],
+              "static_friction": 0.8,
+              "dynamic_friction": 0.6,
+              "lift_m": 0.05,
+              "hold_s": 2.0,
+              "orientation_wxyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yaw_deg": 0.0,
+              "variation": {
+                "name": "baseline",
+                "offset_xy_m": [
+                  0.0,
+                  0.0
+                ],
+                "yaw_deg": 0.0
+              }
+            },
+            "data_contract": {
+              "version": 2,
+              "physics_hz": 120,
+              "signal_hz": 30,
+              "camera_hz": 30,
+              "video_codec": "H.264 CRF18 yuv420p (lossy)",
+              "action": "Position targets in action_names order, radians except Lift in metres; mimic followers excluded",
+              "alignment": "trajectory row contains state after applying that row's action for one physics step",
+              "sampling": "Every fourth physics step at the camera timestamp; no averaging or interpolation",
+              "action_scope": "Sampled 120 Hz command, not a command held for the full 1/30 s recording interval",
+              "video_index": "Zero-based video frame maps to camera_index.state_row; reset images stored separately",
+              "camera_parameters": "Nominal, not physically calibrated",
+              "camera_to_world": "USD camera frame: +X right, +Y up, -Z forward; matrices use column vectors"
+            }
+          },
+          "reference_complete": true,
+          "full_rate_comparison": {
+            "joint_position": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.0
+            },
+            "joint_velocity": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.0
+            },
+            "object_position_m": {
+              "shape": [
+                2160,
+                3
+              ],
+              "max_abs_difference": 0.0
+            },
+            "object_orientation_wxyz": {
+              "shape": [
+                2160,
+                4
+              ],
+              "max_abs_difference": 0.0
+            },
+            "gripper_pose": {
+              "shape": [
+                2160,
+                4,
+                4
+              ],
+              "max_abs_difference": 0.0
+            },
+            "tactile": {
+              "shape": [
+                2160,
+                4,
+                12,
+                32
+              ],
+              "max_abs_difference": 0.0
+            }
+          }
+        },
+        {
+          "episode_id": 1,
+          "episode": {
+            "kind": "Dynamic object, gravity and friction only; left-arm position drives; no object attachment",
+            "checks": {
+              "lift_50mm_within_10mm": true,
+              "hold_2_seconds": true,
+              "slip_under_8mm": true,
+              "both_fingers_loaded_during_hold": true,
+              "both_pads_active_during_hold": true,
+              "released_contact_and_tactile": true,
+              "returned_to_table": true,
+              "returned_near_start_xy": true,
+              "released_object_stable": true,
+              "no_unexpected_robot_contacts": true
+            },
+            "passed": true,
+            "object_baseline_m": [
+              0.3493499159812927,
+              0.2200000286102295,
+              0.8410000205039978
+            ],
+            "hold_lift_range_m": [
+              0.05008745193481445,
+              0.05011641979217529
+            ],
+            "max_relative_slip_m": 4.878668152743886e-05,
+            "hold_finger_contact_fraction": [
+              1.0,
+              1.0
+            ],
+            "unexpected_robot_contacts": {},
+            "frame_count": 540,
+            "sync_checks": {
+              "physics_step_sequence": true,
+              "internal_state_120hz": true,
+              "recorded_state_30hz": true,
+              "camera_every_four_steps": true,
+              "camera_state_alignment": true,
+              "saved_camera_state_alignment": true,
+              "camera_render_clock_alignment": true,
+              "camera_render_references_advance": true,
+              "four_camera_clocks_match": true,
+              "encoded_frame_counts_match": true
+            },
+            "camera_frame_counts": {
+              "head_left": 540,
+              "head_right": 540,
+              "wrist_left": 540,
+              "wrist_right": 540,
+              "observer": 540
+            },
+            "max_render_clock_error_s": 0.0,
+            "api_success": true,
+            "validation_frame_count": 2160,
+            "validation_hz": 120,
+            "final_physics_state": {
+              "step": 2160,
+              "time_s": 18.000000938773155,
+              "terminated": true,
+              "truncated": false,
+              "task_success": true
+            },
+            "grasp_config": {
+              "dimensions_m": [
+                0.04,
+                0.03,
+                0.08
+              ],
+              "mass_kg": 0.05,
+              "position_m": [
+                0.34935,
+                0.22,
+                0.841000001497
+              ],
+              "gripper_base_position_m": [
+                0.2,
+                0.22,
+                0.854500001497
+              ],
+              "static_friction": 0.8,
+              "dynamic_friction": 0.6,
+              "lift_m": 0.05,
+              "hold_s": 2.0,
+              "orientation_wxyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yaw_deg": 0.0,
+              "variation": {
+                "name": "baseline",
+                "offset_xy_m": [
+                  0.0,
+                  0.0
+                ],
+                "yaw_deg": 0.0
+              }
+            },
+            "data_contract": {
+              "version": 2,
+              "physics_hz": 120,
+              "signal_hz": 30,
+              "camera_hz": 30,
+              "video_codec": "H.264 CRF18 yuv420p (lossy)",
+              "action": "Position targets in action_names order, radians except Lift in metres; mimic followers excluded",
+              "alignment": "trajectory row contains state after applying that row's action for one physics step",
+              "sampling": "Every fourth physics step at the camera timestamp; no averaging or interpolation",
+              "action_scope": "Sampled 120 Hz command, not a command held for the full 1/30 s recording interval",
+              "video_index": "Zero-based video frame maps to camera_index.state_row; reset images stored separately",
+              "camera_parameters": "Nominal, not physically calibrated",
+              "camera_to_world": "USD camera frame: +X right, +Y up, -Z forward; matrices use column vectors"
+            }
+          },
+          "reference_complete": true,
+          "full_rate_comparison": {
+            "joint_position": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.0
+            },
+            "joint_velocity": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.0
+            },
+            "object_position_m": {
+              "shape": [
+                2160,
+                3
+              ],
+              "max_abs_difference": 0.0
+            },
+            "object_orientation_wxyz": {
+              "shape": [
+                2160,
+                4
+              ],
+              "max_abs_difference": 0.0
+            },
+            "gripper_pose": {
+              "shape": [
+                2160,
+                4,
+                4
+              ],
+              "max_abs_difference": 0.0
+            },
+            "tactile": {
+              "shape": [
+                2160,
+                4,
+                12,
+                32
+              ],
+              "max_abs_difference": 0.0
+            }
+          }
+        }
+      ],
+      "saved_30hz_repeated_numeric_exact": {
+        "joint_position": true,
+        "joint_velocity": true,
+        "object_position_m": true,
+        "object_orientation_wxyz": true,
+        "gripper_pose": true,
+        "tactile": true
+      },
+      "observer_video_checks": [
+        {
+          "episode": "episode_000",
+          "frame_0_to_345_mean_pixel_change": 8.047070503234863
+        },
+        {
+          "episode": "episode_001",
+          "frame_0_to_345_mean_pixel_change": 7.672479629516602
+        }
+      ],
+      "offline_audit": {
+        "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+        "readable_count": 2,
+        "records": [
+          {
+            "episode": "episode_000",
+            "variation": {
+              "name": "baseline",
+              "offset_xy_m": [
+                0.0,
+                0.0
+              ],
+              "yaw_deg": 0.0
+            },
+            "physics_passed": true,
+            "readable": true,
+            "video_frames": 540,
+            "window_camera_frames": 60,
+            "window_signal_frames": 60,
+            "decoded_frame_index": 345,
+            "decoded_rgb_shapes": {
+              "observation.images.head_left": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.head_right": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.left_wrist": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.right_wrist": [
+                480,
+                640,
+                3
+              ]
+            },
+            "sha256": {
+              "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+              "camera_index.npz": "c57a0c6336ed9b39a5cd188ae6c4629ed80f5e3b96d72dd07ac3e2432be062d8",
+              "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+            },
+            "left_pad_mean_abs_difference_from_baseline": 0.0
+          },
+          {
+            "episode": "episode_001",
+            "variation": {
+              "name": "baseline",
+              "offset_xy_m": [
+                0.0,
+                0.0
+              ],
+              "yaw_deg": 0.0
+            },
+            "physics_passed": true,
+            "readable": true,
+            "video_frames": 540,
+            "window_camera_frames": 60,
+            "window_signal_frames": 60,
+            "decoded_frame_index": 345,
+            "decoded_rgb_shapes": {
+              "observation.images.head_left": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.head_right": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.left_wrist": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.right_wrist": [
+                480,
+                640,
+                3
+              ]
+            },
+            "sha256": {
+              "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+              "camera_index.npz": "844b153fd974984eb57bad7d56b0366aca9417714dd035f5dd15fe5656c22e08",
+              "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+            },
+            "left_pad_mean_abs_difference_from_baseline": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "output": "Isaacsim_tactile_env/output/dexmate_physx_gpu_20260916_v2",
+      "summary": {
+        "status": "passed",
+        "workers": 1,
+        "episodes_per_worker": 2,
+        "worker_startup": [
+          {
+            "worker": 0,
+            "monotonic": 1106027.913516509,
+            "startup_seconds": 8.659317383775488,
+            "initial_reset_seconds": 4.994290400994942,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "process_to_ready_seconds": 13.751284839119762
+          }
+        ],
+        "startup_mode": "sequential loading, synchronized parallel collection",
+        "cpu_threads_per_worker": 8,
+        "physics_threads_per_worker": 8,
+        "physics_mode": "gpu",
+        "ccd_requested": false,
+        "scope": "Independent processes, one shared GPU, identical 120 Hz reference replay; five RGB streams",
+        "worker_pids": [
+          3749442
+        ],
+        "startup_to_gate_seconds": 14.147749684983864,
+        "episode_count": 2,
+        "passed_count": 2,
+        "full_reference_complete": true,
+        "all_numeric_samples_identical": false,
+        "collection_wall_seconds": 226.90395343094133,
+        "successful_episodes_per_minute": 0.5288581277915999,
+        "collection_seconds_per_successful_episode": 113.45197671547066,
+        "aggregate_simulated_seconds_per_wall_second": 0.15865743833747997,
+        "worker_core_seconds": [
+          218.4773428805638
+        ],
+        "start_skew_seconds": 0.0,
+        "physx_errors": {
+          "worker_00": []
+        },
+        "total_wall_seconds": 243.61161638097838,
+        "exit_codes": [
+          0
+        ],
+        "peak_gpu_memory_mib": 4076,
+        "mean_collection_gpu_utilization_percent": 80.88157894736842
+      },
+      "summary_sha256": "8d17062b35c3334d45ab9ce5c6d683a7ded5c5aa8f0d9ce407269349b799a29e",
+      "benchmark_sha256": "2c6becf02960c75af6a255c73e62e462177ff051fb27052442af3b3ada134b91",
+      "runtime": {
+        "physics_device": "cpu",
+        "physics_mode_requested": "gpu",
+        "gpu_dynamics_enabled": true,
+        "broadphase": "GPU",
+        "ccd_enabled": false,
+        "solver_type": "TGS",
+        "suppress_readback": false,
+        "gpu_found_lost_aggregate_pairs_capacity": 4096,
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": true,
+        "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 8,
+          "/persistent/physics/numThreads": 8,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+        }
+      },
+      "timings": {
+        "startup": {
+          "seconds": 8.659317383775488,
+          "calls": 1,
+          "mean_ms": 8659.317383775488
+        },
+        "reset": {
+          "seconds": 9.811125606065616,
+          "calls": 2,
+          "mean_ms": 4905.562803032808
+        },
+        "env_step": {
+          "seconds": 218.4773428805638,
+          "calls": 4320,
+          "mean_ms": 50.57345900013051
+        },
+        "record_append": {
+          "seconds": 1.7129142608027905,
+          "calls": 4320,
+          "mean_ms": 0.3965079307413867
+        },
+        "record_finish": {
+          "seconds": 1.5773740748409182,
+          "calls": 2,
+          "mean_ms": 788.6870374204591
+        }
+      },
+      "env_timings": {
+        "tactile": {
+          "seconds": 2.825452958000824,
+          "calls": 4322,
+          "mean_ms": 0.6537373803796446
+        },
+        "physics_only": {
+          "seconds": 137.0296822139062,
+          "calls": 3240,
+          "mean_ms": 42.293111794415495
+        },
+        "world_step": {
+          "seconds": 207.64688348257914,
+          "calls": 4320,
+          "mean_ms": 48.06640821355999
+        },
+        "observe": {
+          "seconds": 3.5479432907886803,
+          "calls": 4320,
+          "mean_ms": 0.8212831691640464
+        },
+        "physics_and_render": {
+          "seconds": 70.60175235196948,
+          "calls": 1080,
+          "mean_ms": 65.37199291849026
+        },
+        "capture": {
+          "seconds": 6.625460249371827,
+          "calls": 1080,
+          "mean_ms": 6.134685416085024
+        }
+      },
+      "render_flush_histogram": {
+        "0": 1082
+      },
+      "episodes": [
+        {
+          "episode_id": 0,
+          "episode": {
+            "kind": "Dynamic object, gravity and friction only; left-arm position drives; no object attachment",
+            "checks": {
+              "lift_50mm_within_10mm": true,
+              "hold_2_seconds": true,
+              "slip_under_8mm": true,
+              "both_fingers_loaded_during_hold": true,
+              "both_pads_active_during_hold": true,
+              "released_contact_and_tactile": true,
+              "returned_to_table": true,
+              "returned_near_start_xy": true,
+              "released_object_stable": true,
+              "no_unexpected_robot_contacts": true
+            },
+            "passed": true,
+            "object_baseline_m": [
+              0.34934988617897034,
+              0.22000014781951904,
+              0.8410000205039978
+            ],
+            "hold_lift_range_m": [
+              0.049920618534088135,
+              0.04996007680892944
+            ],
+            "max_relative_slip_m": 7.905689030765621e-05,
+            "hold_finger_contact_fraction": [
+              1.0,
+              1.0
+            ],
+            "unexpected_robot_contacts": {},
+            "frame_count": 540,
+            "sync_checks": {
+              "physics_step_sequence": true,
+              "internal_state_120hz": true,
+              "recorded_state_30hz": true,
+              "camera_every_four_steps": true,
+              "camera_state_alignment": true,
+              "saved_camera_state_alignment": true,
+              "camera_render_clock_alignment": true,
+              "camera_render_references_advance": true,
+              "four_camera_clocks_match": true,
+              "encoded_frame_counts_match": true
+            },
+            "camera_frame_counts": {
+              "head_left": 540,
+              "head_right": 540,
+              "wrist_left": 540,
+              "wrist_right": 540,
+              "observer": 540
+            },
+            "max_render_clock_error_s": 0.0,
+            "api_success": true,
+            "validation_frame_count": 2160,
+            "validation_hz": 120,
+            "final_physics_state": {
+              "step": 2160,
+              "time_s": 18.000000938773155,
+              "terminated": true,
+              "truncated": false,
+              "task_success": true
+            },
+            "grasp_config": {
+              "dimensions_m": [
+                0.04,
+                0.03,
+                0.08
+              ],
+              "mass_kg": 0.05,
+              "position_m": [
+                0.34935,
+                0.22,
+                0.841000001497
+              ],
+              "gripper_base_position_m": [
+                0.2,
+                0.22,
+                0.854500001497
+              ],
+              "static_friction": 0.8,
+              "dynamic_friction": 0.6,
+              "lift_m": 0.05,
+              "hold_s": 2.0,
+              "orientation_wxyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yaw_deg": 0.0,
+              "variation": {
+                "name": "baseline",
+                "offset_xy_m": [
+                  0.0,
+                  0.0
+                ],
+                "yaw_deg": 0.0
+              }
+            },
+            "data_contract": {
+              "version": 2,
+              "physics_hz": 120,
+              "signal_hz": 30,
+              "camera_hz": 30,
+              "video_codec": "H.264 CRF18 yuv420p (lossy)",
+              "action": "Position targets in action_names order, radians except Lift in metres; mimic followers excluded",
+              "alignment": "trajectory row contains state after applying that row's action for one physics step",
+              "sampling": "Every fourth physics step at the camera timestamp; no averaging or interpolation",
+              "action_scope": "Sampled 120 Hz command, not a command held for the full 1/30 s recording interval",
+              "video_index": "Zero-based video frame maps to camera_index.state_row; reset images stored separately",
+              "camera_parameters": "Nominal, not physically calibrated",
+              "camera_to_world": "USD camera frame: +X right, +Y up, -Z forward; matrices use column vectors"
+            }
+          },
+          "reference_complete": true,
+          "full_rate_comparison": {
+            "joint_position": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.005344748497009277
+            },
+            "joint_velocity": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 1.0107154846191406
+            },
+            "object_position_m": {
+              "shape": [
+                2160,
+                3
+              ],
+              "max_abs_difference": 0.00029049813747406006
+            },
+            "object_orientation_wxyz": {
+              "shape": [
+                2160,
+                4
+              ],
+              "max_abs_difference": 0.0024300720542669296
+            },
+            "gripper_pose": {
+              "shape": [
+                2160,
+                4,
+                4
+              ],
+              "max_abs_difference": 0.0007942170920856029
+            },
+            "tactile": {
+              "shape": [
+                2160,
+                4,
+                12,
+                32
+              ],
+              "max_abs_difference": 0.08851480484008789
+            }
+          }
+        },
+        {
+          "episode_id": 1,
+          "episode": {
+            "kind": "Dynamic object, gravity and friction only; left-arm position drives; no object attachment",
+            "checks": {
+              "lift_50mm_within_10mm": true,
+              "hold_2_seconds": true,
+              "slip_under_8mm": true,
+              "both_fingers_loaded_during_hold": true,
+              "both_pads_active_during_hold": true,
+              "released_contact_and_tactile": true,
+              "returned_to_table": true,
+              "returned_near_start_xy": true,
+              "released_object_stable": true,
+              "no_unexpected_robot_contacts": true
+            },
+            "passed": true,
+            "object_baseline_m": [
+              0.34934988617897034,
+              0.22000014781951904,
+              0.8410000205039978
+            ],
+            "hold_lift_range_m": [
+              0.049920618534088135,
+              0.04996007680892944
+            ],
+            "max_relative_slip_m": 7.905689030765621e-05,
+            "hold_finger_contact_fraction": [
+              1.0,
+              1.0
+            ],
+            "unexpected_robot_contacts": {},
+            "frame_count": 540,
+            "sync_checks": {
+              "physics_step_sequence": true,
+              "internal_state_120hz": true,
+              "recorded_state_30hz": true,
+              "camera_every_four_steps": true,
+              "camera_state_alignment": true,
+              "saved_camera_state_alignment": true,
+              "camera_render_clock_alignment": true,
+              "camera_render_references_advance": true,
+              "four_camera_clocks_match": true,
+              "encoded_frame_counts_match": true
+            },
+            "camera_frame_counts": {
+              "head_left": 540,
+              "head_right": 540,
+              "wrist_left": 540,
+              "wrist_right": 540,
+              "observer": 540
+            },
+            "max_render_clock_error_s": 0.0,
+            "api_success": true,
+            "validation_frame_count": 2160,
+            "validation_hz": 120,
+            "final_physics_state": {
+              "step": 2160,
+              "time_s": 18.000000938773155,
+              "terminated": true,
+              "truncated": false,
+              "task_success": true
+            },
+            "grasp_config": {
+              "dimensions_m": [
+                0.04,
+                0.03,
+                0.08
+              ],
+              "mass_kg": 0.05,
+              "position_m": [
+                0.34935,
+                0.22,
+                0.841000001497
+              ],
+              "gripper_base_position_m": [
+                0.2,
+                0.22,
+                0.854500001497
+              ],
+              "static_friction": 0.8,
+              "dynamic_friction": 0.6,
+              "lift_m": 0.05,
+              "hold_s": 2.0,
+              "orientation_wxyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yaw_deg": 0.0,
+              "variation": {
+                "name": "baseline",
+                "offset_xy_m": [
+                  0.0,
+                  0.0
+                ],
+                "yaw_deg": 0.0
+              }
+            },
+            "data_contract": {
+              "version": 2,
+              "physics_hz": 120,
+              "signal_hz": 30,
+              "camera_hz": 30,
+              "video_codec": "H.264 CRF18 yuv420p (lossy)",
+              "action": "Position targets in action_names order, radians except Lift in metres; mimic followers excluded",
+              "alignment": "trajectory row contains state after applying that row's action for one physics step",
+              "sampling": "Every fourth physics step at the camera timestamp; no averaging or interpolation",
+              "action_scope": "Sampled 120 Hz command, not a command held for the full 1/30 s recording interval",
+              "video_index": "Zero-based video frame maps to camera_index.state_row; reset images stored separately",
+              "camera_parameters": "Nominal, not physically calibrated",
+              "camera_to_world": "USD camera frame: +X right, +Y up, -Z forward; matrices use column vectors"
+            }
+          },
+          "reference_complete": true,
+          "full_rate_comparison": {
+            "joint_position": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.005344748497009277
+            },
+            "joint_velocity": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 1.0107154846191406
+            },
+            "object_position_m": {
+              "shape": [
+                2160,
+                3
+              ],
+              "max_abs_difference": 0.00029049813747406006
+            },
+            "object_orientation_wxyz": {
+              "shape": [
+                2160,
+                4
+              ],
+              "max_abs_difference": 0.0024300720542669296
+            },
+            "gripper_pose": {
+              "shape": [
+                2160,
+                4,
+                4
+              ],
+              "max_abs_difference": 0.0007942170920856029
+            },
+            "tactile": {
+              "shape": [
+                2160,
+                4,
+                12,
+                32
+              ],
+              "max_abs_difference": 0.08851480484008789
+            }
+          }
+        }
+      ],
+      "saved_30hz_repeated_numeric_exact": {
+        "joint_position": true,
+        "joint_velocity": true,
+        "object_position_m": true,
+        "object_orientation_wxyz": true,
+        "gripper_pose": true,
+        "tactile": true
+      },
+      "observer_video_checks": [
+        {
+          "episode": "episode_000",
+          "frame_0_to_345_mean_pixel_change": 8.090805053710938
+        },
+        {
+          "episode": "episode_001",
+          "frame_0_to_345_mean_pixel_change": 7.737934112548828
+        }
+      ],
+      "offline_audit": {
+        "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+        "readable_count": 2,
+        "records": [
+          {
+            "episode": "episode_000",
+            "variation": {
+              "name": "baseline",
+              "offset_xy_m": [
+                0.0,
+                0.0
+              ],
+              "yaw_deg": 0.0
+            },
+            "physics_passed": true,
+            "readable": true,
+            "video_frames": 540,
+            "window_camera_frames": 60,
+            "window_signal_frames": 60,
+            "decoded_frame_index": 345,
+            "decoded_rgb_shapes": {
+              "observation.images.head_left": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.head_right": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.left_wrist": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.right_wrist": [
+                480,
+                640,
+                3
+              ]
+            },
+            "sha256": {
+              "trajectory.npz": "e8251c76995b40336e5b026766716592d716c902e04e5f1f791c674c60493c94",
+              "camera_index.npz": "3bdf32e9f6776ead874ba03ab7f4dd718ae320ee0b3870b4606e956a3e4046e0",
+              "episode_report.json": "47fe568d009ed78bf021f476104c45511afae2c2a939db589fbd469c996c8e99"
+            },
+            "left_pad_mean_abs_difference_from_baseline": 0.0
+          },
+          {
+            "episode": "episode_001",
+            "variation": {
+              "name": "baseline",
+              "offset_xy_m": [
+                0.0,
+                0.0
+              ],
+              "yaw_deg": 0.0
+            },
+            "physics_passed": true,
+            "readable": true,
+            "video_frames": 540,
+            "window_camera_frames": 60,
+            "window_signal_frames": 60,
+            "decoded_frame_index": 345,
+            "decoded_rgb_shapes": {
+              "observation.images.head_left": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.head_right": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.left_wrist": [
+                480,
+                640,
+                3
+              ],
+              "observation.images.right_wrist": [
+                480,
+                640,
+                3
+              ]
+            },
+            "sha256": {
+              "trajectory.npz": "e8251c76995b40336e5b026766716592d716c902e04e5f1f791c674c60493c94",
+              "camera_index.npz": "8b6078b49c0bd238ea6e5b21f67a7127d3ae37b6695a68fdb414c02f072f9944",
+              "episode_report.json": "47fe568d009ed78bf021f476104c45511afae2c2a939db589fbd469c996c8e99"
+            },
+            "left_pad_mean_abs_difference_from_baseline": 0.0
+          }
+        ]
+      }
+    }
+  ],
+  "gpu_collection_time_ratio_to_cpu": 3.5936743140931067,
+  "invalid_initial_trial": {
+    "output": "Isaacsim_tactile_env/output/dexmate_physx_gpu_20260916_v1",
+    "status": "failed",
+    "stdout_sha256": "56959f4913a713d6cba866b64d76d8cf205e60a3cce286649b7def108dfe3669",
+    "errors": [
+      "2026-09-16T17:41:20Z [8,136ms] [Error] [omni.physx.plugin] PhysX error: The application needs to increase PxGpuDynamicsMemoryConfig::foundLostAggregatePairsCapacity to 1313, otherwise, the simulation will miss interactions, FILE /builds/omniverse/physics/physx/source/gpubroadphase/src/PxgAABBManager.cpp, LINE 1273",
+      "2026-09-16T17:41:21Z [8,789ms] [Error] [omni.physx.plugin] PhysX error: The application needs to increase PxGpuDynamicsMemoryConfig::foundLostAggregatePairsCapacity to 1313, otherwise, the simulation will miss interactions, FILE /builds/omniverse/physics/physx/source/gpubroadphase/src/PxgAABBManager.cpp, LINE 1273"
+    ]
+  },
+  "source_sha256": {
+    "Isaacsim_tactile_env/dexmate_env.py": "fb96dd846bd18d5b50ba61c3281f506e855b4516193d05f315cc0a91a56623c4",
+    "tools/validate_dexmate_scene.py": "6c22720d14ad40dc5b12ce6a062fe8abb309f312cca910001be91f4a13547e34",
+    "tools/benchmark_dexmate_cpu.py": "a455255b4265b78602044761b6291549280d7706b45c5160fb706d76c501c813",
+    "tools/benchmark_dexmate_parallel.py": "dfb32ffac290d84b19312fc5c69e64e4836c8102ae7abb0bd48bca40dd648ddd",
+    "tests/test_dexmate_parallel.py": "029e0a548e86b6328c8cd3abe8d77baad711b2da4804846ab9881cba7b0ca100"
+  }
+}

@@ -1,0 +1,1279 @@
+{
+  "scope": "Sequential full-reference GPU replays with cProfile, followed by two normal collection episodes without cProfile; unchanged sensor/physics rates and camera resolution.",
+  "benchmarks": {
+    "profile": {
+      "path": "Isaacsim_tactile_env/output/dexmate_cpu_profile_20260916_v1",
+      "timings": {
+        "startup": {
+          "seconds": 8.548005505930632,
+          "calls": 1,
+          "mean_ms": 8548.005505930632
+        },
+        "reset": {
+          "seconds": 4.529623104026541,
+          "calls": 1,
+          "mean_ms": 4529.623104026541
+        },
+        "env_step": {
+          "seconds": 62.60100579750724,
+          "calls": 2160,
+          "mean_ms": 28.981947128475575
+        },
+        "record_append": {
+          "seconds": 0.8167239231988788,
+          "calls": 2160,
+          "mean_ms": 0.37811292740688834
+        },
+        "record_finish": {
+          "seconds": 0.772478898987174,
+          "calls": 1,
+          "mean_ms": 772.478898987174
+        }
+      },
+      "runtime": {
+        "physics_device": "cpu",
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": false,
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 32,
+          "/persistent/physics/numThreads": 8,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 32
+        }
+      },
+      "env_timings": {
+        "tactile": {
+          "seconds": 1.6469965232536197,
+          "calls": 2161,
+          "mean_ms": 0.7621455452353632
+        },
+        "physics_only": {
+          "seconds": 28.537387245334685,
+          "calls": 1620,
+          "mean_ms": 17.615671139095486
+        },
+        "world_step": {
+          "seconds": 56.695678383111954,
+          "calls": 2160,
+          "mean_ms": 26.24799925144072
+        },
+        "observe": {
+          "seconds": 2.04432001686655,
+          "calls": 2160,
+          "mean_ms": 0.9464444522530323
+        },
+        "physics_and_render": {
+          "seconds": 28.147731056902558,
+          "calls": 540,
+          "mean_ms": 52.12542788315289
+        },
+        "capture": {
+          "seconds": 3.468754041707143,
+          "calls": 540,
+          "mean_ms": 6.423618595753969
+        }
+      },
+      "full_rate_comparison": {
+        "joint_position": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "joint_velocity": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_position_m": {
+          "shape": [
+            2160,
+            3
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_orientation_wxyz": {
+          "shape": [
+            2160,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "gripper_pose": {
+          "shape": [
+            2160,
+            4,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "tactile": {
+          "shape": [
+            2160,
+            4,
+            12,
+            32
+          ],
+          "max_abs_difference": 0.0
+        }
+      },
+      "contacts_exactly_equal": true,
+      "profile_physics_and_contacts": [
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:154:record_contact_phase",
+          "calls": 16639,
+          "self_seconds": 3.1401190480000003,
+          "inclusive_seconds": 29.155835927000002
+        },
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:124:on_contacts",
+          "calls": 2160,
+          "self_seconds": 0.30020049800000004,
+          "inclusive_seconds": 29.476841003
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.simulate>",
+          "calls": 1620,
+          "self_seconds": 0.21132487300000002,
+          "inclusive_seconds": 0.21132487300000002
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.fetch_results>",
+          "calls": 1620,
+          "self_seconds": 5.48749208,
+          "inclusive_seconds": 28.237340125000003
+        }
+      ],
+      "sha256": {
+        "benchmark.json": "6604f79a1d9ad3eb5db0b443fa967d98e44204ffab501b71f11a934b160fad33",
+        "scene_setup.json": "e782100a03f9cd4870ae52e718cd6aabe1d91ad7b3ab75a2d820fb73e49e6c34",
+        "step_profile.pstats": "483b9a425366e46bfc0b90c1fb5e09881a30f5336e4cc7e45eab2014f4928bd3",
+        "episode_000/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_000/camera_index.npz": "7ff591d9dacc6fce307d216586f900fcf3b75396dfd22e392458808cacb5bf84",
+        "episode_000/episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+      }
+    },
+    "contact_fast": {
+      "path": "Isaacsim_tactile_env/output/dexmate_cpu_contact_fast_20260916_v1",
+      "timings": {
+        "startup": {
+          "seconds": 8.544346491107717,
+          "calls": 1,
+          "mean_ms": 8544.346491107717
+        },
+        "reset": {
+          "seconds": 4.511940141906962,
+          "calls": 1,
+          "mean_ms": 4511.940141906962
+        },
+        "env_step": {
+          "seconds": 35.54718770971522,
+          "calls": 2160,
+          "mean_ms": 16.45703134709038
+        },
+        "record_append": {
+          "seconds": 0.83839823724702,
+          "calls": 2160,
+          "mean_ms": 0.3881473320588056
+        },
+        "record_finish": {
+          "seconds": 0.774265045998618,
+          "calls": 1,
+          "mean_ms": 774.265045998618
+        }
+      },
+      "runtime": {
+        "physics_device": "cpu",
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": false,
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 32,
+          "/persistent/physics/numThreads": 8,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 32
+        }
+      },
+      "env_timings": {
+        "tactile": {
+          "seconds": 1.6155187161639333,
+          "calls": 2161,
+          "mean_ms": 0.7475792300619775
+        },
+        "physics_only": {
+          "seconds": 8.50424467260018,
+          "calls": 1620,
+          "mean_ms": 5.24953374851863
+        },
+        "world_step": {
+          "seconds": 29.628291842294857,
+          "calls": 2160,
+          "mean_ms": 13.716801778840212
+        },
+        "observe": {
+          "seconds": 2.029129897709936,
+          "calls": 2160,
+          "mean_ms": 0.9394119896805259
+        },
+        "physics_and_render": {
+          "seconds": 21.11349347792566,
+          "calls": 540,
+          "mean_ms": 39.099061996158625
+        },
+        "capture": {
+          "seconds": 3.4974129723850638,
+          "calls": 540,
+          "mean_ms": 6.47669068960197
+        }
+      },
+      "full_rate_comparison": {
+        "joint_position": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "joint_velocity": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_position_m": {
+          "shape": [
+            2160,
+            3
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_orientation_wxyz": {
+          "shape": [
+            2160,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "gripper_pose": {
+          "shape": [
+            2160,
+            4,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "tactile": {
+          "shape": [
+            2160,
+            4,
+            12,
+            32
+          ],
+          "max_abs_difference": 0.0
+        }
+      },
+      "contacts_exactly_equal": true,
+      "profile_physics_and_contacts": [
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:154:record_contact_phase",
+          "calls": 16639,
+          "self_seconds": 2.589381741,
+          "inclusive_seconds": 2.604474986
+        },
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:124:on_contacts",
+          "calls": 2160,
+          "self_seconds": 0.400670293,
+          "inclusive_seconds": 3.024710035
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.simulate>",
+          "calls": 1620,
+          "self_seconds": 0.208628642,
+          "inclusive_seconds": 0.208628642
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.fetch_results>",
+          "calls": 1620,
+          "self_seconds": 5.335016815,
+          "inclusive_seconds": 8.208967898000001
+        }
+      ],
+      "sha256": {
+        "benchmark.json": "4cfe18e194fa57302e79d982bac20e65c77ce5d247a0aad3de52203ac51df9d9",
+        "scene_setup.json": "e0499033b17dd7547a115b9e3cc1a810e6c3ae802d6958df95855efc0260f1e5",
+        "step_profile.pstats": "e24694e5a8ebbbc90c334c5b974b7d0aa935dd4cf258fc322c7f755fc0954a62",
+        "episode_000/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_000/camera_index.npz": "9a793681a7aeeab262c72446e40812f014fb61a9cb012fecc626c07843ae5884",
+        "episode_000/episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+      }
+    },
+    "threads8": {
+      "path": "Isaacsim_tactile_env/output/dexmate_cpu_threads8_20260916_v1",
+      "timings": {
+        "startup": {
+          "seconds": 8.500514811137691,
+          "calls": 1,
+          "mean_ms": 8500.514811137691
+        },
+        "reset": {
+          "seconds": 4.50187885388732,
+          "calls": 1,
+          "mean_ms": 4501.87885388732
+        },
+        "env_step": {
+          "seconds": 35.19743394921534,
+          "calls": 2160,
+          "mean_ms": 16.295108309821916
+        },
+        "record_append": {
+          "seconds": 0.8105408868286759,
+          "calls": 2160,
+          "mean_ms": 0.3752504105688314
+        },
+        "record_finish": {
+          "seconds": 0.7751764440909028,
+          "calls": 1,
+          "mean_ms": 775.1764440909028
+        }
+      },
+      "runtime": {
+        "physics_device": "cpu",
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": false,
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 8,
+          "/persistent/physics/numThreads": 8,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+        }
+      },
+      "env_timings": {
+        "tactile": {
+          "seconds": 1.600187991047278,
+          "calls": 2161,
+          "mean_ms": 0.7404849565234974
+        },
+        "physics_only": {
+          "seconds": 8.38111674389802,
+          "calls": 1620,
+          "mean_ms": 5.173528854258037
+        },
+        "world_step": {
+          "seconds": 29.395835984731093,
+          "calls": 2160,
+          "mean_ms": 13.609183326264395
+        },
+        "observe": {
+          "seconds": 1.9601597234141082,
+          "calls": 2160,
+          "mean_ms": 0.9074813534324575
+        },
+        "physics_and_render": {
+          "seconds": 21.004884102847427,
+          "calls": 540,
+          "mean_ms": 38.89793352379153
+        },
+        "capture": {
+          "seconds": 3.45505486195907,
+          "calls": 540,
+          "mean_ms": 6.398249744368648
+        }
+      },
+      "full_rate_comparison": {
+        "joint_position": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "joint_velocity": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_position_m": {
+          "shape": [
+            2160,
+            3
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_orientation_wxyz": {
+          "shape": [
+            2160,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "gripper_pose": {
+          "shape": [
+            2160,
+            4,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "tactile": {
+          "shape": [
+            2160,
+            4,
+            12,
+            32
+          ],
+          "max_abs_difference": 0.0
+        }
+      },
+      "contacts_exactly_equal": true,
+      "profile_physics_and_contacts": [
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:154:record_contact_phase",
+          "calls": 16639,
+          "self_seconds": 2.670889614,
+          "inclusive_seconds": 2.6857159430000004
+        },
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:124:on_contacts",
+          "calls": 2160,
+          "self_seconds": 0.39611218200000003,
+          "inclusive_seconds": 3.1018381980000003
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.simulate>",
+          "calls": 1620,
+          "self_seconds": 0.19814451100000002,
+          "inclusive_seconds": 0.19814451100000002
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.fetch_results>",
+          "calls": 1620,
+          "self_seconds": 5.200201473,
+          "inclusive_seconds": 8.098969425
+        }
+      ],
+      "sha256": {
+        "benchmark.json": "346079e4dc7284ef7321469b2d667d807318d5bbacbbeb8d578c0d4b7d891d34",
+        "scene_setup.json": "5497fd0abbae220ed186888259fd16c0d35767ac3f27544ef710d1141e40552a",
+        "step_profile.pstats": "3eeece60fd852bbcda3db71bd38aceb3b379012d8043f1d6cc64094021684c3c",
+        "episode_000/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_000/camera_index.npz": "9075fcf4a359d92531d995a23d8874f1ddbb4f0146a643fc813d844a614c9862",
+        "episode_000/episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+      }
+    },
+    "threads16": {
+      "path": "Isaacsim_tactile_env/output/dexmate_cpu_threads16_20260916_v1",
+      "timings": {
+        "startup": {
+          "seconds": 8.340440951986238,
+          "calls": 1,
+          "mean_ms": 8340.440951986238
+        },
+        "reset": {
+          "seconds": 4.519165140809491,
+          "calls": 1,
+          "mean_ms": 4519.165140809491
+        },
+        "env_step": {
+          "seconds": 35.22424439457245,
+          "calls": 2160,
+          "mean_ms": 16.307520553042803
+        },
+        "record_append": {
+          "seconds": 0.8275986092630774,
+          "calls": 2160,
+          "mean_ms": 0.3831475042884617
+        },
+        "record_finish": {
+          "seconds": 0.7789494160097092,
+          "calls": 1,
+          "mean_ms": 778.9494160097092
+        }
+      },
+      "runtime": {
+        "physics_device": "cpu",
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": false,
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 16,
+          "/persistent/physics/numThreads": 8,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 16
+        }
+      },
+      "env_timings": {
+        "tactile": {
+          "seconds": 1.6001658872701228,
+          "calls": 2161,
+          "mean_ms": 0.7404747280287473
+        },
+        "physics_only": {
+          "seconds": 8.358850470744073,
+          "calls": 1620,
+          "mean_ms": 5.159784241200045
+        },
+        "world_step": {
+          "seconds": 29.30361950583756,
+          "calls": 2160,
+          "mean_ms": 13.566490511961833
+        },
+        "observe": {
+          "seconds": 2.0077389338985085,
+          "calls": 2160,
+          "mean_ms": 0.929508765693754
+        },
+        "physics_and_render": {
+          "seconds": 20.934493309352547,
+          "calls": 540,
+          "mean_ms": 38.76758020250472
+        },
+        "capture": {
+          "seconds": 3.5217597815208137,
+          "calls": 540,
+          "mean_ms": 6.521777373186692
+        }
+      },
+      "full_rate_comparison": {
+        "joint_position": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "joint_velocity": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_position_m": {
+          "shape": [
+            2160,
+            3
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_orientation_wxyz": {
+          "shape": [
+            2160,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "gripper_pose": {
+          "shape": [
+            2160,
+            4,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "tactile": {
+          "shape": [
+            2160,
+            4,
+            12,
+            32
+          ],
+          "max_abs_difference": 0.0
+        }
+      },
+      "contacts_exactly_equal": true,
+      "profile_physics_and_contacts": [
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:154:record_contact_phase",
+          "calls": 16639,
+          "self_seconds": 2.600280384,
+          "inclusive_seconds": 2.615078125
+        },
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:124:on_contacts",
+          "calls": 2160,
+          "self_seconds": 0.39171086200000005,
+          "inclusive_seconds": 3.0261820520000002
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.simulate>",
+          "calls": 1620,
+          "self_seconds": 0.20336426100000002,
+          "inclusive_seconds": 0.20336426100000002
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.fetch_results>",
+          "calls": 1620,
+          "self_seconds": 5.204813071,
+          "inclusive_seconds": 8.066117269000001
+        }
+      ],
+      "sha256": {
+        "benchmark.json": "fa6aebbcbd8600480ec45a013d58643c6a39b2ff68dfd5c204b381c8179fe676",
+        "scene_setup.json": "ca86ec9709fb075aa5714b623d686e6e1b986e6ddd8cf11b73d7a1861aaf1209",
+        "step_profile.pstats": "464e4a5fd9f734eba58aa7686b132a4d68ba967a83137986340335fcaded5965",
+        "episode_000/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_000/camera_index.npz": "9a793681a7aeeab262c72446e40812f014fb61a9cb012fecc626c07843ae5884",
+        "episode_000/episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+      }
+    },
+    "phys1": {
+      "path": "Isaacsim_tactile_env/output/dexmate_cpu_phys1_20260916_v1",
+      "timings": {
+        "startup": {
+          "seconds": 8.63191682798788,
+          "calls": 1,
+          "mean_ms": 8631.91682798788
+        },
+        "reset": {
+          "seconds": 4.534876020159572,
+          "calls": 1,
+          "mean_ms": 4534.876020159572
+        },
+        "env_step": {
+          "seconds": 36.112847574288025,
+          "calls": 2160,
+          "mean_ms": 16.718910914022235
+        },
+        "record_append": {
+          "seconds": 0.8178115892224014,
+          "calls": 2160,
+          "mean_ms": 0.3786164764918525
+        },
+        "record_finish": {
+          "seconds": 0.7871763128787279,
+          "calls": 1,
+          "mean_ms": 787.1763128787279
+        }
+      },
+      "runtime": {
+        "physics_device": "cpu",
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": false,
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 32,
+          "/persistent/physics/numThreads": 1,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 32
+        }
+      },
+      "env_timings": {
+        "tactile": {
+          "seconds": 1.6158424576278776,
+          "calls": 2161,
+          "mean_ms": 0.7477290410124375
+        },
+        "physics_only": {
+          "seconds": 8.98984309262596,
+          "calls": 1620,
+          "mean_ms": 5.5492858596456545
+        },
+        "world_step": {
+          "seconds": 30.23703954112716,
+          "calls": 2160,
+          "mean_ms": 13.9986294171885
+        },
+        "observe": {
+          "seconds": 2.0030106517951936,
+          "calls": 2160,
+          "mean_ms": 0.9273197462014785
+        },
+        "physics_and_render": {
+          "seconds": 21.236823428655043,
+          "calls": 540,
+          "mean_ms": 39.32745079380564
+        },
+        "capture": {
+          "seconds": 3.4844731010962278,
+          "calls": 540,
+          "mean_ms": 6.452727964993015
+        }
+      },
+      "full_rate_comparison": {
+        "joint_position": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "joint_velocity": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_position_m": {
+          "shape": [
+            2160,
+            3
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_orientation_wxyz": {
+          "shape": [
+            2160,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "gripper_pose": {
+          "shape": [
+            2160,
+            4,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "tactile": {
+          "shape": [
+            2160,
+            4,
+            12,
+            32
+          ],
+          "max_abs_difference": 0.0
+        }
+      },
+      "contacts_exactly_equal": true,
+      "profile_physics_and_contacts": [
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:154:record_contact_phase",
+          "calls": 16639,
+          "self_seconds": 2.609102827,
+          "inclusive_seconds": 2.623889016
+        },
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:124:on_contacts",
+          "calls": 2160,
+          "self_seconds": 0.401638109,
+          "inclusive_seconds": 3.0450059950000004
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.simulate>",
+          "calls": 1620,
+          "self_seconds": 0.20847727400000002,
+          "inclusive_seconds": 0.20847727400000002
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.fetch_results>",
+          "calls": 1620,
+          "self_seconds": 5.800182545,
+          "inclusive_seconds": 8.695334567
+        }
+      ],
+      "sha256": {
+        "benchmark.json": "80a973d831e0932d758bef93bb81325df82009256f178f08f864295149029d67",
+        "scene_setup.json": "555d23c57b737fac44e42e3a29373f3974c7b203476b00f7f86014c1ce17f1dd",
+        "step_profile.pstats": "d814ee9f0640a6a424e227ad5aa67a43fcf03f61932de0af24904a358b588f44",
+        "episode_000/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_000/camera_index.npz": "9a793681a7aeeab262c72446e40812f014fb61a9cb012fecc626c07843ae5884",
+        "episode_000/episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+      }
+    },
+    "no_viewport": {
+      "path": "Isaacsim_tactile_env/output/dexmate_cpu_no_viewport_20260916_v1",
+      "timings": {
+        "startup": {
+          "seconds": 8.52428354579024,
+          "calls": 1,
+          "mean_ms": 8524.28354579024
+        },
+        "reset": {
+          "seconds": 3.2981048829387873,
+          "calls": 1,
+          "mean_ms": 3298.1048829387873
+        },
+        "env_step": {
+          "seconds": 30.344317820388824,
+          "calls": 2160,
+          "mean_ms": 14.048295287217048
+        },
+        "record_append": {
+          "seconds": 0.8323676935397089,
+          "calls": 2160,
+          "mean_ms": 0.3853554136757911
+        },
+        "record_finish": {
+          "seconds": 0.7744302039500326,
+          "calls": 1,
+          "mean_ms": 774.4302039500326
+        }
+      },
+      "runtime": {
+        "physics_device": "cpu",
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": true,
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 32,
+          "/persistent/physics/numThreads": 8,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 32
+        }
+      },
+      "env_timings": {
+        "tactile": {
+          "seconds": 1.5772896755952388,
+          "calls": 2161,
+          "mean_ms": 0.7298887901875237
+        },
+        "physics_only": {
+          "seconds": 8.448273904854432,
+          "calls": 1620,
+          "mean_ms": 5.214983891885452
+        },
+        "world_step": {
+          "seconds": 24.49599522841163,
+          "calls": 2160,
+          "mean_ms": 11.34073853167205
+        },
+        "observe": {
+          "seconds": 1.9799118514638394,
+          "calls": 2160,
+          "mean_ms": 0.9166258571591849
+        },
+        "physics_and_render": {
+          "seconds": 16.037192955613136,
+          "calls": 540,
+          "mean_ms": 29.69850547335766
+        },
+        "capture": {
+          "seconds": 3.4851040991488844,
+          "calls": 540,
+          "mean_ms": 6.4538964799053415
+        }
+      },
+      "full_rate_comparison": {
+        "joint_position": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "joint_velocity": {
+          "shape": [
+            2160,
+            23
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_position_m": {
+          "shape": [
+            2160,
+            3
+          ],
+          "max_abs_difference": 0.0
+        },
+        "object_orientation_wxyz": {
+          "shape": [
+            2160,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "gripper_pose": {
+          "shape": [
+            2160,
+            4,
+            4
+          ],
+          "max_abs_difference": 0.0
+        },
+        "tactile": {
+          "shape": [
+            2160,
+            4,
+            12,
+            32
+          ],
+          "max_abs_difference": 0.0
+        }
+      },
+      "contacts_exactly_equal": true,
+      "profile_physics_and_contacts": [
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:124:on_contacts",
+          "calls": 2160,
+          "self_seconds": 0.39601163500000003,
+          "inclusive_seconds": 2.9848660270000003
+        },
+        {
+          "function": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/tools/dexmate_collision.py:154:record_contact_phase",
+          "calls": 16639,
+          "self_seconds": 2.553850403,
+          "inclusive_seconds": 2.5689670870000003
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.simulate>",
+          "calls": 1620,
+          "self_seconds": 0.208131684,
+          "inclusive_seconds": 0.208131684
+        },
+        {
+          "function": "~:0:<built-in method omni.physx.bindings._physx.fetch_results>",
+          "calls": 1620,
+          "self_seconds": 5.3118910150000005,
+          "inclusive_seconds": 8.152167224000001
+        }
+      ],
+      "sha256": {
+        "benchmark.json": "e7716d3fc2c7f3eae0f23c4fc702aed39f91dc5b55505830d4a272a31a78408e",
+        "scene_setup.json": "ca71ba8dd71cee446f699ec3a66b86026194c6289532d6c3fb9d4db4f7756b7a",
+        "step_profile.pstats": "c1e6d98efde803de6790209bac7ecade1deb64cdfced4723d68e658afb05fcfd",
+        "episode_000/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_000/camera_index.npz": "7ff591d9dacc6fce307d216586f900fcf3b75396dfd22e392458808cacb5bf84",
+        "episode_000/episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+      }
+    }
+  },
+  "final": {
+    "path": "Isaacsim_tactile_env/output/dexmate_cpu_final_20260916_v1",
+    "performance": {
+      "wall_clock_sections": {
+        "startup": {
+          "seconds": 8.535242606885731,
+          "calls": 1,
+          "mean_ms": 8535.242606885731
+        },
+        "reset": {
+          "seconds": 2.8225294889416546,
+          "calls": 2,
+          "mean_ms": 1411.2647444708273
+        },
+        "writer_setup": {
+          "seconds": 0.2723954780958593,
+          "calls": 2,
+          "mean_ms": 136.19773904792964
+        },
+        "motion_plan": {
+          "seconds": 12.867836232995614,
+          "calls": 2,
+          "mean_ms": 6433.918116497807
+        },
+        "env_step": {
+          "seconds": 59.51001713145524,
+          "calls": 4320,
+          "mean_ms": 13.775466928577602
+        },
+        "record_append": {
+          "seconds": 1.6567749900277704,
+          "calls": 4320,
+          "mean_ms": 0.383512729173095
+        },
+        "record_finish": {
+          "seconds": 1.5886783190071583,
+          "calls": 2,
+          "mean_ms": 794.3391595035791
+        },
+        "preview": {
+          "seconds": 11.975299278041348,
+          "calls": 1,
+          "mean_ms": 11975.299278041348
+        }
+      },
+      "note": "Nested timings are inclusive; do not sum parent and child sections",
+      "runtime": {
+        "physics_device": "cpu",
+        "backend": "numpy",
+        "render_mode": "camera",
+        "diagnostic_cameras": false,
+        "zero_delay": true,
+        "disable_viewport_updates": true,
+        "thread_settings": {
+          "/plugins/carb.tasking.plugin/threadCount": 32,
+          "/persistent/physics/numThreads": 8,
+          "/plugins/omni.tbb.globalcontrol/maxThreadCount": 32
+        }
+      },
+      "env_sections": {
+        "tactile": {
+          "seconds": 2.7337549298536032,
+          "calls": 4322,
+          "mean_ms": 0.6325208074626569
+        },
+        "physics_only": {
+          "seconds": 16.831156752537936,
+          "calls": 3240,
+          "mean_ms": 5.194801466832696
+        },
+        "world_step": {
+          "seconds": 48.789131245343015,
+          "calls": 4320,
+          "mean_ms": 11.293780380866439
+        },
+        "observe": {
+          "seconds": 3.4248399033676833,
+          "calls": 4320,
+          "mean_ms": 0.7927870146684453
+        },
+        "physics_and_render": {
+          "seconds": 31.942980180727318,
+          "calls": 1080,
+          "mean_ms": 29.57683350067344
+        },
+        "capture": {
+          "seconds": 6.6750411603134125,
+          "calls": 1080,
+          "mean_ms": 6.180593666956863
+        }
+      },
+      "render_flush_histogram": {
+        "0": 1082
+      }
+    },
+    "passed_count": 2,
+    "reset_checks_passed": true,
+    "motion_plan_cache_hits": 1,
+    "contacts_exactly_equal": true,
+    "episodes": {
+      "episode_000": {
+        "full_rate_comparison": {
+          "source": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/Isaacsim_tactile_env/output/dexmate_pose_sweep_20260916_v1/episode_000/trajectory.npz",
+          "scope": "All 120 Hz internal observations, including non-rendered steps",
+          "comparisons": {
+            "joint_position": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.0
+            },
+            "joint_velocity": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.0
+            },
+            "object_position_m": {
+              "shape": [
+                2160,
+                3
+              ],
+              "max_abs_difference": 0.0
+            },
+            "object_orientation_wxyz": {
+              "shape": [
+                2160,
+                4
+              ],
+              "max_abs_difference": 0.0
+            },
+            "gripper_pose": {
+              "shape": [
+                2160,
+                4,
+                4
+              ],
+              "max_abs_difference": 0.0
+            },
+            "tactile": {
+              "shape": [
+                2160,
+                4,
+                12,
+                32
+              ],
+              "max_abs_difference": 0.0
+            }
+          }
+        },
+        "observer_motion_mean_pixel_difference": 8.050688194444444,
+        "sha256": {
+          "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+          "camera_index.npz": "161c4cf20eb6d1387b62a0521c6fd23a3c5550e9168ff73291b52c4aa023f8f1",
+          "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f",
+          "physics_reference_comparison.json": "555426e8c76cd31819c8c559aff17752c7d04d22a63b2d9ec631f8e90ebce87c"
+        }
+      },
+      "episode_001": {
+        "full_rate_comparison": {
+          "source": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/Isaacsim_tactile_env/output/dexmate_pose_sweep_20260916_v1/episode_000/trajectory.npz",
+          "scope": "All 120 Hz internal observations, including non-rendered steps",
+          "comparisons": {
+            "joint_position": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.0
+            },
+            "joint_velocity": {
+              "shape": [
+                2160,
+                23
+              ],
+              "max_abs_difference": 0.0
+            },
+            "object_position_m": {
+              "shape": [
+                2160,
+                3
+              ],
+              "max_abs_difference": 0.0
+            },
+            "object_orientation_wxyz": {
+              "shape": [
+                2160,
+                4
+              ],
+              "max_abs_difference": 0.0
+            },
+            "gripper_pose": {
+              "shape": [
+                2160,
+                4,
+                4
+              ],
+              "max_abs_difference": 0.0
+            },
+            "tactile": {
+              "shape": [
+                2160,
+                4,
+                12,
+                32
+              ],
+              "max_abs_difference": 0.0
+            }
+          }
+        },
+        "observer_motion_mean_pixel_difference": 7.692809027777778,
+        "sha256": {
+          "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+          "camera_index.npz": "fdd80d1bafa1930400ecd5ab93e3d321866ccb4660913f439d633cc00575c13b",
+          "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f",
+          "physics_reference_comparison.json": "555426e8c76cd31819c8c559aff17752c7d04d22a63b2d9ec631f8e90ebce87c"
+        }
+      }
+    },
+    "offline_audit": {
+      "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+      "readable_count": 2,
+      "records": [
+        {
+          "episode": "episode_000",
+          "variation": {
+            "name": "baseline",
+            "offset_xy_m": [
+              0.0,
+              0.0
+            ],
+            "yaw_deg": 0.0
+          },
+          "physics_passed": true,
+          "readable": true,
+          "video_frames": 540,
+          "window_camera_frames": 60,
+          "window_signal_frames": 60,
+          "decoded_frame_index": 345,
+          "decoded_rgb_shapes": {
+            "observation.images.head_left": [
+              480,
+              640,
+              3
+            ],
+            "observation.images.head_right": [
+              480,
+              640,
+              3
+            ],
+            "observation.images.left_wrist": [
+              480,
+              640,
+              3
+            ],
+            "observation.images.right_wrist": [
+              480,
+              640,
+              3
+            ]
+          },
+          "sha256": {
+            "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+            "camera_index.npz": "161c4cf20eb6d1387b62a0521c6fd23a3c5550e9168ff73291b52c4aa023f8f1",
+            "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+          },
+          "left_pad_mean_abs_difference_from_baseline": 0.0
+        },
+        {
+          "episode": "episode_001",
+          "variation": {
+            "name": "baseline",
+            "offset_xy_m": [
+              0.0,
+              0.0
+            ],
+            "yaw_deg": 0.0
+          },
+          "physics_passed": true,
+          "readable": true,
+          "video_frames": 540,
+          "window_camera_frames": 60,
+          "window_signal_frames": 60,
+          "decoded_frame_index": 345,
+          "decoded_rgb_shapes": {
+            "observation.images.head_left": [
+              480,
+              640,
+              3
+            ],
+            "observation.images.head_right": [
+              480,
+              640,
+              3
+            ],
+            "observation.images.left_wrist": [
+              480,
+              640,
+              3
+            ],
+            "observation.images.right_wrist": [
+              480,
+              640,
+              3
+            ]
+          },
+          "sha256": {
+            "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+            "camera_index.npz": "fdd80d1bafa1930400ecd5ab93e3d321866ccb4660913f439d633cc00575c13b",
+            "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+          },
+          "left_pad_mean_abs_difference_from_baseline": 0.0
+        }
+      ]
+    },
+    "sha256": {
+      "run_report.json": "5948de02295a66328d9d397a2fd45daa4baebbebe2f5896b8034cd0cf4fccad4",
+      "scene_setup.json": "934b8d4337b1140212bf66da956d55a424009df2f6a9c44b72786f4d5b14980b",
+      "offline_audit.json": "e69ae79d973d9aad14063b6e2906c03f64c8d67a190d263a79ba59a47668c658"
+    },
+    "measured_top_level_seconds": 99.22877352545038
+  },
+  "final_source_sha256": {
+    "Isaacsim_tactile_env/dexmate_env.py": "e362749135d6177cd1fdd6be3bb637af1e344a58c350447f8bb195b7341f0cc1",
+    "tools/benchmark_dexmate_cpu.py": "fc8404235e5974c4dc107b4f475a137152af14befa9453f5ec53527efb504290",
+    "tools/dexmate_collision.py": "8694addcfc712530bbcc244565a29e105dc3eee9a92c7caa6c1a212d5392aa4e",
+    "tools/run_dexmate_episodes.py": "74d6e0299ffa8b022f979532af83dfc37d7384b7933afa597a4c8327e455b372",
+    "tests/test_dexmate_collision.py": "bb3b824684d4187b21b77fb9333bea2d7cf3bcae564ac52cf8df0ac09f1ad3f9"
+  },
+  "simulation_tests_passed": 20
+}

@@ -13,10 +13,14 @@ Keep `STATUS.md` short (about 70 lines); move detailed results into dated report
 ## Ownership and entrypoints
 
 - `Isaacsim_tactile_env/dexmate_workspace.json`: table and robot placement configuration.
+- `Isaacsim_tactile_env/dexmate_env.py`: native single-scene reset/step and timed observations.
+- `tools/run_dexmate_episodes.py`: repeated grasp validation and synchronized recording.
 - `tools/*dexmate*`, `tools/convert_vention_step.py`: local asset preparation and validation tools.
 - `Isaacsim_tactile_env/assets/{dexmate,vention_312098_v6}/`: maintained robot/table assets.
 - `source/`: upstream Isaac Lab/FlexiTac implementation; modify only when the task requires it.
-- The original ALOHA example remains available. The Dexmate validation scene is not yet a complete tactile environment.
+- The original ALOHA example remains available. Dexmate has a native single-scene environment;
+  current task coverage is the scripted left-hand grasp and a small deterministic pose sweep,
+  not a general training suite. See STATUS.md for measured outcomes.
 
 ## Preserve evidence and sources
 

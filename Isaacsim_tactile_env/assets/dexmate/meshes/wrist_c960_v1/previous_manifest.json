@@ -1,0 +1,221 @@
+{
+  "schema_version": 3,
+  "upstream_package": "dexmate-urdf",
+  "upstream_version": "0.8.4",
+  "upstream_urdf": "robots/humanoid/vega_1u/vega_1u_gripper.urdf",
+  "upstream_files_sha256": {
+    "robots/hands/dexs_gripper/meshes/collision/gripper_base.obj": "565e5544141aa43b5084e1c1af514907d308060cdf07a971d478a9d700029f11",
+    "robots/hands/dexs_gripper/meshes/collision/gripper_l1.obj": "4366fd2a84e604f7c122e8aaba7f3d50af93d7d6cd078b97dcf94ff7ce139427",
+    "robots/hands/dexs_gripper/meshes/collision/gripper_l2.obj": "d5556db4e3aad20711fce4dab57aa71c63d051fd26631ef5c4af4ebc754b224c",
+    "robots/hands/dexs_gripper/meshes/visual/camera_link.glb": "2cb638f60b537d725dfa276caaccf6d5723bbf2eee4e93665d9c336394d82010",
+    "robots/hands/dexs_gripper/meshes/visual/gripper_base.glb": "d14faa532f23e8bd5cd88d928b7aa8744e1e9b48c003368cd070cd2c5f05077f",
+    "robots/hands/dexs_gripper/meshes/visual/gripper_l1.glb": "2d9182959679cf96f53b68f68c8e963d41af890be621bafbb9801c2f634414cd",
+    "robots/hands/dexs_gripper/meshes/visual/gripper_l2.glb": "99a67e2d7286ed8b33089a00c7610c3fb4a7d0c98295235b6e02290c1aaf0574",
+    "robots/hands/f5d6_hand/meshes/visual/connector.glb": "36e9f6ac0e789ad325578d64b6f04d21d4780ea4c75974fefc83fb87c072d9fb",
+    "robots/humanoid/vega_1/meshes/collision/L_arm_l1.obj": "3de20c5339c919b044bad72b1c4ffd75338c1b890a637b1952805128e36fd2be",
+    "robots/humanoid/vega_1/meshes/collision/L_arm_l6.obj": "b48209bbf5d969966e878f5b55944b12b0970175a09b27acc9f5d3fb781fe3b1",
+    "robots/humanoid/vega_1/meshes/collision/R_arm_l1.obj": "be40ab74b2ee3ec7c51af02ef55403e020610d063694c523ed6d4944d87f3958",
+    "robots/humanoid/vega_1/meshes/collision/R_arm_l6.obj": "b79825473e6e800e26fe80190cb92905e23af2920d132d9befa394affb62ce5e",
+    "robots/humanoid/vega_1/meshes/collision/arm_l2.obj": "4db35b036b8bdfacf2b68d023cd0a0f7b96e93954b413243ff065b363afdca5d",
+    "robots/humanoid/vega_1/meshes/collision/arm_l3.obj": "169295fc1b6194d6e7c4e0850c9a546474201a018e7f939161ad2e375cc0b979",
+    "robots/humanoid/vega_1/meshes/collision/arm_l4.obj": "2007b60cec5f1507401a365efc126323e42cb2e0ee0d4ac5d8b876c5c3d25efa",
+    "robots/humanoid/vega_1/meshes/collision/arm_l5.obj": "1fb6888c9174eb084c73d216cd07a4dbe300d1a69c1127ca9d0ae761ae6d6774",
+    "robots/humanoid/vega_1/meshes/collision/arm_l7.obj": "a94e304b58ed35ad2d91b6649d4c19f35b22957561669c2878922ad73969d192",
+    "robots/humanoid/vega_1/meshes/collision/arm_l8.obj": "e251becda5f4ce923864f9e06a399cfd76ab5cb382bff35f0bfedad798a10888",
+    "robots/humanoid/vega_1/meshes/collision/head_l1.obj": "1979c67071a4f3b51c37df7c54743734ae16708640b073f151c63fdd974edda0",
+    "robots/humanoid/vega_1/meshes/collision/head_l2.obj": "10b71280d0b7988b9f1c473d23650153db1ec44b12a98765ae66df45b1ed3620",
+    "robots/humanoid/vega_1/meshes/collision/head_l3.obj": "5ae353bec15fe5c1eb8c194543bdcbe9b1c9da14e1cf3f544e765bca6b2a41d7",
+    "robots/humanoid/vega_1/meshes/visual/L_arm_l1.glb": "72b12cf85773f9e8f23335a172e6a58da4c3484f2f172b510601492aad95bfed",
+    "robots/humanoid/vega_1/meshes/visual/L_arm_l6.glb": "8431ba2f782e89323fbf57f721b4405b7ff3b8868ab8b22d085b7f18f4072384",
+    "robots/humanoid/vega_1/meshes/visual/R_arm_l1.glb": "402495e7e90e60232b92f425db38310dbc47f6d26d96c05109dae1d3aa33773a",
+    "robots/humanoid/vega_1/meshes/visual/R_arm_l6.glb": "bb524804b7d5a581bedda787e2874ad1c764bcf7d3a5acbf1d709221a8b5be4d",
+    "robots/humanoid/vega_1/meshes/visual/arm_l2.glb": "3ab3ce95af09c50198a49b85f735446a2e26f6496b8a9e13896212a83e1bd6df",
+    "robots/humanoid/vega_1/meshes/visual/arm_l3.glb": "dca0e41d8d557814788fecdc11996563551c84be842fbbbb745047eeb2d34f1a",
+    "robots/humanoid/vega_1/meshes/visual/arm_l4.glb": "b6dbb49e887879d99c09eedceca7c90f6b6c863278e097adda4438eb748d65c4",
+    "robots/humanoid/vega_1/meshes/visual/arm_l5.glb": "5fd473baa0e476ca127dbc7bb5572a7e7d5ac7cfc66e0dfe5ee1395cdeb17c82",
+    "robots/humanoid/vega_1/meshes/visual/arm_l7.glb": "f19957c552e50c0257184618ab53862db17b908a055fc81401c3325d98dca367",
+    "robots/humanoid/vega_1/meshes/visual/arm_l8.glb": "72f928586deb63c9e100ba1aa41907f9bd4293bd9797c0c2312cdf178298bc23",
+    "robots/humanoid/vega_1/meshes/visual/head_l1.glb": "e10643834efa74122d0c73c080f298aa8d7e5f3051cd74c8358028d21a40844e",
+    "robots/humanoid/vega_1/meshes/visual/head_l2.glb": "0d01df8ddc91863fb1d471f735e2c0a3615f2129060b7c9a45c01706ddf0aa25",
+    "robots/humanoid/vega_1/meshes/visual/head_l3.glb": "f390e38f8906a7505fea12cc4cc842d453884fb0d3ed0538c6327fc398547066",
+    "robots/humanoid/vega_1u/meshes/visual/base_link.glb": "f6f8955d99754e753e90e8da430dc951e5d64f81f0fee3270bc9665e8fd6daff",
+    "robots/humanoid/vega_1u/meshes/visual/lift_link.glb": "35760a9098f0cd9c58babc5124a59f929cf484180b6cd3c3e04a9942b0941d9f",
+    "robots/humanoid/vega_1u/meshes/visual/torso_link.glb": "403ccb99a7ee9687aef62fcd2b54754b3eea11d8b472ad3b6563548c1ae1c3f2",
+    "robots/humanoid/vega_1u/vega_1u_gripper.urdf": "79c95c997589b3af3b7057947b4417f155b23520f3c924a0fb82caea22443e40"
+  },
+  "custom_source": {
+    "filename": "gripper_finger_pad_66x26_bump_minus_0p5mm_sim.stl",
+    "path": "meshes/pad_66x26_v3/simulation/gripper_finger_pad_66x26_bump_minus_0p5mm_sim.stl",
+    "sha256": "285809bca9d087b0b0e04a7ec876efa9d4f8cc4327e32009ff2aa47ef4cc58ad",
+    "units": "mm"
+  },
+  "build_versions": {
+    "numpy": "2.2.6",
+    "trimesh": "4.12.2"
+  },
+  "finger_mapping": {
+    "gripper_l1": {
+      "source_metres_to_link": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "custom_tpu_bounds_m": [
+        [
+          -0.013666926383972168,
+          -0.013004961013793946,
+          0.02759315872192383
+        ],
+        [
+          0.025796567916870117,
+          0.012995038986206055,
+          0.15562394714355468
+        ]
+      ],
+      "retained_metal_geometry": "Mesh_1.002_1"
+    },
+    "gripper_l2": {
+      "source_metres_to_link": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          1.9995495676994324e-06
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.00003045797348e-06
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -2.2999942302703857e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "custom_tpu_bounds_m": [
+        [
+          -0.025794568367302418,
+          -0.013000960983335972,
+          0.027570158779621125
+        ],
+        [
+          0.013668925933539867,
+          0.012999039016664028,
+          0.15560094720125198
+        ]
+      ],
+      "retained_metal_geometry": "Mesh_1.001_1"
+    }
+  },
+  "status": {
+    "kinematics": "unchanged",
+    "inertia": "inherited from upstream; not recalculated for custom TPU",
+    "collision": "custom TPU surface plus convex hull of retained metal; provisional",
+    "isaac_sim": "not validated",
+    "camera_calibration": "not validated",
+    "tactile_patches": "not added"
+  },
+  "files_sha256": {
+    "meshes/bump_v2/previous_manifest.json": "0e3bfe61b230aff0a59fd40c1c096fa85a93a362b3dacd5738e71d2f1a7173d2",
+    "meshes/bump_v2/previous_urdf.xml": "2f19880cd81e6a7eea947edfcf048a7065a84f77e54edff394cf2b1f3b211e4d",
+    "meshes/bump_v2/printing/gripper_finger_26mm_bump_minus_0p8mm_print.stl": "7e5dd49126d5cc7419bc558912a1671dc19de1794bf79a4c74257b8206eadfe4",
+    "meshes/bump_v2/revision.json": "5984ce63381dc019ae40403f3bbd4c8598718102c1a08b571aa736dafe25f07b",
+    "meshes/bump_v2/simulation/gripper_finger_26mm_bump_minus_0p5mm_sim.stl": "f2a5ce8d4b52e30d183a6668bb10353178a426f7ccfa3c0da844575af862a0ef",
+    "meshes/bump_v2/simulation/gripper_l1_metal_collision.obj": "0d68d63ebafd5f0613c21110111c9cdcb694641fcd0740f37ffc1db8ce6c4780",
+    "meshes/bump_v2/simulation/gripper_l1_tpu_collision.obj": "5e5cf8cfe39eef71ffae19ec23afaff154bf057fff3075eca4c67304186a5fba",
+    "meshes/bump_v2/simulation/gripper_l1_visual.glb": "2321ce1d161f1cf011421fb26816203dff5834168c17fc93eb5f717a4bd2ab03",
+    "meshes/bump_v2/simulation/gripper_l2_metal_collision.obj": "be2f7e1d02ff6c887fc0fed248286aba0dcf2dbf964fc87eb6700c1ae399c63f",
+    "meshes/bump_v2/simulation/gripper_l2_tpu_collision.obj": "8fbe9983c4855e8c2dd89c54574a53edbfff28c742c9cb0e51263e6aef304368",
+    "meshes/bump_v2/simulation/gripper_l2_visual.glb": "1c0759d46308a6ff59f64406bad26176bd822e2b676bea5b7f87275eca2e4315",
+    "meshes/custom/gripper_finger_tpu_26mm_uniform_width_raise_2mm.stl": "6e9cf1534a1a4153a59a2303c0c7f2e63afb1bc11936219ceb45a89a7955d62e",
+    "meshes/custom/gripper_l1_metal_collision.obj": "0d68d63ebafd5f0613c21110111c9cdcb694641fcd0740f37ffc1db8ce6c4780",
+    "meshes/custom/gripper_l1_tpu_collision.obj": "42b12c992d7d2d0e8cc83d493491c70055b639b927682ae8e95e2564eb79efa2",
+    "meshes/custom/gripper_l1_visual.glb": "d17620a43c390b7a005f5d18d353ff34a851c8534de797c64d77d0da4e93626e",
+    "meshes/custom/gripper_l2_metal_collision.obj": "be2f7e1d02ff6c887fc0fed248286aba0dcf2dbf964fc87eb6700c1ae399c63f",
+    "meshes/custom/gripper_l2_tpu_collision.obj": "ca9bfa5cf70f131ed587195d628d09e5d4d0eec6c89ef59d1b0662968d5cad4d",
+    "meshes/custom/gripper_l2_visual.glb": "ecd64e6cd2e405fab3c80bb54805344d970fa0b1215f39ade24c7131aaa87ebd",
+    "meshes/pad_66x26_v3/previous_manifest.json": "fb8c4c39e9e61a94795ae0fc45f9ee81fb8b100882bec630fbd2e1b879e597b1",
+    "meshes/pad_66x26_v3/previous_urdf.xml": "a6a931cddd341bb6ec3bc724e91cdaeac86d67e6964d66de70e2344ca3d3c394",
+    "meshes/pad_66x26_v3/printing/gripper_finger_pad_66x26_bump_minus_0p8mm_print.stl": "d8115e7bcb0b4759a772159ecfb236a0500e73f5c7e0d17bd4c89699425cf660",
+    "meshes/pad_66x26_v3/revision.json": "e01eaffbfa5c5f4460abce16a6fac26ccbd1f3a8646945e997c4873227967d73",
+    "meshes/pad_66x26_v3/simulation/gripper_finger_pad_66x26_bump_minus_0p5mm_sim.stl": "285809bca9d087b0b0e04a7ec876efa9d4f8cc4327e32009ff2aa47ef4cc58ad",
+    "meshes/pad_66x26_v3/simulation/gripper_l1_metal_collision.obj": "0d68d63ebafd5f0613c21110111c9cdcb694641fcd0740f37ffc1db8ce6c4780",
+    "meshes/pad_66x26_v3/simulation/gripper_l1_tpu_collision.obj": "94647eb3d2d945e1b943a9bac655e4061f9e76c042235eb1d7337d769dbfe0ba",
+    "meshes/pad_66x26_v3/simulation/gripper_l1_visual.glb": "02b0b31754af242a5e63000598df9e1c546964c0adf850c18916261211ee4f21",
+    "meshes/pad_66x26_v3/simulation/gripper_l2_metal_collision.obj": "be2f7e1d02ff6c887fc0fed248286aba0dcf2dbf964fc87eb6700c1ae399c63f",
+    "meshes/pad_66x26_v3/simulation/gripper_l2_tpu_collision.obj": "1c09711269af1209a69f883a9d97f4625c5689453cf3ae6def7918335931c523",
+    "meshes/pad_66x26_v3/simulation/gripper_l2_visual.glb": "20418edc8ecf79451de2fc79a9515449b212ea323b6ff09d5953ce96d3025bdb",
+    "upstream/LICENSE": "ff96ae9867bdaec10c0999e6fc1fc28d37b7dd16a3f41a5548b4295c312bf1b0",
+    "upstream/robots/hands/dexs_gripper/meshes/collision/gripper_base.obj": "565e5544141aa43b5084e1c1af514907d308060cdf07a971d478a9d700029f11",
+    "upstream/robots/hands/dexs_gripper/meshes/collision/gripper_l1.obj": "4366fd2a84e604f7c122e8aaba7f3d50af93d7d6cd078b97dcf94ff7ce139427",
+    "upstream/robots/hands/dexs_gripper/meshes/collision/gripper_l2.obj": "d5556db4e3aad20711fce4dab57aa71c63d051fd26631ef5c4af4ebc754b224c",
+    "upstream/robots/hands/dexs_gripper/meshes/visual/camera_link.glb": "2cb638f60b537d725dfa276caaccf6d5723bbf2eee4e93665d9c336394d82010",
+    "upstream/robots/hands/dexs_gripper/meshes/visual/gripper_base.glb": "d14faa532f23e8bd5cd88d928b7aa8744e1e9b48c003368cd070cd2c5f05077f",
+    "upstream/robots/hands/dexs_gripper/meshes/visual/gripper_l1.glb": "2d9182959679cf96f53b68f68c8e963d41af890be621bafbb9801c2f634414cd",
+    "upstream/robots/hands/dexs_gripper/meshes/visual/gripper_l2.glb": "99a67e2d7286ed8b33089a00c7610c3fb4a7d0c98295235b6e02290c1aaf0574",
+    "upstream/robots/hands/f5d6_hand/meshes/visual/connector.glb": "36e9f6ac0e789ad325578d64b6f04d21d4780ea4c75974fefc83fb87c072d9fb",
+    "upstream/robots/humanoid/vega_1/meshes/collision/L_arm_l1.obj": "3de20c5339c919b044bad72b1c4ffd75338c1b890a637b1952805128e36fd2be",
+    "upstream/robots/humanoid/vega_1/meshes/collision/L_arm_l6.obj": "b48209bbf5d969966e878f5b55944b12b0970175a09b27acc9f5d3fb781fe3b1",
+    "upstream/robots/humanoid/vega_1/meshes/collision/R_arm_l1.obj": "be40ab74b2ee3ec7c51af02ef55403e020610d063694c523ed6d4944d87f3958",
+    "upstream/robots/humanoid/vega_1/meshes/collision/R_arm_l6.obj": "b79825473e6e800e26fe80190cb92905e23af2920d132d9befa394affb62ce5e",
+    "upstream/robots/humanoid/vega_1/meshes/collision/arm_l2.obj": "4db35b036b8bdfacf2b68d023cd0a0f7b96e93954b413243ff065b363afdca5d",
+    "upstream/robots/humanoid/vega_1/meshes/collision/arm_l3.obj": "169295fc1b6194d6e7c4e0850c9a546474201a018e7f939161ad2e375cc0b979",
+    "upstream/robots/humanoid/vega_1/meshes/collision/arm_l4.obj": "2007b60cec5f1507401a365efc126323e42cb2e0ee0d4ac5d8b876c5c3d25efa",
+    "upstream/robots/humanoid/vega_1/meshes/collision/arm_l5.obj": "1fb6888c9174eb084c73d216cd07a4dbe300d1a69c1127ca9d0ae761ae6d6774",
+    "upstream/robots/humanoid/vega_1/meshes/collision/arm_l7.obj": "a94e304b58ed35ad2d91b6649d4c19f35b22957561669c2878922ad73969d192",
+    "upstream/robots/humanoid/vega_1/meshes/collision/arm_l8.obj": "e251becda5f4ce923864f9e06a399cfd76ab5cb382bff35f0bfedad798a10888",
+    "upstream/robots/humanoid/vega_1/meshes/collision/head_l1.obj": "1979c67071a4f3b51c37df7c54743734ae16708640b073f151c63fdd974edda0",
+    "upstream/robots/humanoid/vega_1/meshes/collision/head_l2.obj": "10b71280d0b7988b9f1c473d23650153db1ec44b12a98765ae66df45b1ed3620",
+    "upstream/robots/humanoid/vega_1/meshes/collision/head_l3.obj": "5ae353bec15fe5c1eb8c194543bdcbe9b1c9da14e1cf3f544e765bca6b2a41d7",
+    "upstream/robots/humanoid/vega_1/meshes/visual/L_arm_l1.glb": "72b12cf85773f9e8f23335a172e6a58da4c3484f2f172b510601492aad95bfed",
+    "upstream/robots/humanoid/vega_1/meshes/visual/L_arm_l6.glb": "8431ba2f782e89323fbf57f721b4405b7ff3b8868ab8b22d085b7f18f4072384",
+    "upstream/robots/humanoid/vega_1/meshes/visual/R_arm_l1.glb": "402495e7e90e60232b92f425db38310dbc47f6d26d96c05109dae1d3aa33773a",
+    "upstream/robots/humanoid/vega_1/meshes/visual/R_arm_l6.glb": "bb524804b7d5a581bedda787e2874ad1c764bcf7d3a5acbf1d709221a8b5be4d",
+    "upstream/robots/humanoid/vega_1/meshes/visual/arm_l2.glb": "3ab3ce95af09c50198a49b85f735446a2e26f6496b8a9e13896212a83e1bd6df",
+    "upstream/robots/humanoid/vega_1/meshes/visual/arm_l3.glb": "dca0e41d8d557814788fecdc11996563551c84be842fbbbb745047eeb2d34f1a",
+    "upstream/robots/humanoid/vega_1/meshes/visual/arm_l4.glb": "b6dbb49e887879d99c09eedceca7c90f6b6c863278e097adda4438eb748d65c4",
+    "upstream/robots/humanoid/vega_1/meshes/visual/arm_l5.glb": "5fd473baa0e476ca127dbc7bb5572a7e7d5ac7cfc66e0dfe5ee1395cdeb17c82",
+    "upstream/robots/humanoid/vega_1/meshes/visual/arm_l7.glb": "f19957c552e50c0257184618ab53862db17b908a055fc81401c3325d98dca367",
+    "upstream/robots/humanoid/vega_1/meshes/visual/arm_l8.glb": "72f928586deb63c9e100ba1aa41907f9bd4293bd9797c0c2312cdf178298bc23",
+    "upstream/robots/humanoid/vega_1/meshes/visual/head_l1.glb": "e10643834efa74122d0c73c080f298aa8d7e5f3051cd74c8358028d21a40844e",
+    "upstream/robots/humanoid/vega_1/meshes/visual/head_l2.glb": "0d01df8ddc91863fb1d471f735e2c0a3615f2129060b7c9a45c01706ddf0aa25",
+    "upstream/robots/humanoid/vega_1/meshes/visual/head_l3.glb": "f390e38f8906a7505fea12cc4cc842d453884fb0d3ed0538c6327fc398547066",
+    "upstream/robots/humanoid/vega_1u/meshes/visual/base_link.glb": "f6f8955d99754e753e90e8da430dc951e5d64f81f0fee3270bc9665e8fd6daff",
+    "upstream/robots/humanoid/vega_1u/meshes/visual/lift_link.glb": "35760a9098f0cd9c58babc5124a59f929cf484180b6cd3c3e04a9942b0941d9f",
+    "upstream/robots/humanoid/vega_1u/meshes/visual/torso_link.glb": "403ccb99a7ee9687aef62fcd2b54754b3eea11d8b472ad3b6563548c1ae1c3f2",
+    "upstream/robots/humanoid/vega_1u/vega_1u_gripper.urdf": "79c95c997589b3af3b7057947b4417f155b23520f3c924a0fb82caea22443e40",
+    "vega_1u_gripper_flexitac.urdf": "0407431428b25692c9155f4c6a0e77d9c76070a79b5d5841f87306829048fda3"
+  },
+  "geometry_revision": "pad_66x26_v3",
+  "geometry_revision_record": "meshes/pad_66x26_v3/revision.json"
+}

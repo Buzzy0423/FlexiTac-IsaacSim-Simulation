@@ -1,0 +1,2183 @@
+{
+  "scope": "Four processes, same persistent driver cache; historical first run and two warm repeats",
+  "runs": [
+    {
+      "output": "Isaacsim_tactile_env/output/dexmate_parallel_4_20260916_v1",
+      "summary": {
+        "status": "passed",
+        "workers": 4,
+        "episodes_per_worker": 2,
+        "startup_mode": "sequential loading, synchronized parallel collection",
+        "cpu_threads_per_worker": 8,
+        "physics_threads_per_worker": 8,
+        "scope": "Independent processes, one shared GPU, identical 120 Hz reference replay; five RGB streams",
+        "worker_pids": [
+          3721051,
+          3721694,
+          3722365,
+          3723804
+        ],
+        "startup_to_gate_seconds": 189.97122601792216,
+        "episode_count": 8,
+        "passed_count": 8,
+        "full_reference_complete": true,
+        "all_numeric_samples_identical": true,
+        "collection_wall_seconds": 138.37907883082516,
+        "successful_episodes_per_minute": 3.468732441750261,
+        "collection_seconds_per_successful_episode": 17.297384853853146,
+        "aggregate_simulated_seconds_per_wall_second": 1.0406197325250783,
+        "worker_core_seconds": [
+          129.59187799552456,
+          129.5360427040141,
+          129.48800398339517,
+          129.43874328467064
+        ],
+        "start_skew_seconds": 0.03208152484148741,
+        "total_wall_seconds": 331.5232611389365,
+        "exit_codes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "peak_gpu_memory_mib": 12720,
+        "mean_collection_gpu_utilization_percent": 60.709219858156025
+      },
+      "summary_sha256": "18e0136a4d7e8c8bf0fa6faa04c4dd76969c0fcf68f5901350e5065017e12ff4",
+      "workers": [
+        {
+          "worker": "worker_00",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_101614.log",
+          "kit_log_sha256": "d508d4381c59b22857b6ffb3b60f2b90c952f82bd5040b35d117d67d45bfc6ce",
+          "stdout_sha256": "4d9319e5277798cf2a8094bfbda951cf82697ee2279786c59f5e0e401f5c4ede",
+          "kit_startup_complete_seconds": 4.326,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:16:14Z [94ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 4, size: 343.19 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:16:18Z [4,320ms] [Info] [omni.kit.app.plugin] [4.326s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.557135132141411,
+              "calls": 1,
+              "mean_ms": 8557.135132141411
+            },
+            "reset": {
+              "seconds": 4.4845443579833955,
+              "calls": 2,
+              "mean_ms": 2242.2721789916977
+            },
+            "env_step": {
+              "seconds": 129.59187799552456,
+              "calls": 4320,
+              "mean_ms": 29.998119906371425
+            },
+            "record_append": {
+              "seconds": 3.634981810580939,
+              "calls": 4320,
+              "mean_ms": 0.8414309746715136
+            },
+            "record_finish": {
+              "seconds": 1.6605523771140724,
+              "calls": 2,
+              "mean_ms": 830.2761885570362
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "benchmark_sha256": "cffb9601c04a29f6c9263dac88786e91b7d0f22834fa0db15c4c8a17850af16d",
+          "offline_readable_count": 2,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            },
+            {
+              "episode_id": 1,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_01",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_101624.log",
+          "kit_log_sha256": "4897a0625ad0dcb202f524026bc53f7881d2d68ea9b423945fe0cfef3b9f5708",
+          "stdout_sha256": "f0d8cec828912bc5927b24f0a54fd0a57d652a2474e667ec6d35590596b60554",
+          "kit_startup_complete_seconds": 4.259,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:16:24Z [93ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 4, size: 343.19 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:16:27Z [2,515ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:16:28Z [4,253ms] [Info] [omni.kit.app.plugin] [4.259s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.508251225110143,
+              "calls": 1,
+              "mean_ms": 8508.251225110143
+            },
+            "reset": {
+              "seconds": 4.4823692452628165,
+              "calls": 2,
+              "mean_ms": 2241.1846226314083
+            },
+            "env_step": {
+              "seconds": 129.5360427040141,
+              "calls": 4320,
+              "mean_ms": 29.985195070373635
+            },
+            "record_append": {
+              "seconds": 3.667612347519025,
+              "calls": 4320,
+              "mean_ms": 0.8489843397034781
+            },
+            "record_finish": {
+              "seconds": 1.6508222760166973,
+              "calls": 2,
+              "mean_ms": 825.4111380083486
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "benchmark_sha256": "518757bfb2cfa809e6987fe0d61cf6f7ee752b42712cff951b01320f5c959f61",
+          "offline_readable_count": 2,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            },
+            {
+              "episode_id": 1,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_02",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_101634.log",
+          "kit_log_sha256": "f8448e82906893a7b1655a5ea74782ede2f44f967e1401e3fb6e68b0a97afe5c",
+          "stdout_sha256": "3bf902983cb29dddefd892b3706d805efc96057750272901c1f7a37e3df39dcf",
+          "kit_startup_complete_seconds": 78.553,
+          "maximum_logged_rtpso_wait_seconds": 65,
+          "startup_log_evidence": [
+            "2026-09-16T17:16:34Z [95ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 4, size: 343.19 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:16:37Z [2,559ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:16:51Z [16,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 5 seconds so far",
+            "2026-09-16T17:16:56Z [21,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 10 seconds so far",
+            "2026-09-16T17:17:01Z [26,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 15 seconds so far",
+            "2026-09-16T17:17:06Z [31,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 20 seconds so far",
+            "2026-09-16T17:17:11Z [36,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 25 seconds so far",
+            "2026-09-16T17:17:16Z [41,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 30 seconds so far",
+            "2026-09-16T17:17:21Z [46,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 35 seconds so far",
+            "2026-09-16T17:17:26Z [51,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 40 seconds so far",
+            "2026-09-16T17:17:31Z [56,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 45 seconds so far",
+            "2026-09-16T17:17:36Z [61,362ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 50 seconds so far",
+            "2026-09-16T17:17:41Z [66,363ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 55 seconds so far",
+            "2026-09-16T17:17:46Z [71,363ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 60 seconds so far",
+            "2026-09-16T17:17:51Z [76,363ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 65 seconds so far",
+            "2026-09-16T17:17:53Z [78,546ms] [Info] [omni.kit.app.plugin] [78.553s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 82.80412582983263,
+              "calls": 1,
+              "mean_ms": 82804.12582983263
+            },
+            "reset": {
+              "seconds": 4.482976630097255,
+              "calls": 2,
+              "mean_ms": 2241.4883150486276
+            },
+            "env_step": {
+              "seconds": 129.48800398339517,
+              "calls": 4320,
+              "mean_ms": 29.97407499615629
+            },
+            "record_append": {
+              "seconds": 3.695961609017104,
+              "calls": 4320,
+              "mean_ms": 0.8555466687539592
+            },
+            "record_finish": {
+              "seconds": 1.6585533018223941,
+              "calls": 2,
+              "mean_ms": 829.2766509111971
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "benchmark_sha256": "025d7263656dbedde0efda7a5ba667552de3087558adddc69fdf19dabb510bd1",
+          "offline_readable_count": 2,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            },
+            {
+              "episode_id": 1,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_03",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_101759.log",
+          "kit_log_sha256": "7bbaf521884a80ac72a4c0e6be05664155ed015921522ccce9f61873226122dd",
+          "stdout_sha256": "29be4a87444b1290983c0ca9b0acbf0b66379e366c95c72cff746a2a5153c119",
+          "kit_startup_complete_seconds": 78.43,
+          "maximum_logged_rtpso_wait_seconds": 65,
+          "startup_log_evidence": [
+            "2026-09-16T17:17:59Z [96ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 6, size: 509.76 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:18:02Z [2,565ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:18:15Z [15,854ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 5 seconds so far",
+            "2026-09-16T17:18:20Z [20,854ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 10 seconds so far",
+            "2026-09-16T17:18:25Z [25,854ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 15 seconds so far",
+            "2026-09-16T17:18:30Z [30,854ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 20 seconds so far",
+            "2026-09-16T17:18:35Z [35,854ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 25 seconds so far",
+            "2026-09-16T17:18:40Z [40,854ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 30 seconds so far",
+            "2026-09-16T17:18:45Z [45,854ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 35 seconds so far",
+            "2026-09-16T17:18:50Z [50,854ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 40 seconds so far",
+            "2026-09-16T17:18:55Z [55,855ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 45 seconds so far",
+            "2026-09-16T17:19:00Z [60,855ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 50 seconds so far",
+            "2026-09-16T17:19:05Z [65,855ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 55 seconds so far",
+            "2026-09-16T17:19:10Z [70,855ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 60 seconds so far",
+            "2026-09-16T17:19:15Z [75,855ms] [Info] [gpu.foundation.plugin] *** Waiting for RtPso async group async compilation: 65 seconds so far",
+            "2026-09-16T17:19:18Z [78,424ms] [Info] [omni.kit.app.plugin] [78.430s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 82.66773284808733,
+              "calls": 1,
+              "mean_ms": 82667.73284808733
+            },
+            "reset": {
+              "seconds": 4.41156914900057,
+              "calls": 2,
+              "mean_ms": 2205.784574500285
+            },
+            "env_step": {
+              "seconds": 129.43874328467064,
+              "calls": 4320,
+              "mean_ms": 29.96267205663672
+            },
+            "record_append": {
+              "seconds": 3.615193943027407,
+              "calls": 4320,
+              "mean_ms": 0.8368504497748627
+            },
+            "record_finish": {
+              "seconds": 1.6620065700262785,
+              "calls": 2,
+              "mean_ms": 831.0032850131392
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "benchmark_sha256": "cf59771fe9d07aee1404c6225bcfae3c7076deae3584c945b22f81a620ddec5b",
+          "offline_readable_count": 2,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            },
+            {
+              "episode_id": 1,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "output": "Isaacsim_tactile_env/output/dexmate_startup_shared_20260916_v1",
+      "summary": {
+        "status": "passed",
+        "workers": 4,
+        "episodes_per_worker": 1,
+        "isolate_driver_cache": false,
+        "startup_mode": "sequential loading, synchronized parallel collection",
+        "cpu_threads_per_worker": 8,
+        "physics_threads_per_worker": 8,
+        "scope": "Independent processes, one shared GPU, identical 120 Hz reference replay; five RGB streams",
+        "worker_pids": [
+          3733923,
+          3734602,
+          3735301,
+          3736000
+        ],
+        "startup_to_gate_seconds": 40.42645128490403,
+        "episode_count": 4,
+        "passed_count": 4,
+        "full_reference_complete": true,
+        "all_numeric_samples_identical": true,
+        "collection_wall_seconds": 67.2729570819065,
+        "successful_episodes_per_minute": 3.567555380504443,
+        "collection_seconds_per_successful_episode": 16.818239270476624,
+        "aggregate_simulated_seconds_per_wall_second": 1.0702666141513328,
+        "worker_core_seconds": [
+          64.3917258628644,
+          64.44094980857335,
+          64.37515561794862,
+          64.34267358272336
+        ],
+        "start_skew_seconds": 0.04241369687952101,
+        "total_wall_seconds": 110.1916974328924,
+        "exit_codes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "peak_gpu_memory_mib": 12567,
+        "mean_collection_gpu_utilization_percent": 59.628571428571426
+      },
+      "summary_sha256": "67d88425b92ec0e2b258f8b189c88f99ba84f10aea75e7826006604dd2f4a3c6",
+      "workers": [
+        {
+          "worker": "worker_00",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_103045.log",
+          "kit_log_sha256": "69a5eeeb8ac496124d57158c76c5c0d1282a7b3cdd233ab2eba3beaf771f682a",
+          "stdout_sha256": "9cc96b5cb1345c9a30092d4586463009ebbc671496632fb3267eab03b2253e5d",
+          "kit_startup_complete_seconds": 4.337,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:30:45Z [94ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 8, size: 676.33 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:30:49Z [4,330ms] [Info] [omni.kit.app.plugin] [4.337s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.575351699022576,
+              "calls": 1,
+              "mean_ms": 8575.351699022576
+            },
+            "reset": {
+              "seconds": 1.3622628210578114,
+              "calls": 1,
+              "mean_ms": 1362.2628210578114
+            },
+            "env_step": {
+              "seconds": 64.3917258628644,
+              "calls": 2160,
+              "mean_ms": 29.81098419577056
+            },
+            "record_append": {
+              "seconds": 1.8539330472704023,
+              "calls": 2160,
+              "mean_ms": 0.8583023366992604
+            },
+            "record_finish": {
+              "seconds": 0.8161570332013071,
+              "calls": 1,
+              "mean_ms": 816.1570332013071
+            }
+          },
+          "render_flush_histogram": {
+            "0": 541
+          },
+          "benchmark_sha256": "1445485ec7a6299974234ef5df6f4b314af8f51be794bef125b81595463aa1d2",
+          "offline_readable_count": 1,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_01",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_103055.log",
+          "kit_log_sha256": "9c12f2f2b5e0b1cf6cbef89bcb8af9e7932e9e55cbe5f11acc82b3dd4aec3bca",
+          "stdout_sha256": "994edf51401a6e92211e1c9d7675e3ab9627ddfe2ddf5931a75a684b2472f791",
+          "kit_startup_complete_seconds": 4.245,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:30:55Z [93ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 8, size: 676.33 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:30:58Z [2,498ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:30:59Z [4,239ms] [Info] [omni.kit.app.plugin] [4.245s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.511194748105481,
+              "calls": 1,
+              "mean_ms": 8511.194748105481
+            },
+            "reset": {
+              "seconds": 1.3862451119348407,
+              "calls": 1,
+              "mean_ms": 1386.2451119348407
+            },
+            "env_step": {
+              "seconds": 64.44094980857335,
+              "calls": 2160,
+              "mean_ms": 29.8337730595247
+            },
+            "record_append": {
+              "seconds": 1.8132691830396652,
+              "calls": 2160,
+              "mean_ms": 0.8394764736294746
+            },
+            "record_finish": {
+              "seconds": 0.8107812548987567,
+              "calls": 1,
+              "mean_ms": 810.7812548987567
+            }
+          },
+          "render_flush_histogram": {
+            "0": 541
+          },
+          "benchmark_sha256": "fcaf4d15db414744fba4b139afe91b62d67247e9c1979aa7013ae7bf474e26f6",
+          "offline_readable_count": 1,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_02",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_103105.log",
+          "kit_log_sha256": "c96f118ba847cd4cea7b479f346d3738afc264c90b67ed6872cee81a5813e57c",
+          "stdout_sha256": "269d32c92ed28626b7c849ca4214852725832f9bff25f7c9c0dad6a04e306cef",
+          "kit_startup_complete_seconds": 4.153,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:31:05Z [92ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 8, size: 676.33 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:31:08Z [2,430ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:31:09Z [4,147ms] [Info] [omni.kit.app.plugin] [4.153s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.39284206717275,
+              "calls": 1,
+              "mean_ms": 8392.84206717275
+            },
+            "reset": {
+              "seconds": 1.370718881022185,
+              "calls": 1,
+              "mean_ms": 1370.718881022185
+            },
+            "env_step": {
+              "seconds": 64.37515561794862,
+              "calls": 2160,
+              "mean_ms": 29.803312786087325
+            },
+            "record_append": {
+              "seconds": 1.8665376987773925,
+              "calls": 2160,
+              "mean_ms": 0.8641378235080521
+            },
+            "record_finish": {
+              "seconds": 0.8138177609071136,
+              "calls": 1,
+              "mean_ms": 813.8177609071136
+            }
+          },
+          "render_flush_histogram": {
+            "0": 541
+          },
+          "benchmark_sha256": "a070ff81760da519962e8aa7690b48fa0485cd8b57e020a1c5160fc59ec9b63d",
+          "offline_readable_count": 1,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_03",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_103115.log",
+          "kit_log_sha256": "0b062f37e89f1c744233de6f84244af3b208d7d45ee2688ab7bf9c0fed6c547c",
+          "stdout_sha256": "76b64af958a14e68326bb4c0520906ca2e78808f2193c26991b5e1c469a46ce7",
+          "kit_startup_complete_seconds": 4.186,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:31:15Z [94ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 8, size: 676.33 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:31:18Z [2,437ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:31:19Z [4,180ms] [Info] [omni.kit.app.plugin] [4.186s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.42310837097466,
+              "calls": 1,
+              "mean_ms": 8423.10837097466
+            },
+            "reset": {
+              "seconds": 1.3829181310720742,
+              "calls": 1,
+              "mean_ms": 1382.9181310720742
+            },
+            "env_step": {
+              "seconds": 64.34267358272336,
+              "calls": 2160,
+              "mean_ms": 29.78827480681637
+            },
+            "record_append": {
+              "seconds": 1.8721324547659606,
+              "calls": 2160,
+              "mean_ms": 0.8667279883175744
+            },
+            "record_finish": {
+              "seconds": 0.833029777975753,
+              "calls": 1,
+              "mean_ms": 833.029777975753
+            }
+          },
+          "render_flush_histogram": {
+            "0": 541
+          },
+          "benchmark_sha256": "500d60d11c1009dc2e0ba8002adfc8552a1d92de2045ddb6cb43ef7c00ad599e",
+          "offline_readable_count": 1,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "output": "Isaacsim_tactile_env/output/dexmate_startup_shared_20260916_v2",
+      "summary": {
+        "status": "passed",
+        "workers": 4,
+        "episodes_per_worker": 2,
+        "worker_startup": [
+          {
+            "worker": 0,
+            "monotonic": 1105433.821828678,
+            "startup_seconds": 8.553111240034923,
+            "initial_reset_seconds": 1.373238646890968,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "process_to_ready_seconds": 10.018466674955562
+          },
+          {
+            "worker": 1,
+            "monotonic": 1105443.86402483,
+            "startup_seconds": 8.464469920145348,
+            "initial_reset_seconds": 1.3913479370530695,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "process_to_ready_seconds": 9.953708485001698
+          },
+          {
+            "worker": 2,
+            "monotonic": 1105454.051869266,
+            "startup_seconds": 8.580473263049498,
+            "initial_reset_seconds": 1.3606852830853313,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "process_to_ready_seconds": 10.03166886093095
+          },
+          {
+            "worker": 3,
+            "monotonic": 1105464.027651413,
+            "startup_seconds": 8.44202240020968,
+            "initial_reset_seconds": 1.3627896839752793,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "process_to_ready_seconds": 9.902049247175455
+          }
+        ],
+        "startup_mode": "sequential loading, synchronized parallel collection",
+        "cpu_threads_per_worker": 8,
+        "physics_threads_per_worker": 8,
+        "scope": "Independent processes, one shared GPU, identical 120 Hz reference replay; five RGB streams",
+        "worker_pids": [
+          3738135,
+          3738812,
+          3739515,
+          3740272
+        ],
+        "startup_to_gate_seconds": 40.42688878788613,
+        "episode_count": 8,
+        "passed_count": 8,
+        "full_reference_complete": true,
+        "all_numeric_samples_identical": true,
+        "collection_wall_seconds": 138.8788188130129,
+        "successful_episodes_per_minute": 3.456250593881233,
+        "collection_seconds_per_successful_episode": 17.359852351626614,
+        "aggregate_simulated_seconds_per_wall_second": 1.03687517816437,
+        "worker_core_seconds": [
+          129.72490478795953,
+          129.79345559165813,
+          129.7710551917553,
+          129.85379884089343
+        ],
+        "start_skew_seconds": 0.025364549830555916,
+        "total_wall_seconds": 181.98396963300183,
+        "exit_codes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "peak_gpu_memory_mib": 12565,
+        "mean_collection_gpu_utilization_percent": 61.46099290780142
+      },
+      "summary_sha256": "783f7e274038bba823951cc4821d827026237aa1605e4284f0691393d700bde2",
+      "workers": [
+        {
+          "worker": "worker_00",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_103248.log",
+          "kit_log_sha256": "88c9fc96f314d076c47d2369e3890b1e1f131b7a658537677e4665eb2b8be387",
+          "stdout_sha256": "6e7545a43a0215352d7c16c25c7fc32fa5ed47cb8886c985a76f028b22bcfee8",
+          "kit_startup_complete_seconds": 4.342,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:32:48Z [96ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 8, size: 676.33 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:32:53Z [4,335ms] [Info] [omni.kit.app.plugin] [4.342s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.553111240034923,
+              "calls": 1,
+              "mean_ms": 8553.111240034923
+            },
+            "reset": {
+              "seconds": 4.674286651890725,
+              "calls": 2,
+              "mean_ms": 2337.1433259453624
+            },
+            "env_step": {
+              "seconds": 129.72490478795953,
+              "calls": 4320,
+              "mean_ms": 30.028913145361003
+            },
+            "record_append": {
+              "seconds": 3.766094353981316,
+              "calls": 4320,
+              "mean_ms": 0.871781100458638
+            },
+            "record_finish": {
+              "seconds": 1.639787238324061,
+              "calls": 2,
+              "mean_ms": 819.8936191620305
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "benchmark_sha256": "52fab2c3d375f46748d2f214ce6c9f9ff8406d0200c7d27eff5bce3263741f04",
+          "offline_readable_count": 2,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            },
+            {
+              "episode_id": 1,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_01",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_103258.log",
+          "kit_log_sha256": "a0bceed1384d44c5ad8cdd38bd53b67b8e1925cb8744bbc1b969352aac179e77",
+          "stdout_sha256": "c87125427e6e824ef7ac2769d566b2e10d77eadb3e6bde79a5434be7ffa93206",
+          "kit_startup_complete_seconds": 4.256,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:32:58Z [93ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 8, size: 676.33 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:33:01Z [2,489ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:33:03Z [4,250ms] [Info] [omni.kit.app.plugin] [4.256s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.464469920145348,
+              "calls": 1,
+              "mean_ms": 8464.469920145348
+            },
+            "reset": {
+              "seconds": 4.681628197897226,
+              "calls": 2,
+              "mean_ms": 2340.814098948613
+            },
+            "env_step": {
+              "seconds": 129.79345559165813,
+              "calls": 4320,
+              "mean_ms": 30.0447813869579
+            },
+            "record_append": {
+              "seconds": 3.7329783665481955,
+              "calls": 4320,
+              "mean_ms": 0.8641153626268971
+            },
+            "record_finish": {
+              "seconds": 1.6439479133114219,
+              "calls": 2,
+              "mean_ms": 821.9739566557109
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "benchmark_sha256": "236a5f57fbcb1cd8fc11dd94badf4fd3db69623c7797e3b6ab80a05c143bf722",
+          "offline_readable_count": 2,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            },
+            {
+              "episode_id": 1,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_02",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_103308.log",
+          "kit_log_sha256": "1091154351d1f0d5d3e041f9c3a1ed4695d547a08ee89378f00c75dc9e53b429",
+          "stdout_sha256": "dcdcb6b4391f5f3df51e3370e6b17b82668ff8884ad0266efe21fd28130831c1",
+          "kit_startup_complete_seconds": 4.317,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:33:09Z [92ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 8, size: 676.33 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:33:11Z [2,511ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:33:13Z [4,310ms] [Info] [omni.kit.app.plugin] [4.317s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.580473263049498,
+              "calls": 1,
+              "mean_ms": 8580.473263049498
+            },
+            "reset": {
+              "seconds": 4.6514141471125185,
+              "calls": 2,
+              "mean_ms": 2325.7070735562593
+            },
+            "env_step": {
+              "seconds": 129.7710551917553,
+              "calls": 4320,
+              "mean_ms": 30.039596109202616
+            },
+            "record_append": {
+              "seconds": 3.7528932113200426,
+              "calls": 4320,
+              "mean_ms": 0.868725280398158
+            },
+            "record_finish": {
+              "seconds": 1.6585262899752706,
+              "calls": 2,
+              "mean_ms": 829.2631449876353
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "benchmark_sha256": "ea0872fd82664a0044bb70e96bd571d4f2a52f7074717541507eab2726bcb28d",
+          "offline_readable_count": 2,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            },
+            {
+              "episode_id": 1,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_03",
+          "kit_log": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim Python/5.1/kit_20260916_103319.log",
+          "kit_log_sha256": "f78b8d31be48cf369432a40798df2c9af789638967a604c457587533ac466425",
+          "stdout_sha256": "0e067ce795df7453c284e56355d7c2e048ca80e4e7c57fdba7d78196a61adb85",
+          "kit_startup_complete_seconds": 4.236,
+          "maximum_logged_rtpso_wait_seconds": 0,
+          "startup_log_evidence": [
+            "2026-09-16T17:33:19Z [92ms] [Info] [gpu.foundation.plugin] [ShaderCache]: Driver shadercache folder: /home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache, file count: 8, size: 676.33 MB, process_0: 0.00 MB.",
+            "2026-09-16T17:33:21Z [2,507ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it",
+            "2026-09-16T17:33:23Z [4,230ms] [Info] [omni.kit.app.plugin] [4.236s] Simulation App Startup Complete"
+          ],
+          "contact_summary_identical": true,
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "driver_shader_cache": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.44202240020968,
+              "calls": 1,
+              "mean_ms": 8442.02240020968
+            },
+            "reset": {
+              "seconds": 4.628189139068127,
+              "calls": 2,
+              "mean_ms": 2314.0945695340633
+            },
+            "env_step": {
+              "seconds": 129.85379884089343,
+              "calls": 4320,
+              "mean_ms": 30.058749731688295
+            },
+            "record_append": {
+              "seconds": 3.659495195373893,
+              "calls": 4320,
+              "mean_ms": 0.8471053692995122
+            },
+            "record_finish": {
+              "seconds": 1.6682317850645632,
+              "calls": 2,
+              "mean_ms": 834.1158925322816
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "benchmark_sha256": "fd65b45556d73c5e20ad64135f313cad99c8249ae755938a11cc52125dde1daf",
+          "offline_readable_count": 2,
+          "episodes": [
+            {
+              "episode_id": 0,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            },
+            {
+              "episode_id": 1,
+              "reference_complete": true,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              },
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "cache_inventory_after_repeats": {
+    "path": "/home/zinan/miniforge3/envs/dexmate_isaacsim/lib/python3.11/site-packages/isaacsim/kit/cache/nv_shadercache",
+    "files": [
+      {
+        "file": "GLCache/768b3aece84d7209f1c64d9582bc9000/930ca2a3fb300a73/b9f71d29046c5483.bin",
+        "bytes": 185166685
+      },
+      {
+        "file": "GLCache/768b3aece84d7209f1c64d9582bc9000/930ca2a3fb300a73/b9f71d29046c5483.toc",
+        "bytes": 16496
+      },
+      {
+        "file": "GLCache/768b3aece84d7209f1c64d9582bc9000/930ca2a3fb300a73/b9f71d29046c5484.bin",
+        "bytes": 174659955
+      },
+      {
+        "file": "GLCache/768b3aece84d7209f1c64d9582bc9000/930ca2a3fb300a73/b9f71d29046c5484.toc",
+        "bytes": 15728
+      },
+      {
+        "file": "GLCache/768b3aece84d7209f1c64d9582bc9000/930ca2a3fb300a73/b9f71d29046c5485.bin",
+        "bytes": 174649701
+      },
+      {
+        "file": "GLCache/768b3aece84d7209f1c64d9582bc9000/930ca2a3fb300a73/b9f71d29046c5485.toc",
+        "bytes": 15728
+      },
+      {
+        "file": "GLCache/768b3aece84d7209f1c64d9582bc9000/930ca2a3fb300a73/b9f71d29046c5486.bin",
+        "bytes": 174638562
+      },
+      {
+        "file": "GLCache/768b3aece84d7209f1c64d9582bc9000/930ca2a3fb300a73/b9f71d29046c5486.toc",
+        "bytes": 15728
+      }
+    ]
+  },
+  "source_sha256": {
+    "Isaacsim_tactile_env/dexmate_env.py": "2c2963adf33a9a10f646caf221e244720f48289852069275a9349ae737c57505",
+    "tools/benchmark_dexmate_cpu.py": "0baeb937148008f22bfbe8f193b229d48c2598cf9fa3f503dbc578c0af63b026",
+    "tools/benchmark_dexmate_parallel.py": "dc4f732c3cde60a8c965094970e3377690640cd700f7c16a92f72cd9cc7126de"
+  }
+}

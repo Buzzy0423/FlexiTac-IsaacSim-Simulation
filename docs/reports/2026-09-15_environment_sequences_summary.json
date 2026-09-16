@@ -1,0 +1,351 @@
+{
+  "date_local": "2026-09-15",
+  "run_directory": "Isaacsim_tactile_env/output/dexmate_episodes_20260915_v1",
+  "exit_code": 0,
+  "unit_tests_passed": 13,
+  "run_report": {
+    "status": "passed",
+    "episodes": [
+      {
+        "kind": "Dynamic object, gravity and friction only; left-arm position drives; no object attachment",
+        "checks": {
+          "lift_50mm_within_10mm": true,
+          "hold_2_seconds": true,
+          "slip_under_8mm": true,
+          "both_fingers_loaded_during_hold": true,
+          "both_pads_active_during_hold": true,
+          "released_contact_and_tactile": true,
+          "returned_to_table": true,
+          "returned_near_start_xy": true,
+          "released_object_stable": true,
+          "no_unexpected_robot_contacts": true
+        },
+        "passed": true,
+        "object_baseline_m": [
+          0.3493499159812927,
+          0.2200000286102295,
+          0.8410000205039978
+        ],
+        "hold_lift_range_m": [
+          0.050084829330444336,
+          0.05011248588562012
+        ],
+        "max_relative_slip_m": 4.7058542105797686e-05,
+        "hold_finger_contact_fraction": [
+          1.0,
+          1.0
+        ],
+        "unexpected_robot_contacts": {},
+        "frame_count": 2160,
+        "sync_checks": {
+          "physics_step_sequence": true,
+          "state_120hz": true,
+          "camera_every_four_steps": true,
+          "camera_state_alignment": true,
+          "camera_render_clock_alignment": true,
+          "four_camera_clocks_match": true,
+          "encoded_frame_counts_match": true
+        },
+        "camera_frame_counts": {
+          "head_left": 540,
+          "head_right": 540,
+          "wrist_left": 540,
+          "wrist_right": 540,
+          "observer": 540
+        },
+        "max_render_clock_error_s": 0.0,
+        "api_success": true,
+        "data_contract": {
+          "version": 1,
+          "physics_hz": 120,
+          "camera_hz": 30,
+          "video_codec": "H.264 CRF18 yuv420p (lossy)",
+          "action": "Position targets in action_names order, radians except Lift in metres; mimic followers excluded",
+          "alignment": "trajectory row contains state after applying that row's action for one physics step",
+          "video_index": "Zero-based video frame maps to camera_index.state_row; reset images stored separately",
+          "camera_parameters": "Nominal, not physically calibrated",
+          "camera_to_world": "USD camera frame: +X right, +Y up, -Z forward; matrices use column vectors"
+        }
+      },
+      {
+        "kind": "Dynamic object, gravity and friction only; left-arm position drives; no object attachment",
+        "checks": {
+          "lift_50mm_within_10mm": true,
+          "hold_2_seconds": true,
+          "slip_under_8mm": true,
+          "both_fingers_loaded_during_hold": true,
+          "both_pads_active_during_hold": true,
+          "released_contact_and_tactile": true,
+          "returned_to_table": true,
+          "returned_near_start_xy": true,
+          "released_object_stable": true,
+          "no_unexpected_robot_contacts": true
+        },
+        "passed": true,
+        "object_baseline_m": [
+          0.3493499159812927,
+          0.2200000286102295,
+          0.8410000205039978
+        ],
+        "hold_lift_range_m": [
+          0.050084829330444336,
+          0.05011248588562012
+        ],
+        "max_relative_slip_m": 4.7058542105797686e-05,
+        "hold_finger_contact_fraction": [
+          1.0,
+          1.0
+        ],
+        "unexpected_robot_contacts": {},
+        "frame_count": 2160,
+        "sync_checks": {
+          "physics_step_sequence": true,
+          "state_120hz": true,
+          "camera_every_four_steps": true,
+          "camera_state_alignment": true,
+          "camera_render_clock_alignment": true,
+          "four_camera_clocks_match": true,
+          "encoded_frame_counts_match": true
+        },
+        "camera_frame_counts": {
+          "head_left": 540,
+          "head_right": 540,
+          "wrist_left": 540,
+          "wrist_right": 540,
+          "observer": 540
+        },
+        "max_render_clock_error_s": 0.0,
+        "api_success": true,
+        "data_contract": {
+          "version": 1,
+          "physics_hz": 120,
+          "camera_hz": 30,
+          "video_codec": "H.264 CRF18 yuv420p (lossy)",
+          "action": "Position targets in action_names order, radians except Lift in metres; mimic followers excluded",
+          "alignment": "trajectory row contains state after applying that row's action for one physics step",
+          "video_index": "Zero-based video frame maps to camera_index.state_row; reset images stored separately",
+          "camera_parameters": "Nominal, not physically calibrated",
+          "camera_to_world": "USD camera frame: +X right, +Y up, -Z forward; matrices use column vectors"
+        }
+      },
+      {
+        "kind": "Dynamic object, gravity and friction only; left-arm position drives; no object attachment",
+        "checks": {
+          "lift_50mm_within_10mm": true,
+          "hold_2_seconds": true,
+          "slip_under_8mm": true,
+          "both_fingers_loaded_during_hold": true,
+          "both_pads_active_during_hold": true,
+          "released_contact_and_tactile": true,
+          "returned_to_table": true,
+          "returned_near_start_xy": true,
+          "released_object_stable": true,
+          "no_unexpected_robot_contacts": true
+        },
+        "passed": true,
+        "object_baseline_m": [
+          0.3493499159812927,
+          0.2200000286102295,
+          0.8410000205039978
+        ],
+        "hold_lift_range_m": [
+          0.050084829330444336,
+          0.05011248588562012
+        ],
+        "max_relative_slip_m": 4.7058542105797686e-05,
+        "hold_finger_contact_fraction": [
+          1.0,
+          1.0
+        ],
+        "unexpected_robot_contacts": {},
+        "frame_count": 2160,
+        "sync_checks": {
+          "physics_step_sequence": true,
+          "state_120hz": true,
+          "camera_every_four_steps": true,
+          "camera_state_alignment": true,
+          "camera_render_clock_alignment": true,
+          "four_camera_clocks_match": true,
+          "encoded_frame_counts_match": true
+        },
+        "camera_frame_counts": {
+          "head_left": 540,
+          "head_right": 540,
+          "wrist_left": 540,
+          "wrist_right": 540,
+          "observer": 540
+        },
+        "max_render_clock_error_s": 0.0,
+        "api_success": true,
+        "data_contract": {
+          "version": 1,
+          "physics_hz": 120,
+          "camera_hz": 30,
+          "video_codec": "H.264 CRF18 yuv420p (lossy)",
+          "action": "Position targets in action_names order, radians except Lift in metres; mimic followers excluded",
+          "alignment": "trajectory row contains state after applying that row's action for one physics step",
+          "video_index": "Zero-based video frame maps to camera_index.state_row; reset images stored separately",
+          "camera_parameters": "Nominal, not physically calibrated",
+          "camera_to_world": "USD camera frame: +X right, +Y up, -Z forward; matrices use column vectors"
+        }
+      }
+    ],
+    "reset_checks": [
+      {
+        "checks": {
+          "clock_zero": true,
+          "tactile_zero": true,
+          "object_stationary": true,
+          "fresh_reset_images": true
+        },
+        "max_deviations": {},
+        "passed": true,
+        "object_position_m": [
+          0.3493499159812927,
+          0.2199982851743698,
+          0.8409999012947083
+        ],
+        "object_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_time_s": {
+          "head_left": 1.0166667196899652,
+          "head_right": 1.0166667196899652,
+          "wrist_left": 1.0166667196899652,
+          "wrist_right": 1.0166667196899652,
+          "observer": 1.0166667196899652
+        },
+        "physics_time_s": 1.0166667196899652
+      },
+      {
+        "checks": {
+          "clock_zero": true,
+          "tactile_zero": true,
+          "object_stationary": true,
+          "fresh_reset_images": true,
+          "repeat_joint_position": true,
+          "repeat_joint_velocity": true,
+          "repeat_object_position_m": true,
+          "repeat_object_orientation_wxyz": true
+        },
+        "max_deviations": {
+          "joint_position": 0.0,
+          "joint_velocity": 0.0,
+          "object_position_m": 0.0,
+          "object_orientation_wxyz": 0.0
+        },
+        "passed": true,
+        "object_position_m": [
+          0.3493499159812927,
+          0.2199982851743698,
+          0.8409999012947083
+        ],
+        "object_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_time_s": {
+          "head_left": 1.0166667196899652,
+          "head_right": 1.0166667196899652,
+          "wrist_left": 1.0166667196899652,
+          "wrist_right": 1.0166667196899652,
+          "observer": 1.0166667196899652
+        },
+        "physics_time_s": 1.0166667196899652
+      },
+      {
+        "checks": {
+          "clock_zero": true,
+          "tactile_zero": true,
+          "object_stationary": true,
+          "fresh_reset_images": true,
+          "repeat_joint_position": true,
+          "repeat_joint_velocity": true,
+          "repeat_object_position_m": true,
+          "repeat_object_orientation_wxyz": true
+        },
+        "max_deviations": {
+          "joint_position": 0.0,
+          "joint_velocity": 0.0,
+          "object_position_m": 0.0,
+          "object_orientation_wxyz": 0.0
+        },
+        "passed": true,
+        "object_position_m": [
+          0.3493499159812927,
+          0.2199982851743698,
+          0.8409999012947083
+        ],
+        "object_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "object_angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_time_s": {
+          "head_left": 1.0166667196899652,
+          "head_right": 1.0166667196899652,
+          "wrist_left": 1.0166667196899652,
+          "wrist_right": 1.0166667196899652,
+          "observer": 1.0166667196899652
+        },
+        "physics_time_s": 1.0166667196899652
+      }
+    ]
+  },
+  "source_snapshot_sha256": {
+    "Isaacsim_tactile_env/dexmate_env.py": "570c5135e72b3df9937a59b00cd8bab5555467f89b0a0ecbd86207a7713785b1",
+    "tools/run_dexmate_episodes.py": "4f74e5f9f49b6abac7b8e25f8f5c1415183a96097fd8c3f202040b0f5a203512",
+    "tools/dexmate_episode_recording.py": "11bb1528da9bdf3f7eee419d2f02a1c162e2154abc52d7518f5fc6b19cc93860",
+    "tools/validate_dexmate_scene.py": "3423db9de55b2e9c612f0d06338f411f485950ddb0afa613f958199bd33b54a1"
+  },
+  "evidence_sha256": {
+    "run_report.json": "b18190217de42426061617c3bbc301cb4125a5fa135c89c2af1bc68137ad2b3b",
+    "episode_000/trajectory.npz": "00afec69b8b9a8f1cb1cf0e96a26a399671827cd3e716dec44ff3eeb035e2af5",
+    "episode_000/camera_index.npz": "fa1f8ca8dfb544206bdb604332ac8dff7887c9c924fb7dd180bf8086e9742ada",
+    "episode_000/episode_report.json": "4169b99f7ea1d0c0b315a8cd7dc7a505f172607d838af142928207f202b36d6d",
+    "episode_001/trajectory.npz": "00afec69b8b9a8f1cb1cf0e96a26a399671827cd3e716dec44ff3eeb035e2af5",
+    "episode_001/camera_index.npz": "bdee4f829dd039261b2b53fb399f5075586f879d353680d0d435b17a54261a38",
+    "episode_001/episode_report.json": "4169b99f7ea1d0c0b315a8cd7dc7a505f172607d838af142928207f202b36d6d",
+    "episode_002/trajectory.npz": "00afec69b8b9a8f1cb1cf0e96a26a399671827cd3e716dec44ff3eeb035e2af5",
+    "episode_002/camera_index.npz": "9a166c6e1f414949bc6f90118ab914b8e26ebed4857bd20193da4229e4818b06",
+    "episode_002/episode_report.json": "4169b99f7ea1d0c0b315a8cd7dc7a505f172607d838af142928207f202b36d6d"
+  },
+  "sequence_difference_from_episode_000": {
+    "0": {
+      "joint_position": 0.0,
+      "joint_velocity": 0.0,
+      "object_position_m": 0.0,
+      "tactile": 0.0
+    },
+    "1": {
+      "joint_position": 0.0,
+      "joint_velocity": 0.0,
+      "object_position_m": 0.0,
+      "tactile": 0.0
+    },
+    "2": {
+      "joint_position": 0.0,
+      "joint_velocity": 0.0,
+      "object_position_m": 0.0,
+      "tactile": 0.0
+    }
+  }
+}

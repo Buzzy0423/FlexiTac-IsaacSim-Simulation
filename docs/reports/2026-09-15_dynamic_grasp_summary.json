@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "grasp_config": {
+    "dimensions_m": [
+      0.04,
+      0.03,
+      0.08
+    ],
+    "mass_kg": 0.05,
+    "position_m": [
+      0.34935,
+      0.22,
+      0.841000001497
+    ],
+    "gripper_base_position_m": [
+      0.2,
+      0.22,
+      0.854500001497
+    ],
+    "static_friction": 0.8,
+    "dynamic_friction": 0.6,
+    "lift_m": 0.05,
+    "hold_s": 2.0
+  },
+  "grasp_waypoints_rad": {
+    "pre": [
+      1.6550390592516115,
+      0.07705159082378442,
+      0.058726960095142576,
+      -2.001722204564291,
+      -0.07608590451927545,
+      0.34116657426334,
+      0.09066527143293546
+    ],
+    "grasp": [
+      1.6483498979396993,
+      0.003982898891242416,
+      0.02677016586986239,
+      -1.5477544869161746,
+      -0.0019054522771910362,
+      -0.10066269209379948,
+      0.026806648341702155
+    ],
+    "lift": [
+      1.6727399640022589,
+      0.005799620082937611,
+      0.027044936872234547,
+      -1.760860027059522,
+      -0.0030270971613221777,
+      0.08799857311774317,
+      0.027760882970795996
+    ]
+  },
+  "grasp_regression": {
+    "kind": "Dynamic object, gravity and friction only; left-arm position drives; no object attachment",
+    "checks": {
+      "lift_50mm_within_10mm": true,
+      "hold_2_seconds": true,
+      "slip_under_8mm": true,
+      "both_fingers_loaded_during_hold": true,
+      "both_pads_active_during_hold": true,
+      "released_contact_and_tactile": true,
+      "returned_to_table": true,
+      "returned_near_start_xy": true,
+      "released_object_stable": true,
+      "no_unexpected_robot_contacts": true
+    },
+    "passed": true,
+    "object_baseline_m": [
+      0.3493499159812927,
+      0.2200000286102295,
+      0.8410000205039978
+    ],
+    "hold_lift_range_m": [
+      0.049952805042266846,
+      0.049980759620666504
+    ],
+    "max_relative_slip_m": 9.01829324416464e-05,
+    "hold_finger_contact_fraction": [
+      1.0,
+      1.0
+    ],
+    "unexpected_robot_contacts": {},
+    "frame_count": 2160
+  },
+  "self_collision_enabled": true,
+  "drive_test_passed": true,
+  "table_contact_passed": true,
+  "camera_outputs": {
+    "head_left": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 33.110833087381
+    },
+    "head_right": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 35.30675828552496
+    },
+    "wrist_left": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 29.96530677543036
+    },
+    "wrist_right": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 28.93009244755692
+    }
+  },
+  "source_urdf_sha256": "0407431428b25692c9155f4c6a0e77d9c76070a79b5d5841f87306829048fda3",
+  "run_directory": "Isaacsim_tactile_env/output/dexmate_grasp_20260915_v1",
+  "exit_code": 0,
+  "unit_tests_passed": 9,
+  "tactile_checks": {
+    "finite_and_normalized": true,
+    "free_space_zero": true,
+    "one_sample_per_physics_step_within_phases": true
+  },
+  "tactile_frame_count": 2880,
+  "source_sha256": {
+    "tools/dexmate_grasp_motion.py": "49df190e13adc24ed8dffc069b2986ebc06c3f9bf8ea207a798cf86255344550",
+    "tools/dexmate_grasp_regression.py": "1424b54f7daeb553c9d112769670fb5cb31cbda6d6302e154e74e33c2c715c0b",
+    "tools/validate_dexmate_scene.py": "423219b8cca8791397573946be3056e71060ef6bae977bab29af245b30598532",
+    "tools/dexmate_tactile_preview.py": "ad1949ab161de9bc838248ef9e70a82632cf7b1a3ff72b23d8d1105d66f764c5",
+    "Isaacsim_tactile_env/dexmate_flexitac.py": "055c4c0cda7633ebc49467dc67708233c1ae76de02f427217be4088953a808f4"
+  },
+  "evidence_sha256": {
+    "validation.json": "228f2753da0a20a01fcd727a6ee62445020b716490ecdcd8b5ed0d15fb9f5d63",
+    "grasp_report.json": "8c1cbcb358fbe12d5c609f6f9e1ebe08c719d892597f66725c69cdb66241c0c2",
+    "grasp_sequence.npz": "d90d235bd43a0263d93730848e102169075b85388e44c23baac581357cfc1049",
+    "grasp_replay.gif": "14a45f89a9ea786ab8563f24709b6844478f70b77cb017f9dcba0175ba6cae60"
+  },
+  "task_frame_count": 2160,
+  "task_time_range_s": [
+    6.033333647996187,
+    24.025001253001392
+  ],
+  "final_xy_displacement_m": 0.0006255013597583952,
+  "replay_frames": 187
+}

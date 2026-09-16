@@ -1,0 +1,399 @@
+{
+  "scope": "Sequential GPU runs on identical single-scene grasp; baseline one episode, optimized two. Nested timing sections are inclusive.",
+  "hardware": "RTX 4080 SUPER; CPU physics/NumPy; CUDA tactile; RTX RGB",
+  "runs": {
+    "baseline": {
+      "output": "Isaacsim_tactile_env/output/dexmate_perf_baseline_20260916_v1",
+      "status": "passed",
+      "passed_count": 1,
+      "performance": {
+        "wall_clock_sections": {
+          "startup": {
+            "seconds": 8.800523660844192,
+            "calls": 1,
+            "mean_ms": 8800.523660844192
+          },
+          "reset": {
+            "seconds": 6.347696686862037,
+            "calls": 1,
+            "mean_ms": 6347.696686862037
+          },
+          "writer_setup": {
+            "seconds": 0.13439863896928728,
+            "calls": 1,
+            "mean_ms": 134.39863896928728
+          },
+          "motion_plan": {
+            "seconds": 12.822381185833365,
+            "calls": 1,
+            "mean_ms": 12822.381185833365
+          },
+          "env_step": {
+            "seconds": 201.95450783101842,
+            "calls": 2160,
+            "mean_ms": 93.49745732917519
+          },
+          "record_append": {
+            "seconds": 0.8885390763171017,
+            "calls": 2160,
+            "mean_ms": 0.4113606834801397
+          },
+          "record_finish": {
+            "seconds": 0.9308968728873879,
+            "calls": 1,
+            "mean_ms": 930.8968728873879
+          },
+          "preview": {
+            "seconds": 12.062480601016432,
+            "calls": 1,
+            "mean_ms": 12062.480601016432
+          }
+        },
+        "note": "Nested timings are inclusive; do not sum parent and child sections",
+        "runtime": {
+          "physics_device": "cpu",
+          "backend": "numpy",
+          "render_mode": "physics",
+          "diagnostic_cameras": true
+        },
+        "env_sections": {
+          "render_flush": {
+            "seconds": 99.96503981645219,
+            "calls": 2164,
+            "mean_ms": 46.194565534404894
+          },
+          "tactile": {
+            "seconds": 9.820724101969972,
+            "calls": 2161,
+            "mean_ms": 4.544527580735758
+          },
+          "world_step": {
+            "seconds": 88.10315493587404,
+            "calls": 2160,
+            "mean_ms": 40.788497655497245
+          },
+          "observe": {
+            "seconds": 9.941245488356799,
+            "calls": 2160,
+            "mean_ms": 4.602428466831851
+          },
+          "capture": {
+            "seconds": 103.50619210419245,
+            "calls": 540,
+            "mean_ms": 191.67813352628232
+          }
+        },
+        "render_flush_histogram": {
+          "4": 541
+        }
+      },
+      "motion_plan_cache_hits": 0,
+      "top_level_measured_total_s": 243.94142455374822,
+      "evidence_sha256": {
+        "episode_000/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_000/camera_index.npz": "cac8ff06472f31c23cb5e1a828247ce5b16f27db22960eeab5f5b11014a6611f",
+        "episode_000/episode_report.json": "4deda01b0ae541cb9bfe2c48e2cf31b22c334e08548aec7800134eeffbad7063",
+        "run_report.json": "d4f8d8c4208142d402feb22591006cda1e2a018679c45d700e48731c9ca60f65",
+        "offline_audit.json": "83eed05dc083b8bdfb087eaf1b48bcab2980be4b94b2074b2a46d524fd297208"
+      },
+      "episodes": [
+        {
+          "passed": true,
+          "frame_count": 540,
+          "validation_frame_count": 2160,
+          "hold_lift_range_m": [
+            0.05008745193481445,
+            0.05011641979217529
+          ],
+          "max_relative_slip_m": 4.878668152743886e-05,
+          "max_render_clock_error_s": 0.0,
+          "sync_checks": {
+            "physics_step_sequence": true,
+            "internal_state_120hz": true,
+            "recorded_state_30hz": true,
+            "camera_every_four_steps": true,
+            "camera_state_alignment": true,
+            "saved_camera_state_alignment": true,
+            "camera_render_clock_alignment": true,
+            "four_camera_clocks_match": true,
+            "encoded_frame_counts_match": true
+          }
+        }
+      ]
+    },
+    "optimized": {
+      "output": "Isaacsim_tactile_env/output/dexmate_perf_optimized_20260916_v3",
+      "status": "passed",
+      "passed_count": 2,
+      "performance": {
+        "wall_clock_sections": {
+          "startup": {
+            "seconds": 8.633709628833458,
+            "calls": 1,
+            "mean_ms": 8633.709628833458
+          },
+          "reset": {
+            "seconds": 9.117993774125353,
+            "calls": 2,
+            "mean_ms": 4558.996887062676
+          },
+          "writer_setup": {
+            "seconds": 0.2668907840270549,
+            "calls": 2,
+            "mean_ms": 133.44539201352745
+          },
+          "motion_plan": {
+            "seconds": 13.240532275056466,
+            "calls": 2,
+            "mean_ms": 6620.266137528233
+          },
+          "env_step": {
+            "seconds": 123.35899423365481,
+            "calls": 4320,
+            "mean_ms": 28.555322739271947
+          },
+          "record_append": {
+            "seconds": 1.700829719658941,
+            "calls": 4320,
+            "mean_ms": 0.3937105832543845
+          },
+          "record_finish": {
+            "seconds": 1.5964873838238418,
+            "calls": 2,
+            "mean_ms": 798.2436919119209
+          },
+          "preview": {
+            "seconds": 11.873180710943416,
+            "calls": 1,
+            "mean_ms": 11873.180710943416
+          }
+        },
+        "note": "Nested timings are inclusive; do not sum parent and child sections",
+        "runtime": {
+          "physics_device": "cpu",
+          "backend": "numpy",
+          "render_mode": "camera",
+          "diagnostic_cameras": false,
+          "zero_delay": true
+        },
+        "env_sections": {
+          "tactile": {
+            "seconds": 2.8481028736568987,
+            "calls": 4322,
+            "mean_ms": 0.6589779902028919
+          },
+          "physics_only": {
+            "seconds": 56.22147872764617,
+            "calls": 3240,
+            "mean_ms": 17.35230824927351
+          },
+          "world_step": {
+            "seconds": 112.51328579848632,
+            "calls": 4320,
+            "mean_ms": 26.044742082982946
+          },
+          "observe": {
+            "seconds": 3.5671304629649967,
+            "calls": 4320,
+            "mean_ms": 0.8257246442048604
+          },
+          "physics_and_render": {
+            "seconds": 56.276178523898125,
+            "calls": 1080,
+            "mean_ms": 52.107572707313075
+          },
+          "capture": {
+            "seconds": 6.623997267568484,
+            "calls": 1080,
+            "mean_ms": 6.133330803304152
+          }
+        },
+        "render_flush_histogram": {
+          "0": 1082
+        }
+      },
+      "motion_plan_cache_hits": 1,
+      "top_level_measured_total_s": 169.78861851012334,
+      "evidence_sha256": {
+        "episode_000/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_000/camera_index.npz": "9075fcf4a359d92531d995a23d8874f1ddbb4f0146a643fc813d844a614c9862",
+        "episode_000/episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f",
+        "episode_000/physics_reference_comparison.json": "555426e8c76cd31819c8c559aff17752c7d04d22a63b2d9ec631f8e90ebce87c",
+        "episode_001/trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+        "episode_001/camera_index.npz": "70302bdac86debcda960cfe7a6107d9d287f85908600f975e860e14300ecf484",
+        "episode_001/episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f",
+        "episode_001/physics_reference_comparison.json": "555426e8c76cd31819c8c559aff17752c7d04d22a63b2d9ec631f8e90ebce87c",
+        "run_report.json": "a47187f33e46d62717b9817d4429afbf73b17652b6eb69b66114f8c460b04fc0",
+        "offline_audit.json": "ac5487d14a564301bd600483c755485577446ab8e5c1d58b10581b9f44a55ce0"
+      },
+      "episodes": [
+        {
+          "passed": true,
+          "frame_count": 540,
+          "validation_frame_count": 2160,
+          "hold_lift_range_m": [
+            0.05008745193481445,
+            0.05011641979217529
+          ],
+          "max_relative_slip_m": 4.878668152743886e-05,
+          "max_render_clock_error_s": 0.0,
+          "sync_checks": {
+            "physics_step_sequence": true,
+            "internal_state_120hz": true,
+            "recorded_state_30hz": true,
+            "camera_every_four_steps": true,
+            "camera_state_alignment": true,
+            "saved_camera_state_alignment": true,
+            "camera_render_clock_alignment": true,
+            "camera_render_references_advance": true,
+            "four_camera_clocks_match": true,
+            "encoded_frame_counts_match": true
+          },
+          "full_rate_comparison": {
+            "source": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/Isaacsim_tactile_env/output/dexmate_pose_sweep_20260916_v1/episode_000/trajectory.npz",
+            "scope": "All 120 Hz internal observations, including non-rendered steps",
+            "comparisons": {
+              "joint_position": {
+                "shape": [
+                  2160,
+                  23
+                ],
+                "max_abs_difference": 0.0
+              },
+              "joint_velocity": {
+                "shape": [
+                  2160,
+                  23
+                ],
+                "max_abs_difference": 0.0
+              },
+              "object_position_m": {
+                "shape": [
+                  2160,
+                  3
+                ],
+                "max_abs_difference": 0.0
+              },
+              "object_orientation_wxyz": {
+                "shape": [
+                  2160,
+                  4
+                ],
+                "max_abs_difference": 0.0
+              },
+              "gripper_pose": {
+                "shape": [
+                  2160,
+                  4,
+                  4
+                ],
+                "max_abs_difference": 0.0
+              },
+              "tactile": {
+                "shape": [
+                  2160,
+                  4,
+                  12,
+                  32
+                ],
+                "max_abs_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "passed": true,
+          "frame_count": 540,
+          "validation_frame_count": 2160,
+          "hold_lift_range_m": [
+            0.05008745193481445,
+            0.05011641979217529
+          ],
+          "max_relative_slip_m": 4.878668152743886e-05,
+          "max_render_clock_error_s": 0.0,
+          "sync_checks": {
+            "physics_step_sequence": true,
+            "internal_state_120hz": true,
+            "recorded_state_30hz": true,
+            "camera_every_four_steps": true,
+            "camera_state_alignment": true,
+            "saved_camera_state_alignment": true,
+            "camera_render_clock_alignment": true,
+            "camera_render_references_advance": true,
+            "four_camera_clocks_match": true,
+            "encoded_frame_counts_match": true
+          },
+          "full_rate_comparison": {
+            "source": "/home/zinan/workspace/projects/FlexiTac-IsaacSim-Simulation/Isaacsim_tactile_env/output/dexmate_pose_sweep_20260916_v1/episode_000/trajectory.npz",
+            "scope": "All 120 Hz internal observations, including non-rendered steps",
+            "comparisons": {
+              "joint_position": {
+                "shape": [
+                  2160,
+                  23
+                ],
+                "max_abs_difference": 0.0
+              },
+              "joint_velocity": {
+                "shape": [
+                  2160,
+                  23
+                ],
+                "max_abs_difference": 0.0
+              },
+              "object_position_m": {
+                "shape": [
+                  2160,
+                  3
+                ],
+                "max_abs_difference": 0.0
+              },
+              "object_orientation_wxyz": {
+                "shape": [
+                  2160,
+                  4
+                ],
+                "max_abs_difference": 0.0
+              },
+              "gripper_pose": {
+                "shape": [
+                  2160,
+                  4,
+                  4
+                ],
+                "max_abs_difference": 0.0
+              },
+              "tactile": {
+                "shape": [
+                  2160,
+                  4,
+                  12,
+                  32
+                ],
+                "max_abs_difference": 0.0
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "source_sha256": {
+    "Isaacsim_tactile_env/dexmate_env.py": "b1d22abae981a531cd9955ac0e15dcb41e6d28c48e09ed5e49ad0677a211915e",
+    "tools/run_dexmate_episodes.py": "0cfcf7c159c680b0d5c80d8f8605391127bbcfef7ac4404f7582ed1b6a8fd5f8",
+    "tools/dexmate_performance.py": "c2f034ef0b9fcb8c1178c7a8ec5a92308f24966f405d79ad29b870e52e2652d0",
+    "tools/dexmate_episode_recording.py": "7c91e4b595428727f314c4d0fff7a4c45b546ef8f83e8b1db7df5c583059922f",
+    "tools/validate_dexmate_scene.py": "53da767a371daf41e025a017093605cbd475eb0fd34ad75043dc8bf794985ce8",
+    "tests/test_dexmate_camera_sync.py": "83d159e8c3208aebbba10c19b33d177d7b0c24186c8da20b293bc4aa11a6d76d",
+    "tests/test_dexmate_recording.py": "a78a936d4cef8efde55c3437d71c42624f0d119abf0f42f7aa01d901774c395f",
+    "../dex_wire/src/dex_wire/data/offline.py": "f7ac90cc1631527dc01d4fefadc1b0e78e388957bef34a097ac5a32414a25774",
+    "../dex_wire/tests/contracts/test_offline_episode.py": "6a10a7b9c92cce99fcc87976752329a0ff1635d2f9cb472e4a5e597c616133be"
+  },
+  "tests": {
+    "simulation_unittest": 19,
+    "dex_wire_pytest_passed": 323,
+    "dex_wire_pytest_skipped": 5
+  },
+  "excluded_experiment": "dexmate_perf_optimized_20260916_v1: static RGB despite remapped current clock; marked INVALID_RECORDING.md and rejected by reader",
+  "env_step_speedup": 3.27425671854126
+}

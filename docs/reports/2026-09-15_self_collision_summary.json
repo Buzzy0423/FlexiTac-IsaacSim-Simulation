@@ -1,0 +1,205 @@
+{
+  "source_run": "Isaacsim_tactile_env/output/dexmate_collision_20260915_d10",
+  "exit_code": 0,
+  "status": "passed",
+  "source_urdf_sha256": "a6a931cddd341bb6ec3bc724e91cdaeac86d67e6964d66de70e2344ca3d3c394",
+  "authored_self_collision": {
+    "/World/Dexmate/root_joint": true
+  },
+  "configured_collider_count": 57,
+  "convex_decomposition": {
+    "shrink_wrap": true,
+    "min_thickness_m": 5e-05,
+    "error_percentage": 1.0,
+    "max_convex_hulls": 64
+  },
+  "drive_max_errors_rad_or_m": [
+    0.010631322860717773,
+    0.010633111000061035,
+    0.010633289813995361
+  ],
+  "self_contact_pairs": [
+    "/World/Dexmate/L_gripper_l1 | /World/Dexmate/L_gripper_l2",
+    "/World/Dexmate/R_gripper_l1 | /World/Dexmate/R_gripper_l2"
+  ],
+  "contact_regression": {
+    "kind": "Fixed 20 mm probes at two lateral positions: load each finger and release; not a free-object grasp",
+    "checks": {
+      "L_finger_1": {
+        "hold_contact": true,
+        "released": true
+      },
+      "L_finger_2": {
+        "hold_contact": true,
+        "released": true
+      },
+      "R_finger_1": {
+        "hold_contact": true,
+        "released": true
+      },
+      "R_finger_2": {
+        "hold_contact": true,
+        "released": true
+      }
+    },
+    "release_max_joint_error_rad_or_m": 0.010633289813995361,
+    "passed": true
+  },
+  "loaded_mimic_errors_rad": {
+    "probe_close": {
+      "L": 0.0008115023374557495,
+      "R": 0.0007788911461830139
+    },
+    "probe_shift_close": {
+      "L": 7.718801498413086e-06,
+      "R": 7.206201553344727e-05
+    }
+  },
+  "phase_contacts": {
+    "free_1": {
+      "/World/Dexmate/L_gripper_l1 | /World/Dexmate/L_gripper_l2": {
+        "points": 3325,
+        "min_separation_m": 8.560717105865479e-06,
+        "max_impulse_Ns": 0.0,
+        "last_step": 136,
+        "last_impulse_step": -1
+      },
+      "/World/Dexmate/R_gripper_l1 | /World/Dexmate/R_gripper_l2": {
+        "points": 3246,
+        "min_separation_m": 8.800998330116272e-06,
+        "max_impulse_Ns": 0.0,
+        "last_step": 136,
+        "last_impulse_step": -1
+      }
+    },
+    "free_2": {
+      "/World/Dexmate/L_gripper_l1 | /World/Dexmate/L_gripper_l2": {
+        "points": 58,
+        "min_separation_m": 8.575618267059326e-06,
+        "max_impulse_Ns": 0.0,
+        "last_step": 0,
+        "last_impulse_step": -1
+      },
+      "/World/Dexmate/R_gripper_l1 | /World/Dexmate/R_gripper_l2": {
+        "points": 58,
+        "min_separation_m": 8.838251233100891e-06,
+        "max_impulse_Ns": 0.0,
+        "last_step": 0,
+        "last_impulse_step": -1
+      }
+    },
+    "probe_close": {
+      "/World/Dexmate/L_gripper_l1 | /World/L_ContactProbe": {
+        "points": 119,
+        "min_separation_m": -3.993772679677932e-06,
+        "max_impulse_Ns": 0.004752838557687731,
+        "last_step": 46,
+        "last_impulse_step": 37
+      },
+      "/World/Dexmate/L_gripper_l2 | /World/L_ContactProbe": {
+        "points": 2032,
+        "min_separation_m": -3.618374466896057e-05,
+        "max_impulse_Ns": 0.07842898407258804,
+        "last_step": 239,
+        "last_impulse_step": 239
+      },
+      "/World/Dexmate/R_gripper_l1 | /World/R_ContactProbe": {
+        "points": 131,
+        "min_separation_m": -2.1645487322530244e-06,
+        "max_impulse_Ns": 0.005915432978884091,
+        "last_step": 47,
+        "last_impulse_step": 37
+      },
+      "/World/Dexmate/R_gripper_l2 | /World/R_ContactProbe": {
+        "points": 2032,
+        "min_separation_m": -3.589317202568054e-05,
+        "max_impulse_Ns": 0.07340891801501744,
+        "last_step": 239,
+        "last_impulse_step": 239
+      }
+    },
+    "probe_release_1": {
+      "/World/Dexmate/L_gripper_l2 | /World/L_ContactProbe": {
+        "points": 10,
+        "min_separation_m": -3.478303551673889e-05,
+        "max_impulse_Ns": 0.0014267626180467933,
+        "last_step": 0,
+        "last_impulse_step": 0
+      },
+      "/World/Dexmate/R_gripper_l2 | /World/R_ContactProbe": {
+        "points": 10,
+        "min_separation_m": -3.450736403465271e-05,
+        "max_impulse_Ns": 0.0010551623519070804,
+        "last_step": 0,
+        "last_impulse_step": 0
+      }
+    },
+    "probe_shift_close": {
+      "/World/Dexmate/L_gripper_l1 | /World/L_ContactProbe": {
+        "points": 3698,
+        "min_separation_m": -2.847724829280196e-07,
+        "max_impulse_Ns": 0.014164040552225582,
+        "last_step": 239,
+        "last_impulse_step": 239
+      },
+      "/World/Dexmate/R_gripper_l1 | /World/R_ContactProbe": {
+        "points": 3688,
+        "min_separation_m": -1.7136335372924805e-07,
+        "max_impulse_Ns": 0.015400127748248418,
+        "last_step": 239,
+        "last_impulse_step": 239
+      }
+    },
+    "probe_release": {
+      "/World/Dexmate/L_gripper_l1 | /World/L_ContactProbe": {
+        "points": 17,
+        "min_separation_m": 1.1324882507324219e-06,
+        "max_impulse_Ns": 0.0,
+        "last_step": 0,
+        "last_impulse_step": -1
+      },
+      "/World/Dexmate/R_gripper_l1 | /World/R_ContactProbe": {
+        "points": 17,
+        "min_separation_m": 5.278736352920532e-06,
+        "max_impulse_Ns": 0.0,
+        "last_step": 0,
+        "last_impulse_step": -1
+      }
+    }
+  },
+  "camera_outputs": {
+    "head_left": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 32.59470796101042
+    },
+    "head_right": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 32.58418802029379
+    },
+    "wrist_left": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 28.453214504129246
+    },
+    "wrist_right": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 28.487707508848125
+    }
+  },
+  "table_contact_passed": true
+}

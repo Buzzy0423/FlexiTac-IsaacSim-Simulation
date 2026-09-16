@@ -1,0 +1,194 @@
+{
+  "scope": "Generated simulation output only; source assets untouched",
+  "policy": "Archive reports, images, recordings and previews; remove reproducible USD/USDA/OBJ/URDF copies from historical runs",
+  "removed_bytes": 4935008885,
+  "archived_runs": [
+    {
+      "run": "dexmate_collision_20260915_d1",
+      "removed_files": 138,
+      "removed_bytes": 190037786
+    },
+    {
+      "run": "dexmate_collision_20260915_d10",
+      "removed_files": 139,
+      "removed_bytes": 302090721
+    },
+    {
+      "run": "dexmate_collision_20260915_d2",
+      "removed_files": 138,
+      "removed_bytes": 190043707
+    },
+    {
+      "run": "dexmate_collision_20260915_d3",
+      "removed_files": 137,
+      "removed_bytes": 78180739
+    },
+    {
+      "run": "dexmate_collision_20260915_d4",
+      "removed_files": 138,
+      "removed_bytes": 190043707
+    },
+    {
+      "run": "dexmate_collision_20260915_d5",
+      "removed_files": 138,
+      "removed_bytes": 190069647
+    },
+    {
+      "run": "dexmate_collision_20260915_d6",
+      "removed_files": 138,
+      "removed_bytes": 190090796
+    },
+    {
+      "run": "dexmate_collision_20260915_d7",
+      "removed_files": 139,
+      "removed_bytes": 302090652
+    },
+    {
+      "run": "dexmate_collision_20260915_d8",
+      "removed_files": 139,
+      "removed_bytes": 302090684
+    },
+    {
+      "run": "dexmate_collision_20260915_d9",
+      "removed_files": 139,
+      "removed_bytes": 302090592
+    },
+    {
+      "run": "dexmate_pad66_20260915_v1",
+      "removed_files": 139,
+      "removed_bytes": 302089964
+    },
+    {
+      "run": "dexmate_review_20260915_v1",
+      "removed_files": 0,
+      "removed_bytes": 0
+    },
+    {
+      "run": "dexmate_review_20260915_v2",
+      "removed_files": 0,
+      "removed_bytes": 0
+    },
+    {
+      "run": "dexmate_review_20260915_v3",
+      "removed_files": 0,
+      "removed_bytes": 0
+    },
+    {
+      "run": "dexmate_runtime_20260915",
+      "removed_files": 0,
+      "removed_bytes": 0
+    },
+    {
+      "run": "dexmate_runtime_20260915_v2",
+      "removed_files": 0,
+      "removed_bytes": 0
+    },
+    {
+      "run": "dexmate_runtime_20260915_v3",
+      "removed_files": 0,
+      "removed_bytes": 0
+    },
+    {
+      "run": "dexmate_scene_20260915_v1",
+      "removed_files": 6,
+      "removed_bytes": 31512716
+    },
+    {
+      "run": "dexmate_scene_20260915_v10",
+      "removed_files": 138,
+      "removed_bytes": 190046704
+    },
+    {
+      "run": "dexmate_scene_20260915_v11",
+      "removed_files": 138,
+      "removed_bytes": 190046704
+    },
+    {
+      "run": "dexmate_scene_20260915_v12",
+      "removed_files": 138,
+      "removed_bytes": 190074545
+    },
+    {
+      "run": "dexmate_scene_20260915_v13",
+      "removed_files": 138,
+      "removed_bytes": 190074544
+    },
+    {
+      "run": "dexmate_scene_20260915_v2",
+      "removed_files": 6,
+      "removed_bytes": 31512744
+    },
+    {
+      "run": "dexmate_scene_20260915_v3",
+      "removed_files": 6,
+      "removed_bytes": 31512716
+    },
+    {
+      "run": "dexmate_scene_20260915_v4",
+      "removed_files": 7,
+      "removed_bytes": 222572806
+    },
+    {
+      "run": "dexmate_scene_20260915_v5",
+      "removed_files": 0,
+      "removed_bytes": 0
+    },
+    {
+      "run": "dexmate_scene_20260915_v6",
+      "removed_files": 138,
+      "removed_bytes": 167249974
+    },
+    {
+      "run": "dexmate_scene_20260915_v7",
+      "removed_files": 138,
+      "removed_bytes": 167249976
+    },
+    {
+      "run": "dexmate_scene_20260915_v8",
+      "removed_files": 138,
+      "removed_bytes": 190009438
+    },
+    {
+      "run": "dexmate_scene_20260915_v9",
+      "removed_files": 138,
+      "removed_bytes": 190046586
+    },
+    {
+      "run": "dexmate_tactile_20260915_v1",
+      "removed_files": 139,
+      "removed_bytes": 302090215
+    },
+    {
+      "run": "dexmate_tactile_20260915_v2",
+      "removed_files": 139,
+      "removed_bytes": 302090222
+    },
+    {
+      "run": "vention_312098_v6_solids_only",
+      "removed_files": 0,
+      "removed_bytes": 0
+    }
+  ],
+  "retained_full_runs": [
+    "dexmate_pad66_review_v1",
+    "dexmate_tactile_20260915_v3",
+    "dexmate_tactile_heatmap_review_v1"
+  ],
+  "environment_smoke_cleanup": [
+    {
+      "run": "dexmate_env_smoke_v1",
+      "removed_files": 137,
+      "removed_bytes": 78179543
+    },
+    {
+      "run": "dexmate_env_smoke_v2",
+      "removed_files": 137,
+      "removed_bytes": 78179543
+    },
+    {
+      "run": "dexmate_env_smoke_v3",
+      "removed_files": 137,
+      "removed_bytes": 78179543
+    }
+  ]
+}

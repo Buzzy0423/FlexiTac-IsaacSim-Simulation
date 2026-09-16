@@ -1,0 +1,2293 @@
+{
+  "scope": "Independent processes on one GPU; two identical reference replays per worker",
+  "runs": [
+    {
+      "output": "Isaacsim_tactile_env/output/dexmate_parallel_1_20260916_v1",
+      "summary": {
+        "status": "passed",
+        "workers": 1,
+        "episodes_per_worker": 2,
+        "cpu_threads_per_worker": 8,
+        "physics_threads_per_worker": 8,
+        "scope": "Independent processes, one shared GPU, identical 120 Hz reference replay; five RGB streams",
+        "worker_pids": [
+          3713442
+        ],
+        "startup_to_gate_seconds": 10.1059880531393,
+        "episode_count": 2,
+        "passed_count": 2,
+        "full_reference_complete": true,
+        "all_numeric_samples_identical": true,
+        "collection_wall_seconds": 63.247126278001815,
+        "successful_episodes_per_minute": 1.8973194050357602,
+        "collection_seconds_per_successful_episode": 31.623563139000908,
+        "aggregate_simulated_seconds_per_wall_second": 0.5691958215107281,
+        "worker_core_seconds": [
+          58.39634137949906
+        ],
+        "start_skew_seconds": 0.0,
+        "total_wall_seconds": 75.83597619808279,
+        "exit_codes": [
+          0
+        ],
+        "peak_gpu_memory_mib": 3693,
+        "mean_collection_gpu_utilization_percent": 30.227272727272727
+      },
+      "summary_sha256": "f10235b87c363db34343690f8bc9b5a7ae5ce277df30556a5b90c6ce06e6958b",
+      "workers": [
+        {
+          "worker": "worker_00",
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.552668568911031,
+              "calls": 1,
+              "mean_ms": 8552.66856891103
+            },
+            "reset": {
+              "seconds": 2.6402965909801424,
+              "calls": 2,
+              "mean_ms": 1320.1482954900712
+            },
+            "env_step": {
+              "seconds": 58.39634137949906,
+              "calls": 4320,
+              "mean_ms": 13.517671615624783
+            },
+            "record_append": {
+              "seconds": 1.6827868642285466,
+              "calls": 4320,
+              "mean_ms": 0.3895339963492006
+            },
+            "record_finish": {
+              "seconds": 1.5711985111702234,
+              "calls": 2,
+              "mean_ms": 785.5992555851117
+            }
+          },
+          "env_timings": {
+            "tactile": {
+              "seconds": 2.653385490644723,
+              "calls": 4322,
+              "mean_ms": 0.6139253796031289
+            },
+            "physics_only": {
+              "seconds": 16.483258759602904,
+              "calls": 3240,
+              "mean_ms": 5.087425543087316
+            },
+            "world_step": {
+              "seconds": 47.823207687120885,
+              "calls": 4320,
+              "mean_ms": 11.070186964611317
+            },
+            "observe": {
+              "seconds": 3.3339572267141193,
+              "calls": 4320,
+              "mean_ms": 0.7717493580356758
+            },
+            "physics_and_render": {
+              "seconds": 31.325590084074065,
+              "calls": 1080,
+              "mean_ms": 29.00517600377228
+            },
+            "capture": {
+              "seconds": 6.6106939828023314,
+              "calls": 1080,
+              "mean_ms": 6.121012947039196
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "contact_summary_identical": true,
+          "benchmark_sha256": "54179784c24fea158dcae4d0a44fad8fc1935347f600020fc879cc5fc82b1555",
+          "offline_audit": {
+            "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+            "readable_count": 2,
+            "records": [
+              {
+                "episode": "episode_000",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "08d584e7b3a76ea703ae84c73c685dd26c8ab76dff4028580efe2d280de46113",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              },
+              {
+                "episode": "episode_001",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "66ab296ef73f1e531228bed4cb37721d5d333b17baba5fb722038b478e23672e",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              }
+            ]
+          },
+          "episodes": [
+            {
+              "episode": "episode_000",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 8.038555145263672,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            },
+            {
+              "episode": "episode_001",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 7.673097133636475,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "throughput_ratio_to_single": 1.0
+    },
+    {
+      "output": "Isaacsim_tactile_env/output/dexmate_parallel_2_20260916_v2",
+      "summary": {
+        "status": "passed",
+        "workers": 2,
+        "episodes_per_worker": 2,
+        "startup_mode": "sequential loading, synchronized parallel collection",
+        "cpu_threads_per_worker": 8,
+        "physics_threads_per_worker": 8,
+        "scope": "Independent processes, one shared GPU, identical 120 Hz reference replay; five RGB streams",
+        "worker_pids": [
+          3718072,
+          3718777
+        ],
+        "startup_to_gate_seconds": 20.214410729007795,
+        "episode_count": 4,
+        "passed_count": 4,
+        "full_reference_complete": true,
+        "all_numeric_samples_identical": true,
+        "collection_wall_seconds": 86.37247498519719,
+        "successful_episodes_per_minute": 2.778662994676626,
+        "collection_seconds_per_successful_episode": 21.593118746299297,
+        "aggregate_simulated_seconds_per_wall_second": 0.8335988984029878,
+        "worker_core_seconds": [
+          80.42558067804202,
+          80.44434062414803
+        ],
+        "start_skew_seconds": 0.009022990008816123,
+        "total_wall_seconds": 109.16577565693296,
+        "exit_codes": [
+          0,
+          0
+        ],
+        "peak_gpu_memory_mib": 6712,
+        "mean_collection_gpu_utilization_percent": 48.08988764044944
+      },
+      "summary_sha256": "4ed5c391cce19a01199a4cd615af471bb2104632228cbcbdce79363c161049cc",
+      "workers": [
+        {
+          "worker": "worker_00",
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.65064703905955,
+              "calls": 1,
+              "mean_ms": 8650.64703905955
+            },
+            "reset": {
+              "seconds": 3.327045121928677,
+              "calls": 2,
+              "mean_ms": 1663.5225609643385
+            },
+            "env_step": {
+              "seconds": 80.42558067804202,
+              "calls": 4320,
+              "mean_ms": 18.61703256436158
+            },
+            "record_append": {
+              "seconds": 2.0400639313738793,
+              "calls": 4320,
+              "mean_ms": 0.47223702115136096
+            },
+            "record_finish": {
+              "seconds": 1.581633436260745,
+              "calls": 2,
+              "mean_ms": 790.8167181303725
+            }
+          },
+          "env_timings": {
+            "tactile": {
+              "seconds": 3.5886416849680245,
+              "calls": 4322,
+              "mean_ms": 0.8303196864803388
+            },
+            "physics_only": {
+              "seconds": 17.724595087813213,
+              "calls": 3240,
+              "mean_ms": 5.470554039448523
+            },
+            "world_step": {
+              "seconds": 68.09858755092137,
+              "calls": 4320,
+              "mean_ms": 15.763561933083649
+            },
+            "observe": {
+              "seconds": 4.413600942119956,
+              "calls": 4320,
+              "mean_ms": 1.02166688474999
+            },
+            "physics_and_render": {
+              "seconds": 50.35623464267701,
+              "calls": 1080,
+              "mean_ms": 46.6261431876639
+            },
+            "capture": {
+              "seconds": 7.133793372893706,
+              "calls": 1080,
+              "mean_ms": 6.605364234160839
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "contact_summary_identical": true,
+          "benchmark_sha256": "b7a64503821d19489157cc64d213e6ddce3ef526f049dd0a3dae72456626f7e0",
+          "offline_audit": {
+            "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+            "readable_count": 2,
+            "records": [
+              {
+                "episode": "episode_000",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "5d57e48c3d8e487a4ffc743a4fe69a2babe8578fce996c962a2f28944fdee55f",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              },
+              {
+                "episode": "episode_001",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "485b5a2718da783b54cb9d50f5deee860529bdc4310f1d06abfabd58c30fa944",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              }
+            ]
+          },
+          "episodes": [
+            {
+              "episode": "episode_000",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 8.027932167053223,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            },
+            {
+              "episode": "episode_001",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 7.666553974151611,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_01",
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.544956899946555,
+              "calls": 1,
+              "mean_ms": 8544.956899946555
+            },
+            "reset": {
+              "seconds": 3.335031470982358,
+              "calls": 2,
+              "mean_ms": 1667.515735491179
+            },
+            "env_step": {
+              "seconds": 80.44434062414803,
+              "calls": 4320,
+              "mean_ms": 18.62137514447871
+            },
+            "record_append": {
+              "seconds": 2.034197475994006,
+              "calls": 4320,
+              "mean_ms": 0.47087904536898284
+            },
+            "record_finish": {
+              "seconds": 1.5813673050142825,
+              "calls": 2,
+              "mean_ms": 790.6836525071412
+            }
+          },
+          "env_timings": {
+            "tactile": {
+              "seconds": 3.56563314050436,
+              "calls": 4322,
+              "mean_ms": 0.8249960991449237
+            },
+            "physics_only": {
+              "seconds": 17.745859859976918,
+              "calls": 3240,
+              "mean_ms": 5.477117240733617
+            },
+            "world_step": {
+              "seconds": 68.13137727812864,
+              "calls": 4320,
+              "mean_ms": 15.771152147714963
+            },
+            "observe": {
+              "seconds": 4.377437051618472,
+              "calls": 4320,
+              "mean_ms": 1.0132956138005722
+            },
+            "physics_and_render": {
+              "seconds": 50.368825214216486,
+              "calls": 1080,
+              "mean_ms": 46.637801124274525
+            },
+            "capture": {
+              "seconds": 7.158483829814941,
+              "calls": 1080,
+              "mean_ms": 6.628225768347168
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "contact_summary_identical": true,
+          "benchmark_sha256": "c5024efd2fd13aea50407051e3dafa06e6d6aeec24d5ffc2ee8c8622b8819a63",
+          "offline_audit": {
+            "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+            "readable_count": 2,
+            "records": [
+              {
+                "episode": "episode_000",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "161c4cf20eb6d1387b62a0521c6fd23a3c5550e9168ff73291b52c4aa023f8f1",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              },
+              {
+                "episode": "episode_001",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "fdd80d1bafa1930400ecd5ab93e3d321866ccb4660913f439d633cc00575c13b",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              }
+            ]
+          },
+          "episodes": [
+            {
+              "episode": "episode_000",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 8.034150123596191,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            },
+            {
+              "episode": "episode_001",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 7.667059898376465,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "throughput_ratio_to_single": 1.464520410902694
+    },
+    {
+      "output": "Isaacsim_tactile_env/output/dexmate_parallel_4_20260916_v1",
+      "summary": {
+        "status": "passed",
+        "workers": 4,
+        "episodes_per_worker": 2,
+        "startup_mode": "sequential loading, synchronized parallel collection",
+        "cpu_threads_per_worker": 8,
+        "physics_threads_per_worker": 8,
+        "scope": "Independent processes, one shared GPU, identical 120 Hz reference replay; five RGB streams",
+        "worker_pids": [
+          3721051,
+          3721694,
+          3722365,
+          3723804
+        ],
+        "startup_to_gate_seconds": 189.97122601792216,
+        "episode_count": 8,
+        "passed_count": 8,
+        "full_reference_complete": true,
+        "all_numeric_samples_identical": true,
+        "collection_wall_seconds": 138.37907883082516,
+        "successful_episodes_per_minute": 3.468732441750261,
+        "collection_seconds_per_successful_episode": 17.297384853853146,
+        "aggregate_simulated_seconds_per_wall_second": 1.0406197325250783,
+        "worker_core_seconds": [
+          129.59187799552456,
+          129.5360427040141,
+          129.48800398339517,
+          129.43874328467064
+        ],
+        "start_skew_seconds": 0.03208152484148741,
+        "total_wall_seconds": 331.5232611389365,
+        "exit_codes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "peak_gpu_memory_mib": 12720,
+        "mean_collection_gpu_utilization_percent": 60.709219858156025
+      },
+      "summary_sha256": "18e0136a4d7e8c8bf0fa6faa04c4dd76969c0fcf68f5901350e5065017e12ff4",
+      "workers": [
+        {
+          "worker": "worker_00",
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.557135132141411,
+              "calls": 1,
+              "mean_ms": 8557.135132141411
+            },
+            "reset": {
+              "seconds": 4.4845443579833955,
+              "calls": 2,
+              "mean_ms": 2242.2721789916977
+            },
+            "env_step": {
+              "seconds": 129.59187799552456,
+              "calls": 4320,
+              "mean_ms": 29.998119906371425
+            },
+            "record_append": {
+              "seconds": 3.634981810580939,
+              "calls": 4320,
+              "mean_ms": 0.8414309746715136
+            },
+            "record_finish": {
+              "seconds": 1.6605523771140724,
+              "calls": 2,
+              "mean_ms": 830.2761885570362
+            }
+          },
+          "env_timings": {
+            "tactile": {
+              "seconds": 4.239242868032306,
+              "calls": 4322,
+              "mean_ms": 0.9808521212476414
+            },
+            "physics_only": {
+              "seconds": 22.906637138221413,
+              "calls": 3240,
+              "mean_ms": 7.069949734018954
+            },
+            "world_step": {
+              "seconds": 116.10162015096284,
+              "calls": 4320,
+              "mean_ms": 26.875375034945105
+            },
+            "observe": {
+              "seconds": 5.311611313605681,
+              "calls": 4320,
+              "mean_ms": 1.229539655927241
+            },
+            "physics_and_render": {
+              "seconds": 93.173483237857,
+              "calls": 1080,
+              "mean_ms": 86.27174373875648
+            },
+            "capture": {
+              "seconds": 7.097648781724274,
+              "calls": 1080,
+              "mean_ms": 6.571897020115069
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "contact_summary_identical": true,
+          "benchmark_sha256": "cffb9601c04a29f6c9263dac88786e91b7d0f22834fa0db15c4c8a17850af16d",
+          "offline_audit": {
+            "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+            "readable_count": 2,
+            "records": [
+              {
+                "episode": "episode_000",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "08d584e7b3a76ea703ae84c73c685dd26c8ab76dff4028580efe2d280de46113",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              },
+              {
+                "episode": "episode_001",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "66ab296ef73f1e531228bed4cb37721d5d333b17baba5fb722038b478e23672e",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              }
+            ]
+          },
+          "episodes": [
+            {
+              "episode": "episode_000",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 8.0388765335083,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            },
+            {
+              "episode": "episode_001",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 7.675189018249512,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_01",
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 8.508251225110143,
+              "calls": 1,
+              "mean_ms": 8508.251225110143
+            },
+            "reset": {
+              "seconds": 4.4823692452628165,
+              "calls": 2,
+              "mean_ms": 2241.1846226314083
+            },
+            "env_step": {
+              "seconds": 129.5360427040141,
+              "calls": 4320,
+              "mean_ms": 29.985195070373635
+            },
+            "record_append": {
+              "seconds": 3.667612347519025,
+              "calls": 4320,
+              "mean_ms": 0.8489843397034781
+            },
+            "record_finish": {
+              "seconds": 1.6508222760166973,
+              "calls": 2,
+              "mean_ms": 825.4111380083486
+            }
+          },
+          "env_timings": {
+            "tactile": {
+              "seconds": 4.230409503215924,
+              "calls": 4322,
+              "mean_ms": 0.9788083070837399
+            },
+            "physics_only": {
+              "seconds": 22.967990609584376,
+              "calls": 3240,
+              "mean_ms": 7.088885990612462
+            },
+            "world_step": {
+              "seconds": 116.03271105093881,
+              "calls": 4320,
+              "mean_ms": 26.859423854383984
+            },
+            "observe": {
+              "seconds": 5.289456594968215,
+              "calls": 4320,
+              "mean_ms": 1.2244112488352348
+            },
+            "physics_and_render": {
+              "seconds": 93.04342752182856,
+              "calls": 1080,
+              "mean_ms": 86.15132177947089
+            },
+            "capture": {
+              "seconds": 7.14262561313808,
+              "calls": 1080,
+              "mean_ms": 6.61354223438711
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "contact_summary_identical": true,
+          "benchmark_sha256": "518757bfb2cfa809e6987fe0d61cf6f7ee752b42712cff951b01320f5c959f61",
+          "offline_audit": {
+            "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+            "readable_count": 2,
+            "records": [
+              {
+                "episode": "episode_000",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "161c4cf20eb6d1387b62a0521c6fd23a3c5550e9168ff73291b52c4aa023f8f1",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              },
+              {
+                "episode": "episode_001",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "fdd80d1bafa1930400ecd5ab93e3d321866ccb4660913f439d633cc00575c13b",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              }
+            ]
+          },
+          "episodes": [
+            {
+              "episode": "episode_000",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 8.0349760055542,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            },
+            {
+              "episode": "episode_001",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 7.665485382080078,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_02",
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 82.80412582983263,
+              "calls": 1,
+              "mean_ms": 82804.12582983263
+            },
+            "reset": {
+              "seconds": 4.482976630097255,
+              "calls": 2,
+              "mean_ms": 2241.4883150486276
+            },
+            "env_step": {
+              "seconds": 129.48800398339517,
+              "calls": 4320,
+              "mean_ms": 29.97407499615629
+            },
+            "record_append": {
+              "seconds": 3.695961609017104,
+              "calls": 4320,
+              "mean_ms": 0.8555466687539592
+            },
+            "record_finish": {
+              "seconds": 1.6585533018223941,
+              "calls": 2,
+              "mean_ms": 829.2766509111971
+            }
+          },
+          "env_timings": {
+            "tactile": {
+              "seconds": 4.244131709448993,
+              "calls": 4322,
+              "mean_ms": 0.9819832738197578
+            },
+            "physics_only": {
+              "seconds": 22.96947713638656,
+              "calls": 3240,
+              "mean_ms": 7.089344795181036
+            },
+            "world_step": {
+              "seconds": 115.98786921962164,
+              "calls": 4320,
+              "mean_ms": 26.849043800838345
+            },
+            "observe": {
+              "seconds": 5.3150923799257725,
+              "calls": 4320,
+              "mean_ms": 1.230345458316151
+            },
+            "physics_and_render": {
+              "seconds": 92.99724462046288,
+              "calls": 1080,
+              "mean_ms": 86.10855983376193
+            },
+            "capture": {
+              "seconds": 7.122044013347477,
+              "calls": 1080,
+              "mean_ms": 6.59448519754396
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "contact_summary_identical": true,
+          "benchmark_sha256": "025d7263656dbedde0efda7a5ba667552de3087558adddc69fdf19dabb510bd1",
+          "offline_audit": {
+            "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+            "readable_count": 2,
+            "records": [
+              {
+                "episode": "episode_000",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "d3d777af4b16cd4aa28ef4eb8e91fa8b179d1452a587a536408a2e90cce2b2b8",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              },
+              {
+                "episode": "episode_001",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "cb671e8f51413cc24de65a568aa7c57f3b808660f8fdfbe77db2717d36adb47f",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              }
+            ]
+          },
+          "episodes": [
+            {
+              "episode": "episode_000",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 8.032116889953613,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            },
+            {
+              "episode": "episode_001",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 7.660680770874023,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "worker": "worker_03",
+          "runtime": {
+            "physics_device": "cpu",
+            "backend": "numpy",
+            "render_mode": "camera",
+            "diagnostic_cameras": false,
+            "zero_delay": true,
+            "disable_viewport_updates": true,
+            "thread_settings": {
+              "/plugins/carb.tasking.plugin/threadCount": 8,
+              "/persistent/physics/numThreads": 8,
+              "/plugins/omni.tbb.globalcontrol/maxThreadCount": 8
+            }
+          },
+          "timings": {
+            "startup": {
+              "seconds": 82.66773284808733,
+              "calls": 1,
+              "mean_ms": 82667.73284808733
+            },
+            "reset": {
+              "seconds": 4.41156914900057,
+              "calls": 2,
+              "mean_ms": 2205.784574500285
+            },
+            "env_step": {
+              "seconds": 129.43874328467064,
+              "calls": 4320,
+              "mean_ms": 29.96267205663672
+            },
+            "record_append": {
+              "seconds": 3.615193943027407,
+              "calls": 4320,
+              "mean_ms": 0.8368504497748627
+            },
+            "record_finish": {
+              "seconds": 1.6620065700262785,
+              "calls": 2,
+              "mean_ms": 831.0032850131392
+            }
+          },
+          "env_timings": {
+            "tactile": {
+              "seconds": 4.303062444087118,
+              "calls": 4322,
+              "mean_ms": 0.9956183350502356
+            },
+            "physics_only": {
+              "seconds": 23.1153934111353,
+              "calls": 3240,
+              "mean_ms": 7.134380682449167
+            },
+            "world_step": {
+              "seconds": 115.91374155809171,
+              "calls": 4320,
+              "mean_ms": 26.831884619928637
+            },
+            "observe": {
+              "seconds": 5.373429198749363,
+              "calls": 4320,
+              "mean_ms": 1.2438493515623525
+            },
+            "physics_and_render": {
+              "seconds": 92.77556344424374,
+              "calls": 1080,
+              "mean_ms": 85.90329948541087
+            },
+            "capture": {
+              "seconds": 7.089132120134309,
+              "calls": 1080,
+              "mean_ms": 6.564011222346583
+            }
+          },
+          "render_flush_histogram": {
+            "0": 1082
+          },
+          "contact_summary_identical": true,
+          "benchmark_sha256": "cf59771fe9d07aee1404c6225bcfae3c7076deae3584c945b22f81a620ddec5b",
+          "offline_audit": {
+            "scope": "Offline record alignment and four-camera decode; physics outcomes remain separate",
+            "readable_count": 2,
+            "records": [
+              {
+                "episode": "episode_000",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "97be497d91ab6bbb281b81e6ee020e85ee8cf97fe710e56348151a612fd2030a",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              },
+              {
+                "episode": "episode_001",
+                "variation": {
+                  "name": "baseline",
+                  "offset_xy_m": [
+                    0.0,
+                    0.0
+                  ],
+                  "yaw_deg": 0.0
+                },
+                "physics_passed": true,
+                "readable": true,
+                "video_frames": 540,
+                "window_camera_frames": 60,
+                "window_signal_frames": 60,
+                "decoded_frame_index": 345,
+                "decoded_rgb_shapes": {
+                  "observation.images.head_left": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.head_right": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.left_wrist": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "observation.images.right_wrist": [
+                    480,
+                    640,
+                    3
+                  ]
+                },
+                "sha256": {
+                  "trajectory.npz": "70fe72b338d7c7492524cb7a60179057c35332813ae89205aab548853077c7c0",
+                  "camera_index.npz": "9c4ab0740794e3ea059807d15d405ea681c5417b67826f362405c1bf8db324ae",
+                  "episode_report.json": "a213b18ffb6bd2d60ab1569dac63686ed02e8a3e65cf18c462f1b262deafa53f"
+                },
+                "left_pad_mean_abs_difference_from_baseline": 0.0
+              }
+            ]
+          },
+          "episodes": [
+            {
+              "episode": "episode_000",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 8.035367012023926,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            },
+            {
+              "episode": "episode_001",
+              "passed": true,
+              "max_render_clock_error_s": 0.0,
+              "camera_frame_counts": {
+                "head_left": 540,
+                "head_right": 540,
+                "wrist_left": 540,
+                "wrist_right": 540,
+                "observer": 540
+              },
+              "hold_lift_range_m": [
+                0.05008745193481445,
+                0.05011641979217529
+              ],
+              "max_relative_slip_m": 4.878668152743886e-05,
+              "observer_frame_0_to_345_mean_pixel_change": 7.6698689460754395,
+              "full_rate_comparison": {
+                "joint_position": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "joint_velocity": {
+                  "shape": [
+                    2160,
+                    23
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_position_m": {
+                  "shape": [
+                    2160,
+                    3
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "object_orientation_wxyz": {
+                  "shape": [
+                    2160,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "gripper_pose": {
+                  "shape": [
+                    2160,
+                    4,
+                    4
+                  ],
+                  "max_abs_difference": 0.0
+                },
+                "tactile": {
+                  "shape": [
+                    2160,
+                    4,
+                    12,
+                    32
+                  ],
+                  "max_abs_difference": 0.0
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "throughput_ratio_to_single": 1.8282279897331695
+    }
+  ],
+  "source_sha256": {
+    "tools/benchmark_dexmate_parallel.py": "202ed29c52a58306ac2ae33a7782b61a8475e3b839d6f94a797108db409b8aa1",
+    "tools/benchmark_dexmate_cpu.py": "6e99bd60929c41d091f1d2b38f7b5e952df27af09730972579b4d6eee78aa956",
+    "Isaacsim_tactile_env/dexmate_env.py": "e362749135d6177cd1fdd6be3bb637af1e344a58c350447f8bb195b7341f0cc1",
+    "tools/dexmate_collision.py": "8694addcfc712530bbcc244565a29e105dc3eee9a92c7caa6c1a212d5392aa4e",
+    "tests/test_dexmate_parallel.py": "c25b64fd5be5337b35227f10e65c36aace471839b142404f9a72a2f61d2765bf"
+  }
+}

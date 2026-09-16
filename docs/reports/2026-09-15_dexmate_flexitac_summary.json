@@ -1,0 +1,353 @@
+{
+  "date_local": "2026-09-15",
+  "run_directory": "Isaacsim_tactile_env/output/dexmate_tactile_20260915_v3",
+  "exit_code": 0,
+  "status": "passed",
+  "validation_scope": "Drive/render/table-contact checks with robot self-collision enabled; tactile/contact checks as individually declared in this report",
+  "tactile": {
+    "implementation": "Native Isaac Sim adapter, shared ALOHA Warp kernels and spring_response",
+    "slots": [
+      "L_gripper_l1",
+      "L_gripper_l2",
+      "R_gripper_l1",
+      "R_gripper_l2"
+    ],
+    "shape": [
+      4,
+      12,
+      32
+    ],
+    "config": {
+      "enabled": true,
+      "num_rows": 12,
+      "num_cols": 32,
+      "point_distance_m": 0.002,
+      "outward_offset_m": 0.0021,
+      "stiffness": 5000.0,
+      "max_force": 10.0,
+      "mesh_max_dist_m": 0.2,
+      "device": "cuda:0",
+      "target_prim_paths": [
+        "/World/TestCube"
+      ],
+      "policy": "ALOHA signed-distance spring response; virtual sample plane outside the existing plateau; no added collider"
+    },
+    "target_paths": [
+      "/World/TestCube",
+      "/World/L_ContactProbe",
+      "/World/R_ContactProbe"
+    ],
+    "target_mesh_parts": [
+      1,
+      1,
+      1
+    ],
+    "local_normals": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "local_sample_bounds_m": [
+      [
+        [
+          0.027896568179130554,
+          -0.011004961095750332,
+          0.0910692885518074
+        ],
+        [
+          0.027896568179130554,
+          0.010995038785040379,
+          0.15306928753852844
+        ]
+      ],
+      [
+        [
+          -0.02789456769824028,
+          -0.011000961065292358,
+          0.0910462886095047
+        ],
+        [
+          -0.02789456769824028,
+          0.010999038815498352,
+          0.15304629504680634
+        ]
+      ],
+      [
+        [
+          0.027896568179130554,
+          -0.011004961095750332,
+          0.0910692885518074
+        ],
+        [
+          0.027896568179130554,
+          0.010995038785040379,
+          0.15306928753852844
+        ]
+      ],
+      [
+        [
+          -0.02789456769824028,
+          -0.011000961065292358,
+          0.0910462886095047
+        ],
+        [
+          -0.02789456769824028,
+          0.010999038815498352,
+          0.15304629504680634
+        ]
+      ]
+    ],
+    "units": "normalized per-taxel distance response in [0,1], not measured pressure or PhysX force",
+    "phase_statistics": {
+      "free_0": {
+        "frames": 240,
+        "peak_per_finger": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tail_peak_per_finger": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "first_nonzero_step": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "free_1": {
+        "frames": 240,
+        "peak_per_finger": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tail_peak_per_finger": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "first_nonzero_step": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "free_2": {
+        "frames": 240,
+        "peak_per_finger": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tail_peak_per_finger": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "first_nonzero_step": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "probe_close": {
+        "frames": 240,
+        "peak_per_finger": [
+          0.8833054900169373,
+          0.8963831067085266,
+          0.8826861381530762,
+          0.895675778388977
+        ],
+        "tail_peak_per_finger": [
+          0.7593399286270142,
+          0.8950424194335938,
+          0.7576360106468201,
+          0.8941372036933899
+        ],
+        "first_nonzero_step": [
+          68,
+          68,
+          68,
+          68
+        ]
+      },
+      "probe_release_1": {
+        "frames": 240,
+        "peak_per_finger": [
+          0.7374887466430664,
+          0.8771783113479614,
+          0.7365443706512451,
+          0.8773910403251648
+        ],
+        "tail_peak_per_finger": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "first_nonzero_step": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "probe_shift_close": {
+        "frames": 240,
+        "peak_per_finger": [
+          0.9461455345153809,
+          0.0,
+          0.9460192918777466,
+          0.0
+        ],
+        "tail_peak_per_finger": [
+          0.946049153804779,
+          0.0,
+          0.9457664489746094,
+          0.0
+        ],
+        "first_nonzero_step": [
+          64,
+          null,
+          64,
+          null
+        ]
+      },
+      "probe_release": {
+        "frames": 240,
+        "peak_per_finger": [
+          0.7447125315666199,
+          0.0,
+          0.743710458278656,
+          0.0
+        ],
+        "tail_peak_per_finger": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "first_nonzero_step": [
+          0,
+          null,
+          0,
+          null
+        ]
+      }
+    },
+    "checks": {
+      "finite_and_normalized": true,
+      "free_space_zero": true,
+      "one_sample_per_physics_step_within_phases": true,
+      "all_four_respond_when_loaded": true,
+      "all_four_zero_after_release": true
+    },
+    "passed": true,
+    "frame_count": 1680,
+    "physics_dt_s": 0.008333333333333333,
+    "recorded_time_range_s": [
+      0.025000001303851604,
+      14.02500073146075
+    ]
+  },
+  "contact_checks": {
+    "L_finger_1": {
+      "hold_contact": true,
+      "released": true
+    },
+    "L_finger_2": {
+      "hold_contact": true,
+      "released": true
+    },
+    "R_finger_1": {
+      "hold_contact": true,
+      "released": true
+    },
+    "R_finger_2": {
+      "hold_contact": true,
+      "released": true
+    }
+  },
+  "contact_passed": true,
+  "drive_passed": true,
+  "table_contact_passed": true,
+  "camera_outputs": {
+    "head_left": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 32.60077839703693
+    },
+    "head_right": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 32.57778284301445
+    },
+    "wrist_left": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 28.80917145292275
+    },
+    "wrist_right": {
+      "shape": [
+        480,
+        640,
+        4
+      ],
+      "std": 28.81810807896828
+    }
+  },
+  "unit_tests_passed": 6,
+  "source_sha256": {
+    "Isaacsim_tactile_env/dexmate_flexitac.py": "055c4c0cda7633ebc49467dc67708233c1ae76de02f427217be4088953a808f4",
+    "Isaacsim_tactile_env/dexmate_workspace.json": "160c8ffb0ca1f2ae348b40cc8ce251698c0fafff08a2fcf10c0e666f3995c30d",
+    "tools/dexmate_tactile_validation.py": "72d1ffad64e9531efccce1e2ba097b93bac6bfe1510689554b8be581801f72db",
+    "source/isaaclab/isaaclab/sensors/warp_sdf_tactile/warp_sdf_kernels.py": "1c52605ef6cd7f850160983ac181cb597773e2ec839ec0e046e428d745787960"
+  },
+  "evidence_sha256": {
+    "validation.json": "2e07168a9b6a41c4a68849f3197fdb01d125078803aa05f669fc2bbf3b030b2d",
+    "tactile_sequence.npz": "1050ac10b4a3ea16c5b1e8dcc01f783be915b86adbec307b74ad0828bfd7458d",
+    "tactile_peaks.png": "a385e8bd7d2622bc7117eb15478bf4545bbedd8de887e0587ce3cb7de426be7a"
+  },
+  "limitations": [
+    "free-object grasp and physically calibrated tactile response",
+    "four calibrated cameras"
+  ]
+}

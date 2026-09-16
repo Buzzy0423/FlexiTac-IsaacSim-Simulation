@@ -1,0 +1,87 @@
+{
+  "revision": "wrist_c960_v1",
+  "source_sha256": {
+    "vega_1u_gripper_flexitac.urdf": "0407431428b25692c9155f4c6a0e77d9c76070a79b5d5841f87306829048fda3",
+    "meshes/custom/camera_in_mount_frame_mm.stl": "6ffa104e7d0e8dc9aef22d78be05f270c8ae37fe3785cb9d17c29b323ec69e06",
+    "meshes/custom/dexmate_c960_base_camera_mount_skate_ramp_full_base_coverage_left_dual_limit_2mm_w16mm_tangent_YZ24deg.stl": "6577e6b72aef9c2866bbc6babe8ba4ad3b17d31a7ce2cee542f08f545cd0a6b1",
+    "upstream/robots/hands/dexs_gripper/meshes/visual/gripper_base.glb": "d14faa532f23e8bd5cd88d928b7aa8744e1e9b48c003368cd070cd2c5f05077f"
+  },
+  "status": "Nominal model, not physical calibration",
+  "optical_to_gripper_base": [
+    [
+      0.9999999999865075,
+      -1.8616127240978788e-06,
+      -4.849666950193329e-06,
+      0.0002017108437925761
+    ],
+    [
+      3.6732051033217936e-06,
+      0.9135454576419256,
+      0.40673664306073026,
+      -0.07786466015626162
+    ],
+    [
+      3.673205103346574e-06,
+      -0.40673664307305624,
+      0.9135454576364378,
+      -0.005515452861115283
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "lens_front_cad_mm": [
+    -77.86466089666163,
+    5.5154536009527915,
+    -0.20140457153320343
+  ],
+  "optical_origin_policy": "Lens front disc centroid; optical +Z outward, +X gripper right, +Y down",
+  "removed_old_mount_bounds_mm": [
+    [
+      [
+        -71.9130477768907,
+        3.946629819410113,
+        -17.299885427951313
+      ],
+      [
+        -50.56299572884457,
+        41.14174300202017,
+        16.899988061612223
+      ]
+    ],
+    [
+      [
+        -96.14728556097573,
+        -18.903155447089397,
+        -41.33494218014145
+      ],
+      [
+        9.20063671309257,
+        49.56584929242203,
+        40.942234023487515
+      ]
+    ]
+  ],
+  "base_collision_policy": {
+    "type": "Per retained substantial CAD body convex hull, replacing the old mount-containing OBJ",
+    "count": 6,
+    "limitation": "Approximation; original small recesses may be filled"
+  },
+  "inertia_policy": "Retain official camera mass 0.0253335276780861 kg as provisional; uniform mesh inertia about its centroid in new optical frame. Base mass/inertia inherited; new mount mass not independently identified. Not measured C960 mass.",
+  "generated_sha256": {
+    "base_collision_5.obj": "b5f177a121159843189b1f51aa70fc7c8b5e4571dd57eccd7d31f35a60daf9f4",
+    "mount_visual.glb": "ea5ec7630659419f280f8529911e67c96a49a07f7aebc06ba1e54891a715a915",
+    "camera_visual.glb": "29ae6be4fba93a1cb08d9109ab3be7c5179e24bae7bedeaadd91154805fb29c2",
+    "camera_collision.obj": "2d81de8778e2d786d52702d878e39f41de089bb8f536831c43fea8f6a5a1692b",
+    "base_collision_4.obj": "924767baba0387a188f7c1af31e0465868aae64af8bd330adc513796006368ff",
+    "gripper_base_visual.glb": "aa044a3fcda5d74588298e60d2788f0595238ba6fe85ad46ad5819dc3543956c",
+    "mount_collision.obj": "97556b871d3cf7a1bc691277c928f3a66695f43e59889e1f27fcade1df3e883c",
+    "base_collision_0.obj": "e74a67cae9095e2514413ca2a52f015ac2f6059e13104051bcd729db66bfe403",
+    "base_collision_2.obj": "f56f842662ca196bc330ee98038619946e4ee515e6d90f68f018b7520693bb18",
+    "base_collision_3.obj": "a7c65e9b714d571f8941e5cb2f727f61392b7babe750aa8d430c858f1314a888",
+    "base_collision_1.obj": "070b9ce878833df5dda1e8095a6e6acb8a3acf5f0bd38c83b061cb32137364d8"
+  }
+}

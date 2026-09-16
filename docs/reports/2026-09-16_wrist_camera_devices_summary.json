@@ -1,0 +1,69 @@
+{
+  "scope": "Simultaneous short real-camera capture; intrinsics/extrinsics not calibrated",
+  "output_directory": "Isaacsim_tactile_env/output/wrist_camera_profile_20260916_v1",
+  "tested_profile_sha256": "912487904e8d25da0a4f75240f44f3f2071088673254ff78724a2dff6354f670",
+  "camera_results": {
+    "wrist_left": {
+      "serial": "A260401000123002",
+      "device": "/dev/dexmate-wrist-left",
+      "capture": {
+        "width": 1280,
+        "height": 720,
+        "reported_fps": 30.0,
+        "fourcc": 1196444237,
+        "measured_host_read_fps": 29.989014696505077,
+        "max_host_frame_interval_s": 0.036566677037626505,
+        "captured_frames": 135,
+        "warmup_frames": 15,
+        "unique_decoded_frames": 120,
+        "timestamp_semantics": "Host read completion, not hardware exposure time or cross-camera synchronization",
+        "within_5_percent_of_requested_fps": true
+      },
+      "intrinsics": {
+        "status": "requires_calibration",
+        "image_size": [
+          1280,
+          720
+        ],
+        "camera_matrix": null,
+        "distortion_model": null,
+        "distortion_coefficients": null,
+        "source": null
+      }
+    },
+    "wrist_right": {
+      "serial": "A260421000122337",
+      "device": "/dev/dexmate-wrist-right",
+      "capture": {
+        "width": 1280,
+        "height": 720,
+        "reported_fps": 30.0,
+        "fourcc": 1196444237,
+        "measured_host_read_fps": 29.93293473421759,
+        "max_host_frame_interval_s": 0.03683151910081506,
+        "captured_frames": 135,
+        "warmup_frames": 15,
+        "unique_decoded_frames": 120,
+        "timestamp_semantics": "Host read completion, not hardware exposure time or cross-camera synchronization",
+        "within_5_percent_of_requested_fps": true
+      },
+      "intrinsics": {
+        "status": "requires_calibration",
+        "image_size": [
+          1280,
+          720
+        ],
+        "camera_matrix": null,
+        "distortion_model": null,
+        "distortion_coefficients": null,
+        "source": null
+      }
+    }
+  },
+  "evidence_sha256": {
+    "probe.json": "8dab7ae822b1fe90038ff25e2ae7a3e0bd1fa19df9b0670f97985ea55f3210a4",
+    "tested_profile.json": "912487904e8d25da0a4f75240f44f3f2071088673254ff78724a2dff6354f670",
+    "wrist_left.png": "b013bbf32976c6033d32fabeb2cf0ba44e3c5b1c89f9025c12b98461de20c762",
+    "wrist_right.png": "4ac516dc3ae0cfec2e3b43edbbd6318f30fa87357c36747a833d872ee0235863"
+  }
+}

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot name="vega_1u_gripper_flexitac">
-  <!-- Project derivative of dexmate-urdf 0.8.4: 26 mm TPU fingers; see README.zh-CN.md. Kinematics and inertias retained; dynamics and camera calibration NOT validated. -->
+  <!-- Project derivative of dexmate-urdf 0.8.4: 26 mm TPU fingers; see README.zh-CN.md. Arm/finger kinematics retained; wrist optical frames and camera inertia approximated. See manifest and scoped validation reports; camera parameters are not calibrated. -->
   <link name="base_link">
     <inertial>
       <origin xyz="-0.00062 -0.07869 0.02414" rpy="0 0 0" />
@@ -618,16 +618,58 @@
         <mesh filename="upstream/robots/hands/f5d6_hand/meshes/visual/connector.glb" />
       </geometry>
     </visual>
-    <visual>
-      <origin xyz="0 0 0" rpy="-1.5708 0 1.5708" />
-      <geometry>
-        <mesh filename="upstream/robots/hands/dexs_gripper/meshes/visual/gripper_base.glb" />
-      </geometry>
-    </visual>
-    <collision>
+    <visual name="retained_base">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="upstream/robots/hands/dexs_gripper/meshes/collision/gripper_base.obj" />
+        <mesh filename="meshes/wrist_c960_v1/gripper_base_visual.glb" />
+      </geometry>
+    </visual>
+    <visual name="c960_mount">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/mount_visual.glb" />
+      </geometry>
+    </visual>
+    <collision name="retained_base_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_0.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_1.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_2">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_2.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_3">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_3.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_4">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_4.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_5">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_5.obj" />
+      </geometry>
+    </collision>
+    <collision name="c960_mount">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/mount_collision.obj" />
       </geometry>
     </collision>
   </link>
@@ -647,19 +689,19 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l1_visual.glb" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l1_visual.glb" />
       </geometry>
     </visual>
     <collision name="tpu_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l1_tpu_collision.obj" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l1_tpu_collision.obj" />
       </geometry>
     </collision>
     <collision name="metal_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l1_metal_collision.obj" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l1_metal_collision.obj" />
       </geometry>
     </collision>
   </link>
@@ -680,37 +722,43 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l2_visual.glb" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l2_visual.glb" />
       </geometry>
     </visual>
     <collision name="tpu_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l2_tpu_collision.obj" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l2_tpu_collision.obj" />
       </geometry>
     </collision>
     <collision name="metal_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l2_metal_collision.obj" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l2_metal_collision.obj" />
       </geometry>
     </collision>
   </link>
   <link name="L_camera_link">
     <inertial>
-      <origin xyz="-2.91893930039341E-08 9.32267760699046E-06 -0.0143153509024817" rpy="0 0 0" />
+      <origin xyz="-4.292976788414471e-11 0.000401456813170086 -0.014127453144966372" rpy="0 0 0" />
       <mass value="0.0253335276780861" />
-      <inertia ixx="2.36501083500509E-06" ixy="1.39971410740578E-08" ixz="8.33563162347089E-12" iyy="2.40110525837032E-06" iyz="-1.7455153320645E-08" izz="3.46264940304301E-06" />
+      <inertia ixx="3.1837770821540876e-06" ixy="7.563518916861787e-15" ixz="-1.1895364861207906e-13" iyy="2.9876545477965314e-05" iyz="1.9060128596137224e-09" izz="3.062119252959136e-05" />
     </inertial>
-    <visual>
+    <visual name="c960_camera">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="upstream/robots/hands/dexs_gripper/meshes/visual/camera_link.glb" />
+        <mesh filename="meshes/wrist_c960_v1/camera_visual.glb" />
       </geometry>
     </visual>
+    <collision name="c960_camera">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/camera_collision.obj" />
+      </geometry>
+    </collision>
   </link>
   <joint name="L_camera_joint" type="fixed">
-    <origin xyz="0.0002 -0.07459 0.0017504" rpy="-0.087266 0 0" />
+    <origin xyz="0.000201710843793 -0.0778646601563 -0.00551545286112" rpy="-0.418879020479 -3.67320510335e-06 3.67320510335e-06" />
     <parent link="L_gripper_base" />
     <child link="L_camera_link" />
   </joint>
@@ -731,16 +779,58 @@
         <mesh filename="upstream/robots/hands/f5d6_hand/meshes/visual/connector.glb" />
       </geometry>
     </visual>
-    <visual>
-      <origin xyz="0 0 0" rpy="-1.5708 0 1.5708" />
-      <geometry>
-        <mesh filename="upstream/robots/hands/dexs_gripper/meshes/visual/gripper_base.glb" />
-      </geometry>
-    </visual>
-    <collision>
+    <visual name="retained_base">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="upstream/robots/hands/dexs_gripper/meshes/collision/gripper_base.obj" />
+        <mesh filename="meshes/wrist_c960_v1/gripper_base_visual.glb" />
+      </geometry>
+    </visual>
+    <visual name="c960_mount">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/mount_visual.glb" />
+      </geometry>
+    </visual>
+    <collision name="retained_base_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_0.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_1.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_2">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_2.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_3">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_3.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_4">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_4.obj" />
+      </geometry>
+    </collision>
+    <collision name="retained_base_5">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/base_collision_5.obj" />
+      </geometry>
+    </collision>
+    <collision name="c960_mount">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/mount_collision.obj" />
       </geometry>
     </collision>
   </link>
@@ -760,19 +850,19 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l1_visual.glb" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l1_visual.glb" />
       </geometry>
     </visual>
     <collision name="tpu_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l1_tpu_collision.obj" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l1_tpu_collision.obj" />
       </geometry>
     </collision>
     <collision name="metal_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l1_metal_collision.obj" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l1_metal_collision.obj" />
       </geometry>
     </collision>
   </link>
@@ -793,37 +883,43 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l2_visual.glb" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l2_visual.glb" />
       </geometry>
     </visual>
     <collision name="tpu_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l2_tpu_collision.obj" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l2_tpu_collision.obj" />
       </geometry>
     </collision>
     <collision name="metal_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/bump_v2/simulation/gripper_l2_metal_collision.obj" />
+        <mesh filename="meshes/pad_66x26_v3/simulation/gripper_l2_metal_collision.obj" />
       </geometry>
     </collision>
   </link>
   <link name="R_camera_link">
     <inertial>
-      <origin xyz="-2.91893930039341E-08 9.32267760699046E-06 -0.0143153509024817" rpy="0 0 0" />
+      <origin xyz="-4.292976788414471e-11 0.000401456813170086 -0.014127453144966372" rpy="0 0 0" />
       <mass value="0.0253335276780861" />
-      <inertia ixx="2.36501083500509E-06" ixy="1.39971410740578E-08" ixz="8.33563162347089E-12" iyy="2.40110525837032E-06" iyz="-1.7455153320645E-08" izz="3.46264940304301E-06" />
+      <inertia ixx="3.1837770821540876e-06" ixy="7.563518916861787e-15" ixz="-1.1895364861207906e-13" iyy="2.9876545477965314e-05" iyz="1.9060128596137224e-09" izz="3.062119252959136e-05" />
     </inertial>
-    <visual>
+    <visual name="c960_camera">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="upstream/robots/hands/dexs_gripper/meshes/visual/camera_link.glb" />
+        <mesh filename="meshes/wrist_c960_v1/camera_visual.glb" />
       </geometry>
     </visual>
+    <collision name="c960_camera">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wrist_c960_v1/camera_collision.obj" />
+      </geometry>
+    </collision>
   </link>
   <joint name="R_camera_joint" type="fixed">
-    <origin xyz="0.0002 -0.07459 0.0017504" rpy="-0.087266 0 0" />
+    <origin xyz="0.000201710843793 -0.0778646601563 -0.00551545286112" rpy="-0.418879020479 -3.67320510335e-06 3.67320510335e-06" />
     <parent link="R_gripper_base" />
     <child link="R_camera_link" />
   </joint>
